@@ -1,0 +1,114 @@
+html {
+	visibility: visible;
+}
+a, 
+a:hover,
+a:focus {
+	color: #F1A80B;
+	text-decoration: none;
+}
+body {
+	background-color: #333333;
+}
+.badge {
+	background-color: #EEEEEE;
+}
+.btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
+.open .dropdown-toggle.btn-default {
+	background-color: #333333;
+	color: #F1A80B;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active, .btn-primary.active[disabled], fieldset[disabled] .btn-primary.active {
+	background-color: #F1A80B;
+	border-color: #F1A80B;
+}
+.btn-group > .btn-primary {
+	color: #F1A80B;
+	background-color: #FFF;
+	border-color: #FFF;
+}
+.btn-group > .btn-primary:hover, .btn-group > .btn-primary.active {
+	color: #FFF;
+	background-color: #F1A80B;
+	border-color: #F1A80B;
+}
+.suggest .btn-primary {
+	color: #F1A80B;
+}
+.datepicker button strong,
+.datepicker button strong:active,
+.datepicker button span,
+.datepicker button span:active {
+	color: #F1A80B;
+}
+
+.default-avatar  span {
+	color: #F1A80B;
+}
+.form-control:focus {
+	border-color: #F1A80B;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 103, 103, 0.6);
+}
+.left-menu{
+	background-color: #333333;
+}
+.menu-central .nav-stacked {
+	background-color: #F1A80B;
+}
+.menu-central .nav-stacked > li {
+	background-color: #F1A80B;
+}
+.menu-central .nav-stacked > li > a {
+	color: #FFF;
+}
+.modal {
+	background-color: #FFF;
+}
+.navbar-default {
+	background: #F1A80B;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #F1A80B;
+}
+.nav-pills > li > i {
+	color: #EEEEEE;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #F1A80B;
+	color: #FFF;
+}
+.nav > .ng-click-active {
+	background-color: #EEE;
+}
+.nav-stacked .highlight {
+	background-color: #FDEDF5;
+}
+.pg-btn-container {
+	border-top-color: #333333;
+	border-bottom-color: #333333;
+}
+.pg-btn-container>div {
+	border-bottom-color: #333333;
+}
+.pg-btn-container>div>button, .pg-btn-container>div>button:hover {
+	border-left-color: #333333;
+}
+.switch {
+	background-color: #F1A80B;
+}
+.view-fields {
+	background-color: #FFF;
+}
+.wells .well {
+	background-color: #FFF;
+    border: 1px solid #333333;
+	border-radius: 0;
+}
+.wells span {
+	color: #EEEEEE;
+}

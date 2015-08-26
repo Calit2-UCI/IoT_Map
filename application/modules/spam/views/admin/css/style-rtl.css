@@ -1,0 +1,6 @@
+#ds_items {margin: 0;}
+#ds_items ul{padding: 4px 0; margin: 0; padding-bottom: 10px;}
+#ds_items ul li{padding: 5px; padding-right: 20px; border: solid 1px #29b43d; list-style: none; margin: 2px 0; background: #f7fff8; }
+#ds_items ul li:hover{cursor: move; background: #f6e4a0;}
+#ds_items ul li .icons{float: left;}
+#ds_items ul li.limiter{border: dashed 1px #888888;}

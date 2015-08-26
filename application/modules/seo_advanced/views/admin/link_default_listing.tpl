@@ -1,0 +1,1 @@
+<a id="seo_link_default_listing" href="{$site_url}admin/seo_advanced/default_listing/">{l i='link_3' gid='admin_home_page'}</a>

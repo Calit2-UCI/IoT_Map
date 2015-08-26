@@ -1,0 +1,193 @@
+/* Icons in sprite */
+.fa{
+	background-image: url(../img/icons-awesome-ltr.png) !important; 
+	background-position: bottom;
+	background-repeat: no-repeat; 
+	content: "";
+	display: inline-block;
+	height: 15px;
+	vertical-align: middle;
+	width: 15px;
+}
+
+.fa-th-large{background-position:  -55px -5px;}
+.fa-th-large.w{background-position: -5px -5px;}
+
+.fa-search{background-position:  -55px -30px;}
+.fa-search.w{background-position: -5px -30px;}
+
+.fa-cog{background-position:  -55px -55px;}
+.fa-cog.w{background-position: -5px -55px;}
+
+.fa-bars{background-position:  -5px -80px;}
+.fa-bars.w{background-position: -5px -80px;}
+
+.fa-left-arrow{background-position:  -55px -105px;}
+.fa-left-arrow.w{background-position: -5px -105px;}
+
+.fa-arrow-left{background-position:  -50px -100px;}
+.fa-arrow-left.w{background-position: 0 -100px;}
+
+.fa-camera{background-position:  -55px -130px;}
+.fa-camera.w{background-position: -5px -130px;}
+
+.fa-th{background-position:  -55px -155px;}
+.fa-th.w{background-position: -5px -155px;}
+
+.fa-user{background-position:  -55px -180px;}
+.fa-user.w{background-position: -5px -180px;}
+
+.fa-file-text-o {background-position:  -55px -205px;}
+.fa-file-text-o .w{background-position: -5px -205px;}
+
+.fa-refresh {background-position:  -54px -229px;}
+.fa-refresh .w{background-position: -4px -229px;}
+
+.fa-angle-right {background-position:  -50px -255px;}
+.fa-angle-right .w{background-position: 0 -255px;}
+
+.fa-chevron-right {background-position:  -55px -280px;}
+.fa-chevron-right .w{background-position: -5px -280px;}
+
+.fa-caret-down {background-position:  -55px -305px;}
+.fa-caret-down .w{background-position: -5px -305px;}
+
+.fa-play {background-position:  -55px -330px;}
+.fa-play .w{background-position: -5px -330px;}
+
+.fa-pencil {background-position:  -55px -355px;}
+.fa-pencil .w{background-position: -5px -355px;}
+
+.fa-trash-o {background-position:  -55px -380px;}
+.fa-trash-o .w{background-position: -5px -380px;}
+
+.fa-check {background-position:  -55px -405px;}
+.fa-check .w{background-position: -5px -405px;}
+
+.fa-circle {background-position:  -54px -429px;}
+.fa-circle .w{background-position: -54px -454px;}
+
+.fa-comments {background-position:  -55px -455px;}
+.fa-comments .w{background-position: -5px -455px;}
+
+.fa-users {background-position:  -55px -455px;}
+.fa-users .w{background-position: -5px -455px;}
+/* Icons in sprite */
+
+html {
+	visibility: visible;
+}
+a, a:hover {
+	color: #82BAB3;
+}
+body {
+	background-color: #FFFFFF;
+}
+.badge {
+	background-color: #ED8F8E;
+}
+.btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
+.open .dropdown-toggle.btn-default {
+	background-color: #FFFFFF;
+	color: #82BAB3;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active, .btn-primary.active[disabled], fieldset[disabled] .btn-primary.active {
+	background-color: #82BAB3;
+	border-color: #82BAB3;
+}
+.btn-group > .btn-primary {
+	color: #82BAB3;
+	background-color: #FFF;
+	border-color: #FFF;
+}
+.btn-group > .btn-primary:hover, .btn-group > .btn-primary.active {
+	color: #FFF;
+	background-color: #82BAB3;
+	border-color: #82BAB3;
+}
+.bubble {
+	background: #FFF;
+}
+.bubble:after {
+	border-color: transparent #FFF;
+}
+.datepicker button strong,
+.datepicker button strong:active,
+.datepicker button span,
+.datepicker button span:active {
+	color: #82BAB3;
+}
+
+.default-avatar  span {
+	color: #82BAB3;
+}
+.form-control:focus {
+	border-color: #82BAB3;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 103, 103, 0.6);
+}
+.left-menu{
+	background-color: #FFFFFF;
+}
+.menu-central .nav-stacked {
+	background-color: #82BAB3;
+}
+.menu-central .nav-stacked > li {
+	background-color: #82BAB3;
+}
+.menu-central .nav-stacked > li > a {
+	color: #FFF;
+}
+.modal {
+	background-color: #FFF;
+}
+.navbar-default {
+	background: #82BAB3;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+	background-color: #82BAB3;
+}
+.nav-pills > li > i {
+	color: #ED8F8E;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #82BAB3;
+	color: #FFF;
+}
+.nav > .ng-click-active {
+	background-color: #EEE;
+}
+.nav-stacked .highlight {
+	background-color: #FDEDF5;
+}
+.pg-btn-container {
+	border-top-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+}
+.pg-btn-container>div {
+	border-bottom-color: #FFFFFF;
+}
+.pg-btn-container>div>button, .pg-btn-container>div>button:hover {
+	border-left-color: #FFFFFF;
+}
+#slider .descr {
+    color: #FFF;
+}
+.switch {
+	background-color: #82BAB3;
+}
+.view-fields {
+	background-color: #FFF;
+}
+.wells .well {
+	background-color: #FFF;
+    border: 1px solid #FFFFFF;
+	border-radius: 0;
+}
+.wells span {
+	color: #ED8F8E;
+}

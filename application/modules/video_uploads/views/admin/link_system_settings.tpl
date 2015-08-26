@@ -1,0 +1,1 @@
+<a id="video_uploads_link_system_settings" href="{$site_url}admin/video_uploads/system_settings/">{l i='link_6' gid='admin_home_page'}</a>

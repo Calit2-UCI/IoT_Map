@@ -1,0 +1,7 @@
+#pages {margin: 5px 0px}
+#pages ul{padding: 4px 0px; margin: 0px; padding-bottom: 10px}
+#pages ul li{padding: 5px; padding-left: 20px; border: solid 1px #29b43d; list-style: none; margin: 2px 0px; background: #f7fff8; display: table;width: 96%;}
+#pages ul li:hover{ cursor: move; background: #f6e4a0 }
+#pages ul li .icons{float: right; }
+#pages ul li div {display: table-cell;vertical-align: top;}
+#pages ul li.limiter{border: dashed 1px #888888; }

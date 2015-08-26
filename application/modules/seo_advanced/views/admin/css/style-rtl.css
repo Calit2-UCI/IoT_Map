@@ -1,0 +1,16 @@
+ul.url-creator{margin: 0px; padding: 0px}
+ul.url-creator li{float: right; list-style: none; padding: 5px; margin: 1px; border: solid 1px transparent; font-size: 13px; line-height: 23px;}
+ul.url-creator li.fixed{color: #cccccc}
+ul.url-creator li.text{background: none; border: 1px #777 dashed; cursor: pointer}
+ul.url-creator li.text:nth-child(2){background: rgba(255, 153, 51, 0.5); border: 1px #FF9933 solid; cursor: default;}
+ul.url-creator li.tpl{background: none; border: 1px #777 dashed; cursor: pointer}
+ul.url-creator li.opt{background: none; border: 1px #777 dashed; cursor: pointer}
+ul.url-creator li.postfix{background: rgba(255, 153, 51, 0.5); border: 1px #FF9933 solid; cursor: default;}
+ul.url-creator li input, ul.url-creator li select{display: inline; width: 50px !important; font-size: 13px !important; height: 16px; line-height: 13px; margin: 0; padding: 0;}
+ul.url-creator li select{width: 100px !important; height: 20px; line-height: 16px;}
+ul.url-creator li.text input{ width: 100px !important;}
+.limiter{border: dashed 1px #666666 !important}
+
+.url-form{background: #ffffff; border: solid 1px #208B2F; padding: 5px; margin: 3px 0;}
+span.or{line-height: 20px;}
+.icn-confirm, .icn-cancel, .icn-delete{padding-left: 16px !important; line-height: 16px !important; margin: 0 2px;}

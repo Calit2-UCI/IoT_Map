@@ -1,0 +1,219 @@
+.grey_text{
+	color:#aeaeae;
+}
+.arrow_video_chat{
+	float:left; 
+	padding: 150px 40px;
+}
+.arrow_video_chat i{
+	font-weight: bold;
+}
+.call{
+	background: #eeeeee; 
+	width:940px;
+	display: block;
+	float: left;
+	padding: 20px;
+}
+.call img{
+	border: none;
+}
+.call_block{
+	width:670px; 
+	margin: 0 auto; 
+}
+.info_profile_video{
+	padding: 16px 0;
+}
+.to_call_profile{
+	float: left; 
+	text-align: center;
+}
+.me_to_call{
+	float:left; 
+	padding: 60px 0;
+	width: 156px;
+	text-align: center;
+}
+.me_to_call img{
+	margin-bottom: 20px;
+}
+#make_video_call, #cancel_video_call{
+	background: #FE3D0C;
+	border: 2px solid #FE3D0C;
+}
+#make_video_call:hover, #cancel_video_call:hover{
+	border: 2px solid #FE3D0C ;
+	color:#FE3D0C ;
+	background:#ffffff;
+}
+.text_bold{
+	font-weight: bold;
+}
+#video-container:-webkit-full-screen {
+  position:fixed;
+  top:0; 
+  right:0; 
+  bottom:0; 
+  left:0;
+  margin:0;
+  box-sizing:border-box;
+  width:100%;
+  height:100%;
+}
+#video-from{
+	width: 820px;	
+	height: 440px;	
+	margin: 0 80px;
+	border: 1px solid #ffffff;
+}
+#video-to{
+	margin-top: -170px;
+	margin-left: 18px;
+	border: 1px solid #ffffff;
+	position: absolute;
+}
+#video-container_main{
+	background:#000000;	
+}
+#menu_for_video_chat{
+	background: #eeeeee; 
+	display: block;
+	float:left;
+	width: 98%;
+	padding: 10px 10px;
+	text-align: center;
+}
+.fa:after{
+	border: 0.15em solid #FE3D0C;
+	content: " ";
+	height: 1.7em;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: -0.3em;
+	width: 1.8em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+#menu_for_video_chat i{
+	margin: 5px;
+	color:#767676;
+}
+#menu_for_video_chat a{
+	text-decoration: none;
+}
+#menu_for_video_chat .edge:after 
+{
+	border: 0.15em solid #767676;
+}
+#menu_for_video_chat_phone .edge:after {
+	border: 0.15em solid #FE3D0C;
+}
+.pad_left{
+	padding-left: 3px !important;
+}
+.fa-volume-off{
+	margin-left:0px !important;
+}
+#menu_for_video_chat .fa-phone .edge:after {
+	border: 0.15em solid #FE3D0C !important;	
+}
+#menu_for_video_chat .fa-phone{
+	color:#FE3D0C;	
+}
+:-webkit-full-screen #video-container {
+  width: 100%;
+  height: 100%;
+}
+.block_video_call_me_main{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 315px;
+	z-index: 3;
+	margin: 5px;
+}
+.block_video_call_me{
+	background: #ffffff;	
+	border: 1px solid #FE3D0C;	
+	margin-top: 5px;
+}
+.block_video_call_me img{
+	width: 41px;
+	height: 41px;
+	float: left;
+}
+.h1_for_block_video{
+	background: #FE3D0C;
+	color:#ffffff;
+	text-align: left;
+	padding: 12px;
+	font-size: 16px;
+}
+.user_info_call_me{
+	padding: 11px;
+	min-height:40px;
+}
+.user_name_call_me{
+	float: left;
+	padding-left: 9px;
+	font-weight: 600;
+}
+.user_location_call_me{
+	color: #a9a9a9;
+	float: left;
+	padding-left: 9px;
+	padding-bottom: 13px;
+}
+#button_call_me_answer{
+	padding: 7px 18px;
+	background: #FE3D0C;
+	float: left;
+	color:#ffffff;
+	border:none !important;
+	margin: 11px;
+}
+/*#button_call_me_answer:hover{
+	background: #ffffff;
+	color: #FE3D0C;
+}*/
+#button_call_me_decline{
+	border:none;
+	color: #FE3D0C;
+	padding: 7px 18px;
+	margin: 11px;
+	background: none;
+	
+}
+/*
+#button_call_me_decline:hover{
+	background: #FE3D0C;
+	color:#ffffff;
+}*/
+.fa-expand{
+	padding-left:1px !important;
+}
+#fullscreen{
+	display: none;
+	position: fixed;
+	background: #000000;
+	width: 100%;
+	opacity: 0.8;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+#fullscreen_call{
+	display: none;
+	position: fixed;
+	width: 100%;
+	opacity: 1;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}

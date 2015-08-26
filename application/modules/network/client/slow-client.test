@@ -1,0 +1,9 @@
+#!/bin/sh
+BASEDIR=$(dirname $0)
+KEY=$1
+DOMAIN=$2
+PHP=$(which php)
+
+TEST=$(${PHP} -f ${BASEDIR}/index.test ${KEY} ${DOMAIN})
+echo ${TEST}
+

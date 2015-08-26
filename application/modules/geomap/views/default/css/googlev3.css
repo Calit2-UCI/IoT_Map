@@ -1,0 +1,9 @@
+.map_container img, .pano_container img{background: transparent; border: none; padding: 0;}
+.routes p{margin: 0;}
+.map_search_box{margin: 20px 10px;}
+.map_search_keyword{width: 40%; max-width: 250px;}
+.map_search_radius{width: auto; max-width: 150px;}
+.pano_container{margin-top: 20px;}
+.amenities_goolgemaps{border: 1px solid #ccc; position: absolute; overflow: hidden; right: 10px; top: 29px; padding: 5px; margin: 0 5px; background: #f0f0f0; opacity: 0.7;}
+.amenities_goolgemaps .amenities_header{font-weight: bold; border-bottom: 1px solid #ccc; margin-bottom: 8px; text-align: center;}
+.amenities_switch{text-decoration: none;}

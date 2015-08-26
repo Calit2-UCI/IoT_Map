@@ -1,0 +1,53 @@
+<?php
+
+require_once MODULEPATH . "network/install/config.php";
+
+$install_settings = array(
+	'fast_server' => NETWORK_FAST_SERVER,
+	'slow_server' => NETWORK_SLOW_SERVER,
+	'key' => '',
+	'domain' => '',
+	'daemon_pid' => '',
+	'profile_data_limits' => serialize(array(
+		'body_type' => 100,
+		'description' => 1000,
+		'drinking_habits' => 100,
+		'education' => 100,
+		'eye_colour' => 100,
+		'hair_colour' => 100,
+		'have_children' => 100,
+		'headline' => 255,
+		'height' => 100,
+		'hobby' => 1000,
+		'marital_status' => 100,
+		'occupation' => 100,
+		'purpose' => 100,
+		'race' => 100,
+		'religion' => 100,
+		'smoking_habits' => 100,
+		'want_children' => 100,
+		'weight' => 100,
+	)),
+	'settings_limits' => serialize(array(
+		'country_code' => 5,
+		'land' => 5,
+		'lang' => 5,
+		'orientation' => 3,
+		'site_type' => 5,
+		'user_type' => 2,
+	)),
+	'temp_processing_limits' => serialize(array(
+		'add' => 10, 
+		'update' => 10, 
+		'remove' => 10,
+	)),
+	'country_code' => serialize(array('all')),
+	'land' => serialize(array('all')),
+	'lang' => serialize(array('all')),
+	'max_age' => 80,
+	'min_age' => 18,
+	'orientation' => serialize(array('all')),
+	'site_type' => serialize(array(/*'asian', 'black', 'buddhist', 'casual', 'christian', 'cougar', 'gay',*/ 'general', 'indian', /*'interracial', 'jewish',*/ 'latin', /*'lesbian', 'muslim',*/ 'russian', /*'senior', 'sugardaddy', 'transgender', 'white'*/)),
+	'user_type' => serialize(array('all')),
+    "is_upload_photos" => 0,
+);

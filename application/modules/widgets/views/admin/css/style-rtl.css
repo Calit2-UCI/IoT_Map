@@ -1,0 +1,12 @@
+.lef{width: 350px; float: right; overflow: hidden}
+.ref{margin-right: 360px;}
+.preview{padding: 10px !important; text-align: center;}
+#code{width: 100%; margin-top: -6px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+input.color-pick{width: 100px !important;}
+
+.row input[type=checkbox].width4{float: right; vertical-align: top;}
+.row label.width4{float: right; width: 80px; margin-top: 3px; max-width: 80px; overflow: hidden; line-height: 22px;}
+.row input[type=checkbox].width4:nth-child(4n+1){clear: both;}
+.row input[type=checkbox].width4:first-child{clear: none;}
+.row{position: relative;}
+

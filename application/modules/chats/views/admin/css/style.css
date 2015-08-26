@@ -1,0 +1,6 @@
+.iframe-container {
+	overflow-x: scroll;
+}
+.iframe-container > iframe {
+	overflow: hidden;
+}

@@ -1,0 +1,1 @@
+<a id="dynamic_blocks_link_index" href="{$site_url}admin/dynamic_blocks/index/">{l i='link_10' gid='admin_home_page'}</a>

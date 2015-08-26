@@ -1,0 +1,2 @@
+<li class="{if $filter eq 'all'}active{/if}{if !$filter_data.all} hide{/if}"><a href="{$site_url}admin/ausers/index/all">{l i='filter_all_users' gid='ausers'} ({$count_data.all})</a></li>
+<li class="{if $filter eq 'moderator'}active{/if}{if !$filter_data.moderator} hide{/if}"><a href="{$site_url}admin/moderators/">{l i='filter_moderator_users' gid='ausers'} ({$count_data.moderators})</a></li>

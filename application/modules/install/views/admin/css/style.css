@@ -1,0 +1,10 @@
+.req{color: #FF3333; font-weight: bold;}
+
+.tbl{}
+.tbl .row{}
+.tbl .row.red{color: #FF3333}
+.tbl .row.green{color: #669900}
+.tbl .row .value{width: 50px; float: right; text-align: right}
+.tbl .row .name{margin-right: 55px; }
+
+.hided{color: #cccccc; font-style: italic}

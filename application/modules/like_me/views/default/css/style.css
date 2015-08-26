@@ -1,0 +1,46 @@
+.congratulations{
+	position: absolute;
+	width: 400px;
+	background: #F2F2F2;
+	top:5%;
+	left:30%;
+}
+
+.congratulations .first-liked{
+	
+	border: 1px solid #c5c5c5;
+	background: #FFFFFF;
+	float:left;
+	z-index: 1;
+	transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+}
+
+.congratulations .second-liked{
+	
+	border: 1px solid #c5c5c5;
+	background: #FFFFFF;
+	float:right;
+	position: absolute;
+	z-index: 2;
+	left: 40%;
+	transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+.congratulations img{border: none !important;}
+.congratulations input{width: 100%;}
+#matches .actions{padding-top:15px !important; z-index: 10 !important;}
+#matches .edge[class*="fa-"]:after, #matches .edge[class*="icon-"]:after{border-color: #ffffff !important;}
+#matches .edge[class*="fa-"]:hover:after, #matches .edge[class*="icon-"]:hover:after{background-color: #ffffff !important;}
+
+.like_me-btn{border: solid 2px #FE3D0C; background-color: #FE3D0C; padding:4px; cursor: pointer; }
+.like_me-btn a{text-decoration: none; color: #FFFFFF; font-size: 17px; text-align: center;}
+.like_me-btn:hover{background-color: #FFFFFF; color: #FE3D0C !important;}
+.like_me-btn:hover a{color: #FE3D0C;}
+.like_me-btn a i{margin-left: 5px;}

@@ -1,0 +1,44 @@
+.lef{
+	width: 362px;
+	float: left; 
+	overflow: hidden;
+	display: inline;
+	margin-right: 10px;
+}
+.ref{
+	width: 366px; 
+	overflow: hidden;
+}
+p.preview{
+	padding: 10px !important;
+}
+.row{
+	overflow: hidden;
+}
+input.answer_input {
+	width: 120px !important;
+}
+input.color_input {
+	width: 60px !important;
+}
+div.hidden_container {
+	display: none !important;
+}
+div.progress {
+	height: 20px;
+}
+div.result {
+	margin-bottom: 10px;
+}
+div.question {
+	line-height: 28px;
+}
+div.answer_side {
+	width: 122px;
+}
+a.delete_answer {
+	padding: 0 5px;
+}
+div .preview .results {
+	margin-top:7px;
+}

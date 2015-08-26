@@ -1,0 +1,6 @@
+.badw{width: 24%; float: left; margin: 1px; border: solid 1px #cccccc; overflow: hidden}
+.badw > div{margin: 3px; line-height: 17px;}
+.badw a{float: right; }
+.bwmark{background: #FFCC00; color: #000000; font-weight: bold; font-size: +1}
+.bwresult{border: solid 1px #cccccc; padding: 10px}
+.btn.inline {display: inline-block; float:none; margin: 0 5px;}

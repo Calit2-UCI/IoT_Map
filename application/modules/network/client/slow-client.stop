@@ -1,0 +1,12 @@
+#!/bin/sh
+BASEDIR=$(dirname $0)
+
+PIDFILE="${BASEDIR}/logs/.pidfile"
+PID=$(cat $PIDFILE)
+if [ "$PID" ]
+then
+    kill ${PID}
+    rm -f ${PIDFILE}
+    echo "kill ${PID}"
+fi
+

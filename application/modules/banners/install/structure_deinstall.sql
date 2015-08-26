@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `[prefix]banners`;
+DROP TABLE IF EXISTS `[prefix]banners_banner_group`;
+DROP TABLE IF EXISTS `[prefix]banners_groups`;
+DROP TABLE IF EXISTS `[prefix]banners_modules`;
+DROP TABLE IF EXISTS `[prefix]banners_pages`;
+DROP TABLE IF EXISTS `[prefix]banners_places`;
+DROP TABLE IF EXISTS `[prefix]banners_place_group`;
+DROP TABLE IF EXISTS `[prefix]banners_statistics`;
+DROP TABLE IF EXISTS `[prefix]banners_statistics_hourly`;
+DROP TABLE IF EXISTS `[prefix]banners_statistics_temp`;

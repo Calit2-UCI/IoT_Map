@@ -1,0 +1,39 @@
+.preview{
+	padding: 10px !important;
+}
+.row{
+	overflow: hidden;
+}
+div.poll_result {
+	margin-bottom: 10px;
+	width: 90%;
+}
+.poll_block {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 10px;
+}
+.poll_block .poll_inputs, .poll_block .poll_inputs input {
+	margin-bottom: 10px;
+}
+.poll_action {
+	height: 20px;
+	line-height: 20px;
+}
+.poll_action a {
+	line-height: 20px;
+	height: 20px;
+}
+.poll_question_link {
+	cursor: pointer;
+	width: 100%;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 10px;
+	line-height: 40px;
+}
+.poll_results_content {
+	display: none;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}

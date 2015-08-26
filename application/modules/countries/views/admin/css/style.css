@@ -1,0 +1,13 @@
+.bar-level1{background: #efefef; min-height: 20px}
+.bar-level1 .bar{float: left; width:0%; overflow: hidden; background: #FF9933; color: #ffffff; text-align: right;  font-size: 15px; line-height: 20px}
+
+.bar-level2{background: #efefef; min-height: 16px}
+.bar-level2 .bar{float: left; width:0%; overflow: hidden; background: #FF9933; color: #ffffff; text-align: right;  font-size: 12px; line-height: 16px}
+
+.country-block{float: left; width: 100%; overflow: hidden; padding: 5px}
+.country-block span{color: #cccccc; font-style: italic; font-size: 18px}
+.country-block span.installed{color: #555555; font-style: normal}
+
+.region-block{float: left; width: 25%; overflow: hidden; padding: 5px}
+.region-block span{color: #cccccc; font-style: italic; font-size: 15px}
+.region-block span.installed{color: #555555; font-style: normal}

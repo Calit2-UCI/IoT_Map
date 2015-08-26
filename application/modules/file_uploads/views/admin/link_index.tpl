@@ -1,0 +1,1 @@
+<a id="file_uploads_link_index" href="{$site_url}admin/file_uploads/index/">{l i='link_9' gid='admin_home_page'}</a>

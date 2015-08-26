@@ -1,0 +1,23 @@
+#tbl_filters dl {
+	margin: 0;
+}
+#tbl_filters dt {
+	display: inline-block;
+	width: 22%;
+}
+#tbl_filters dd {
+	display: inline-block;
+	font-weight: bold;
+    margin: 0;
+    width: 76%;
+}
+#tbl_filters .icons a {
+	text-decoration: none;
+}
+#mail_list td label {
+	display: inline-block;
+	width: 100%;
+}
+#mail_list  .l {
+	padding: 0 17px !important;
+}

@@ -1,0 +1,22 @@
+#!/bin/sh
+BASEDIR=$(dirname $0)
+
+PIDFILE="${BASEDIR}/logs/.pidfile"
+PID=$(cat $PIDFILE)
+
+if [ "$PID" ]
+then
+    STARTED=$(ps aux | grep -w ${PID} | grep -v grep >/dev/null && echo 1 || echo 0)
+else
+    STARTED=0
+fi
+
+if [ $STARTED -eq 1 ]
+then
+    echo "service already started"
+else
+    nohup sh ${BASEDIR}/slow-client-service.sh 1 > /dev/null &
+    echo "service started"
+fi
+
+

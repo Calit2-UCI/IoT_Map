@@ -1,0 +1,13 @@
+.lef{width: 350px; float: left; overflow: hidden}
+.ref{margin-left: 360px;}
+
+ol{padding: 4px 0px; margin: 0px; padding-bottom: 10px}
+ol li{padding: 5px; padding-left: 20px; border: solid 1px #29b43d; list-style: none; margin: 2px 0px; background: #f7fff8; }
+ol li:hover{ cursor: move; background: #f6e4a0 }
+ol li.inactive{background: #efefef }
+ol li.inactive:hover{ cursor: default; background: #efefef}
+ol li.limiter{border: dashed 1px #888888; }
+
+.used_page{font-weight: bold; color: #FF6633}
+
+.preview {display: none; position: absolute;}

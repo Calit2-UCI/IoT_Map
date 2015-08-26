@@ -1,0 +1,30 @@
+.fa-long-arrow-down:before, .fa-long-arrow.down:before{content:"\f175";}
+.fa-sun:before{content:"\f185";}
+.fa-flag-alt:before{content:"\f11d";}
+.fa-file-text-alt:before{content:"\f0f6";}
+.fa-unchecked:before,.fa-check-empty:before{content:"\f096";}
+.fa-heart-empty:before{content:"\f08a";}
+.fa-chevron-down:before, .fa-chevron.down:before{content:"\f078";}
+.fa-chevron-up:before, .fa-chevron.up:before{content:"\f077";}
+.fa-eye-close:before{content:"\f070";}
+.fa-eye-open:before{content:"\f06e";}
+.fa-facetime-video:before{content:"\f03d";}
+.fa-star-empty:before{content:"\f006";}
+.fa-star:before{content:"\f005";}
+.fa-heart:before{content:"\f004";}
+.fa-ok:before{content:"\f00c";}
+#mailbox_delete.fa-trash:before{content:"\f014";}
+#mailbox_untrash.fa-trash:before{content:"\f014";}
+[class^="fa-"],[class*=" fa-"]{line-height: 1; font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:none;-webkit-font-smoothing:antialiased;*margin-right:.3em;}
+[class^="fa-"].w,[class*=" fa-"].w{color: #fff;}
+[class^="fa-"].g,[class*=" fa-"].g{color: #808080;}
+.fa-mini-stack{
+    bottom: -0.15em;
+    color: inherit !important;
+    filter: inherit;
+    font-size: 0.7em;
+    left: 0.5em;
+    position: absolute;
+    text-shadow: inherit;
+    z-index: 3;
+}

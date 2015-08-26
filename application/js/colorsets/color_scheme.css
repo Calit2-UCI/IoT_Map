@@ -1,0 +1,23 @@
+#maincolorsample {height: 70px; position: absolute; width: 70px; z-index: 1;}
+#color_enter{ min-height: 300px; margin-left: 20px}
+#image {position: absolute; z-index: 2}
+#wheelarea {background: url("./images/wheel.gif") repeat scroll 0 0 transparent;cursor: pointer;  height: 232px; width: 232px;}
+#pointer0, #pointer1, #pointer2, #pointer3 {background: url("./images/ring-hide.png") no-repeat scroll center center transparent; display: none;font-size: 1px; height: 7px; position: absolute; width: 7px; z-index: 10;}
+#pointer0 {background: url("./images/ring.png") no-repeat scroll center center transparent;}
+#maincolorhue {color: #999999; display: inline; font-size: 12px; position: absolute;  z-index: 1; margin-top: 215px; margin-right: 15px;}
+#manual_color_block{position: absolute; margin-top: 250px}
+#manual_h{width: 50px}
+#coltable {  }
+#coltable dl{margin: 0px 0px 3px 0px; padding: 0px; overflow: hidden}
+#coltable dl dd{width: 200px; float: left; text-align: left; margin: 0px; padding: 0px}
+#coltable dl dt{width: 80px; margin-left: 205px; float: none; padding: 0px; }
+#coltable dl dt div{border: solid 1px #cccccc; padding: 0px 5px; font-size: 13px; text-align: left}
+
+.coltbl-item, .coltbl-itemvar { border-left: 40px solid white; margin: 5px 0 0.1em; padding: 3px 0 3px 10px; }
+.coltbl-itemvar { border-left-width: 25px; margin: 0 0 0.1em 15px; padding: 0 0 0 10px; }
+.coltbl-image { cursor: pointer;  float: right; margin: 10px 0 0 10px;}
+.button_apply{   }
+.example{width: 20px;height: 20px; float: left}
+div.v > div{width: 70px; border: solid 1px #cccccc; padding: 3px; min-height: 16px;  }
+.font{width: 50px !important}
+.color-pick{width: 120px !important}

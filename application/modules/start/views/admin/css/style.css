@@ -1,0 +1,21 @@
+.homepage_block table.data tr:hover td{background: parent;}
+.homepage_block table.data tr th{text-align: left}
+.homepage_block .left-side{float: left; width: 49%}
+.homepage_block .right-side{float: right; width: 49%}
+.homepage-banners{position: relative; margin: 10px 0; cursor: pointer;}
+.homepage-banners .text-block{position: absolute; width:100%; top: 20px;}
+.homepage-banners .custom, .homepage-banners .packages{color: #FFFFFF !important; text-align:center;}
+.homepage-banners .modules{color: #000000 !important; text-align:center;}
+.homepage-banners .design{color: #FFFFFF !important; left: 30px;}
+.homepage-banners .text-block .header{font-size: 30px; line-height: 30px;}
+.homepage-banners .text-block .description{font-size: 18px; line-height: 30px;}
+.homepage-banners .text-block .button{font-size: 14px; margin-top: 10px; line-height: 35px; padding: 0 30px; border: 2px solid; display: inline-block;}
+.homepage-banners .inverted{ 
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: #E9646D !important;
+    margin-left: 10px;
+}

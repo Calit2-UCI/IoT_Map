@@ -1,0 +1,1 @@
+<a id="content_link_index" href="{$site_url}admin/content/index/">{l i='link_12' gid='admin_home_page'}</a>

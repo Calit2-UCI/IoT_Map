@@ -1,0 +1,48 @@
+ol.blocks{ margin: 0px; padding: 0px}
+ol.blocks li{float: left; width: 365px; height: 100px; list-style-position: outside; background: #ffffff; cursor: pointer; margin-left: 23px}
+ol.blocks li img{float: left; margin: 3px}
+ol.blocks li .stat-active{color: green}
+ol.blocks li .stat-moder{color: red}
+ol.blocks li:hover{background: #ececec}
+.limiter{border: dashed 1px #cccccc}
+
+#reg_info {
+	padding-bottom: 20px;
+}
+table.profile_table {
+	width: 100%;
+}
+table.profile_table tr.block_header td {
+    padding-left: 10px;
+	margin: 0;
+}
+table.profile_table tr.block_header {
+    background: #e5e5e5;
+}
+table.profile_table tr.block_header td.subtitle {
+    font-size: 15px;
+    height: 30px;
+	color: #006598;
+	line-height: 27px;
+}
+table.profile_table td.left_row {
+	width: 250px;
+}
+table.profile_table td.right_row {
+	width: 470px;
+}
+table.profile_table td.left_row, table.profile_table td.right_row {
+	padding: 5px 0 5px 10px;
+}
+table.profile_table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table.profile_table div.edit_profile {
+	background: url(../images/edit_pen.png) no-repeat !important;
+	width: 15px;
+	height: 15px;
+	margin: 7px;
+	float: right;
+	cursor: pointer;
+}

@@ -1,0 +1,11 @@
+.row span{display: inline-block; width: 115px;}
+
+.system-operators ul{padding: 4px 0px; margin: 0px; padding-bottom: 10px}
+.system-operators ul li{padding: 5px; padding-left: 20px; border: solid 1px #29b43d; list-style: none; margin: 2px 0px; background: #f7fff8; }
+.system-operators ul li:hover{ cursor: move; background: #f6e4a0 }
+.system-operators ul li .icons{float: right; }
+.system-operators ul li.limiter{border: dashed 1px #888888; }
+.system-operators ul li span{display: inline;}
+
+.tarifs{padding-top: 4px;}
+.tarif_row{padding: 2px 0;}

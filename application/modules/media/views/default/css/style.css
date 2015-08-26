@@ -1,0 +1,10 @@
+.uploadArea {min-height: 100px;height: auto;border: 1px dotted #ccc;padding: 10px;cursor: move;margin-bottom: 10px;position: relative;}
+ul.uploadArea, .uploadArea ul{padding: 5px 10px 5px 0; margin: 0;}
+ul.uploadArea li, .uploadArea ul li{margin: 0; padding: 3px; list-style: none; line-height: 16px; border-bottom: solid 1px #E4E4E4; overflow: hidden; }
+ul.uploadArea li span, .uploadArea ul li span{display: block; min-width: 100px; float: left}
+.uploadArea ul li .progress{width: 100px; border: solid 1px #8585f1; height: 13px; overflow: hidden; }
+.uploadArea ul li .progress .percent{width: 0%; background-color:#9494d0; color: #555555; font-size: 9px; height: 13px; line-height: 13px; }
+.uploadArea ul li .stat-bar{float: right}
+.uploadArea div.drag {color: #ccc;width: 100%;z-index: 0;text-align: center;vertical-align: middle;position: absolute;top: 25px;}
+
+

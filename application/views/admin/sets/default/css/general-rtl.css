@@ -1,0 +1,36 @@
+.clr{clear: both}
+img{border: none}
+.fright{float: left !important}
+.fleft{float: right !important}
+.highlight{background-color: #f6e4a0;}
+
+.w20{width: 20px}
+.w30{width: 30px}
+.w50{width: 50px}
+.w70{width: 70px}
+.w100{width: 100px}
+.w110{width: 110px}
+.w125{width: 125px}
+.w150{width: 150px}
+.w200{width: 200px}
+
+#error_block, #info_block, #success_block{display: none}
+
+.lang-mark{background: #FFFF00 !important; border: solid 1px #FFFF00; color: #333333}
+.lang-button-mark{border: solid 3px #FF0000 !important}
+#lang_editor_js_block{position: fixed; bottom: 2px; left: 2px; z-index: 2000; width: 40%; background: #ffffff; border: solid 1px #444444; text-align: right}
+#lang_handle{margin: 1px; background: #999999; line-height: 22px; padding-right: 10px; color: #ffffff; font-weight: bold; cursor: pointer}
+#lang_editor_js_block  #lang_editor_content{height: 200px; overflow: scroll}
+#lang_editor_js_block .ledit{line-height: 20px; margin: 1px 1px 2px; background: #eeeeee; padding: 5px}
+#lang_editor_js_block .ledit .name{width: 150px; float: right; overflow: hidden}
+#lang_editor_js_block .ledit .value{margin-right: 160px; cursor: pointer}
+#lang_editor_js_block .ledit .value input{border: solid 1px #676767; color: #555555}
+#lang_editor_js_block .ledit .value .hide_text{color: #cccccc; font-style: italic}
+
+.p-top2{padding-top: 2px}
+
+.absolute{position:absolute;}
+.relative{position:relative;}
+.center{text-align:center;}
+.oh{overflow: hidden;}
+.text-overflow{overflow-x: hidden; text-overflow: ellipsis; -o-text-overflow: ellipsis; white-space: nowrap;}

@@ -1,0 +1,13 @@
+.select-options ul{padding: 4px 0px; margin: 0px; padding-bottom: 10px}
+.select-options ul li{padding: 5px; padding-left: 20px; border: solid 1px #29b43d; list-style: none; margin: 2px 0px; background: #f7fff8; }
+.select-options ul li:hover{ cursor: move; background: #f6e4a0 }
+.select-options ul li .icons{float: right; }
+.select-options ul li.limiter{border: dashed 1px #888888; }
+
+.type_text{}
+/*.type_select{border: solid 1px #f27000 !important; background: #f2dac6 !important}
+.type_checkbox{border: solid 1px #62874e !important; background: #cef8b8 !important}
+.type_textarea{border: solid 1px #fdc800 !important; background: #fdf1c2 !important} */
+.type_section{border: solid 1px #e5e5e5 !important; background: #f2f2f2 !important}
+
+div.field_type{width: 120px; float: left; color: #aaaaaa; font-weight: bold}

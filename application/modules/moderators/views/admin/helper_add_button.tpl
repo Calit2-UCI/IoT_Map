@@ -1,0 +1,1 @@
+<li><div class="l"><a href="{$site_url}admin/moderators/edit">{l i='link_add_user' gid='moderators'}</a></div></li>

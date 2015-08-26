@@ -1,0 +1,3 @@
+<?php
+
+$install_lang["content"] = '<p><span style="font-size:20px">Добро пожаловать на сайт знакомств</span></p><p><span style="font-size:20px">Dating Pro - место, где люди находят</span></p><p><span style="font-size:20px">друг друга.<br />Создайте свою анкету, загрузите</span></p><p><span style="font-size:20px">фотографии, и Вы сможете общаться</span></p><p><span style="font-size:20px">с замечательными людьми на нашем</span></p><p><span style="font-size:20px">сайте. К нам уже присоединились тысячи</span></p><p><span style="font-size:20px">человек, и теперь мы рады приветствовать</span></p><p><span style="font-size:20px">Вас. Начните сегодня и сделайте шаг</span></p><p><span style="font-size:20px">вперед навстречу своей судьбе!</span></p>';

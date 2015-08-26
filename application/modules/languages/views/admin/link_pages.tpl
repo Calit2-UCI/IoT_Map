@@ -1,0 +1,1 @@
+<a id="languages_link_pages" href="{$site_url}admin/languages/pages/">{l i='link_11' gid='admin_home_page'}</a>
