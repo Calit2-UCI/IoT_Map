@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin/
+Sitemap: http://core/dating/sitemap.xml
