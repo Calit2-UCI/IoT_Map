@@ -1,0 +1,264 @@
+<!doctype html>
+<html ng-app="datingMobile"
+      ng-swipe-right="Layout.showSideMenu()"
+      ng-swipe-left="Layout.hideSideMenu()"
+      class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=150">
+        <base href="/m/" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- For iPhone 4 Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114-precomposed.png">
+        <!-- For iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72-precomposed.png">
+        <!-- For iPhone: -->
+        <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-57x57-precomposed.png">
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <!--<link rel="stylesheet" href="styles/bootstrap-theme.css">-->
+        <link rel="stylesheet" href="styles/font-awesome.css">
+         <link ng-if="!!window['operamini']" rel="stylesheet" ng-if="apd.data.operaMiniCssUrl" ng-href="{{apd.data.operaMiniCssUrl}}">
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" ng-if="apd.data.cssUrl" ng-href="{{apd.data.cssUrl}}">
+    </head>
+    <body ng-cloak ng-class="{oyh: Layout.sideMenuVisible}">
+        <!-- <left menu> -->
+        <nav ng-mouseup="Layout.hideSideMenu()" ng-click="Layout.hideSideMenu()" class="ng-hide animate-show main-menu left-menu" ng-show="Layout.sideMenuVisible" id="main-menu">
+            <ul class="nav nav-pills nav-stacked">
+                <li ng-if="item" ng-class="{active: item.isActive}" ng-repeat="item in mainMenu.items">
+                    <a href="javascript:void(0);" ng-click="item.click ? item.click() : go(item.href)">
+                        <i class="fa {{item.icon}}"></i>
+                        <span ng-bind="item.text"></span>
+                        <span ng-show="indicators[item.indicator]" class="badge" ng-bind="indicators[item.indicator]"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- </left menu> -->
+        <!-- <top bar> -->
+        <nav ng-show="Layout.topBarVisible" class="top-bar navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- <left button> -->
+                <div class="pull-left">
+                    <a ng-show="leftBtn" class="navbar-link {{leftBtn.class}}" ng-click="leftBtn.click()" href="{{leftBtn.href}}">
+                        <i class="{{leftBtn.icon}}"></i>
+                        <span ng-bind="leftBtn.text"></span>
+                    </a>
+                    <a ng-show="!leftBtn" class="navbar-link" ng-click="Layout.toggleSideMenu()" href="javascript:void(0);">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <!-- </left button> -->
+                <!-- <right button> -->
+                <div class="pull-right">
+                    <div ng-if="rightBtn">
+                        <a class="navbar-link {{rightBtn.class}}" ng-click="rightBtn.click()" href="{{rightBtn.href}}">
+                            <span ng-bind="rightBtn.text"></span>
+                            <i class="{{rightBtn.icon}}"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- </right button> -->
+                <!-- <actions> -->
+                <nav class="menu-central col text-center">
+                    <div class="dropdown">
+                        <div ng-if="actions.items">
+                            <a href="javascript:void(0);" class="dropdown-toggle navbar-link page-header" data-toggle="dropdown">
+                                <span ng-bind="actions.text|truncate:15" title="{{actions.text}}"></span>&nbsp;<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu nav nav-pills nav-stacked">
+                                <li ng-repeat="item in actions.items">
+                                    <div ng-bind-html="item.html"></div>
+                                    <a ng-if="!item.html" href="{{item.href}}" ng-click="item.click()" ng-bind="item.text"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div ng-if="!actions.items">
+                            <span class="navbar-link page-header" ng-click="actions.click()" ng-bind="actions.text|truncate:15" title="{{actions.text}}"></span>
+                        </div>
+                    </div>
+                </nav>
+                <!-- </actions> -->
+            </div>
+        </nav>
+        <!-- </top bar> -->
+        <div class="loading-indicator col-xs-12 text-center" ng-hide="api.indicator.hide" ng-class="api.indicator.type" ng-show="pendingRequests > 0">
+            <div>
+                <i class="fa fa-refresh fa-spin"></i>&nbsp;<span ng-bind="apd.l.loading_text"></span>&nbsp;
+            </div>
+        </div>
+        <div ng-cloak class="container" id="content">
+            <!-- <alerts> -->
+            <div class="alerts col-xs-12 container">
+                <div ng-if="Layout.getAlerts()[id]" class="alert alert-{{alert.type}} alert-dismissable"
+                     ng-class="{'fade-out': alert.expired}"
+                     ng-repeat="(id, alert) in Layout.getAlerts() track by id">
+                    <button type="button" class="close" ng-click="Layout.getAlerts()[id] = null">&times;</button>
+                    <p ng-bind-html="alert.msg"></p>
+                </div>
+            </div>
+            <!-- </alerts> -->
+            <!-- <top message> -->
+			<div ng-if="Layout.topMessage" class="container col-xs-12 {{Layout.topMessage.class}}">
+				<div class="close text-right">
+					<a href="javascript:void(0);" ng-click="Layout.topMessage.close();">
+						<i class="righted fa fa-times"></i>
+					</a>
+				</div>
+				<div class="text-center" ng-bind="Layout.topMessage.text"></div>
+				<div ng-if="button.text" ng-repeat="(id, button) in Layout.topMessage.buttons track by id">
+					<button type="button" class="col-xs-12 btn {{button.class}}"
+							ng-class="button.colSize ? 'col-xs-' + button.colSize : 'col-xs-12'"
+							ng-click="button.action(); Layout.topMessage = false;"
+							ng-bind="button.text"></button>
+				</div>
+			</div>
+            <!-- </top message> -->
+            <div app-view-segment="0"></div>
+            <!-- <modal window> -->
+            <div modal-show="Layout.modalVisible" class="modal fade {{Layout.modal.position}}">
+                <div ng-if="Layout.modal.text" class="body" ng-bind-html="Layout.modal.text"></div>
+                <div ng-if="Layout.modal.include" class="body" ng-include="Layout.modal.include"></div>
+                <div class="buttons form-group" ng-repeat="(id, button) in Layout.modal.buttons track by id">
+                    <button type="button" class="col-xs-12 btn {{button.class}}"
+                            ng-click="button.action(); Layout.hideModal();" ng-bind="button.text"></button>
+                </div>
+            </div>
+            <!-- </modal window> -->
+            <!--<div ng-if="showLoginForm" ng-include="'views/login.html'" class="overlay"></div>-->
+        </div>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <!--script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-XXXXX-X');
+                ga('send', 'pageview');
+        </script-->
+        
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/es5-shim/es5-sham.js"></script>
+        <script>
+            if ('object' !== typeof window.JSON) {
+            console.log('loaded');
+                    var script = document.createElement('script');
+                    script.src = '//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js';
+                    document.body.appendChild(script);
+            }
+        </script>
+
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/lz-string.js"></script>
+        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-route-segment/build/angular-route-segment.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/ngInfiniteScroll/ng-infinite-scroll.min.js"></script>
+        <script src="bower_components/angular-responsive-images/src/bh-responsive-images.js"></script>
+        <script src="bower_components/ng-file-upload/angular-file-upload.min.js"></script>
+        <script src="bower_components/angular-cache/dist/angular-cache.min.js"></script>
+        <script src="bower_components/angular-elastic/elastic.js"></script>
+        <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
+        <script src="bower_components/videogular/videogular.min.js"></script>
+		<script src="scripts/libs/locales.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/controllers/friends.js"></script>
+        <script src="scripts/controllers/gallery.js"></script>
+        <script src="scripts/controllers/im.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/profile.js"></script>
+        <script src="scripts/controllers/register.js"></script>
+        <script src="scripts/controllers/search.js"></script>
+        <script src="scripts/controllers/services.js"></script>
+        <script src="scripts/controllers/settings.js"></script>
+        <script src="scripts/controllers/start.js"></script>
+
+        <script src="scripts/filters/filters.js"></script>
+
+        <script src="scripts/services/appCache.js"></script>
+        <script src="scripts/services/appSettings.js"></script>
+        <script src="scripts/services/appHistory.js"></script>
+        <script src="scripts/services/backend.js"></script>
+        <script src="scripts/services/directives.js"></script>
+
+        <script src="scripts/factories/api.js"></script>
+        <script src="scripts/factories/helpers.js"></script>
+        <script src="scripts/factories/init.js"></script>
+        <script src="scripts/factories/layout.js"></script>
+        <script src="scripts/factories/ios.js"></script>
+        <script src="scripts/factories/data.js"></script>
+        <!-- endbuild -->
+        
+        <script>
+			var iOS_callbacks = [];
+		
+			calliOSFunction = function(functionName, args, successCallback, errorCallback){
+				function openCustomURLinIFrame(src){
+					var rootElm = document.documentElement;
+					var newFrameElm = document.createElement('IFRAME');
+				
+					newFrameElm.setAttribute('src', src);
+					rootElm.appendChild(newFrameElm);
+					
+					setTimeout(function(){
+						newFrameElm.parentNode.removeChild(newFrameElm);
+					}, 500);
+				}
+				
+				var callInfo = {};
+				
+				callInfo.functionname = functionName;
+				
+				if(args){
+					callInfo.args = args;
+				}
+				
+				if(successCallback){
+					callInfo.success = successCallback;
+				}
+					
+				if(errorCallback){
+					callInfo.error = errorCallback;
+				}
+				
+				openCustomURLinIFrame('js2ios://' + JSON.stringify(callInfo));
+			}
+			
+			function iOSSuccess(data){
+				if(!iOS_callbacks.length) return;
+				var f = iOS_callbacks.pop();
+			
+				try{
+					f(1, JSON.parse(data));
+				}catch(e){
+					f(0, data);
+				}
+			}
+			
+			function iOSError(data){
+				if(!iOS_callbacks.length) return;
+				var f = iOS_callbacks.pop();
+				f(0, data);
+			}
+        </script>
+    </body>
+</html>

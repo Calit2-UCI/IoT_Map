@@ -1,0 +1,8 @@
+<div class="view-fields">
+	<p>
+		<button ng-click="go('/login')" type="submit" class="col-xs-12 btn btn-primary btn-lg" ng-bind="l('btn_login')"></button>
+	</p>
+	<p ng-show="canRegister" ng-cloak>
+		<button ng-click="go('/register/step1')" type="submit" class="col-xs-12 btn btn-primary btn-lg" ng-bind="l('btn_register')"></button>
+	</p>
+</div>

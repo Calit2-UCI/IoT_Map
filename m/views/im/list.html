@@ -1,0 +1,15 @@
+<ul class="im nav nav-pills nav-stacked">
+    <li ng-class="{'highlight': contact.count_new > 0}" 
+        ng-click="go('im/' + contact.id_contact, true)" 
+        ng-repeat="contact in data.list">
+        <div class="image-container">
+            <img ng-src="{{contact.contact_user.thumbs.middle}}"
+                 alt="{{contact.contact_user.output_name}}">
+        </div>
+        <div class="info">
+            <time class="pull-right small text-muted" ng-bind="contact.date_update"></time>
+            <h5 ng-bind="contact.contact_user.output_name"></h5>
+            <p class="font_main" ng-bind="data.im_messages[contact.contact_user.id].text"></p>
+        </div>
+    </li>
+</ul>

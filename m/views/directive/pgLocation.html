@@ -1,0 +1,59 @@
+<div id="country" class="form-group">
+    <select class="form-control"
+            ng-model="pgLocation.id_country" 
+            ng-change="selectCountry()"
+            ng-options="country.code as country.name for (index, country) in countries">
+            <option value="">—{{l('field_country')}}—</option>
+    </select>
+</div>
+<!--Country: {{pgLocation.id_country}}<br/>
+Region: {{pgLocation.id_region}}<br/>
+City: {{pgLocation.id_city}}<br/>-->
+<div id="region" class="form-group" ng-if="pgLocation.id_country">
+    <input type="text" class="form-control dropdown-toggle" placeholder="{{l('field_region')}}"
+           ng-click="selectRegion(true); showRegions=true;" 
+           ng-model="autocomplete.region">
+
+    <select size="5" class="form-control"
+            ng-model="pgLocation.id_region" 
+            ng-show="showRegions && regions.length" 
+            ng-change="selectRegion(); selectCity(true);showRegions=false;"
+            ng-options="region.id as region.name for (index, region) in regions | filter:autocomplete.region">
+        <option value="">—{{l('field_region')}}—</option>
+    </select>
+</div>
+<div id="city" class="form-group" ng-if="pgLocation.id_region">
+    <input type="text" class="form-control dropdown-toggle" placeholder="{{l('field_city')}}"
+           ng-model="autocomplete.city"
+           ng-click="selectCity(true); showCities=true;" 
+           ng-change="searchCity()">
+    <select size="5" class="form-control" 
+            ng-change="selectCity(); showCities=false;"
+            ng-model="pgLocation.id_city" 
+            ng-show="showCities && cities.length" 
+            ng-options="city.id as city.name for (index, city) in cities | filter:autocomplete.city">
+        <option value="">—{{l('field_city')}}—</option>
+    </select>
+</div>
+
+<!--<b ng-bind="l('field_location')"></b>
+<div id="country" class="form-group">
+    <select ng-model="pgLocation.id_country" ng-change="selectCountry(); selectRegion(); selectCity()" class="form-control"
+                    ng-options="country.code as country.name for (index, country) in countries">
+            <option value="">—{{l('field_country')}}—</option>
+    </select>
+</div>
+<div id="region" class="form-group" ng-if="pgLocation.id_country">
+    <input type="text" class="form-control dropdown-toggle" placeholder="{{l('field_region')}}"
+               ng-click="selectRegion(); selectCity(); showRegions=true;" ng-model="autocomplete.region">
+    <select size="5" ng-click="showRegions=false" ng-show="showRegions && regions.length" class="form-control">
+            <option ng-click="selectRegion(region)" ng-repeat="region in regions | filter:autocomplete.region" ng-bind="region.name"></option>
+    </select>
+</div>
+<div id="city" class="form-group" ng-if="pgLocation.id_region">
+	<input type="text" class="form-control dropdown-toggle" placeholder="{{l('field_city')}}"
+		   ng-click="selectCity(); showCities=true;" ng-model="autocomplete.city">
+	<select size="5" ng-click="showCities=false" ng-show="showCities && cities.length" class="form-control">
+		<option ng-click="selectCity(city)" ng-repeat="city in cities | filter:autocomplete.city" ng-bind="city.name"></option>
+	</select>
+</div>-->

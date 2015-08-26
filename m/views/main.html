@@ -1,0 +1,27 @@
+<ul class="nav nav-pills nav-stacked">
+    <li class="pointer" ng-click="go('im', true)">
+        <span ng-bind="l('messages')"></span>
+        <span class="badge" ng-if="indicators['new_messages']" ng-bind="indicators['new_messages']"></span>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li class="pointer" ng-click="go('friends', true)">
+        <span ng-bind="l('friends')"></span>
+        <span class="badge" ng-if="indicators['new_friends']" ng-bind="indicators['new_friends']"></span>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li class="pointer" ng-click="go('search', true)">
+        <span ng-bind="l('search')"></span>
+        <i class="fa fa-angle-right"></i>
+    </li>
+    <li class="pointer" ng-click="go('settings', true)">
+        <span ng-bind="l('settings')"></span>
+        <i class="fa fa-angle-right"></i>
+    </li>
+</ul>
+<div ng-if="users.length">
+	<div class="inter">
+		<b ng-bind="l('new_members')"></b>
+		<span ng-click="go('search/new', true)" class="btn-link text-muted pull-right"><span ng-bind="l('view_more')"></span> <i class="fa fa-chevron-right small"></i></span>
+	</div>
+	<div ng-include="'views/search/list.html'"></div>
+</div>

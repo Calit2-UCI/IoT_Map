@@ -1,0 +1,67 @@
+[class^="fa-"]:before, [class*=" fa-"]:before {
+	content:"";
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+}
+
+.fa-pencil:before {
+	background-image: url('../fonts/fa-png/white/pencil.png');
+}
+.fa-check:before {
+	background-image: url('../fonts/fa-png/white/check.png');
+}
+.fa-search:before {
+	background-image: url('../fonts/fa-png/white/search.png');
+}
+.fa-arrow-left:before {
+	background-image: url('../fonts/fa-png/white/arrow-left.png');
+}
+.fa-play:before {
+	background-image: url('../fonts/fa-png/white/caret-right.png');
+}
+.fa-th:before {
+	background-image: url('../fonts/fa-png/white/th.png');
+}
+.fa-comments:before {
+	background-image: url('../fonts/fa-png/white/comments.png');
+}
+.fa-user:before {
+	background-image: url('../fonts/fa-png/white/user.png');
+}
+.fa-users:before {
+	background-image: url('../fonts/fa-png/white/users.png');
+}
+.fa-camera:before {
+	background-image: url('../fonts/fa-png/white/camera.png');
+}
+.fa-th-large:before {
+	background-image: url('../fonts/fa-png/white/th-large.png');	/*!*/
+}
+.fa-file-text-o:before {
+	background-image: url('../fonts/fa-png/white/file-text-o.png');	/*!*/
+}
+.fa-cog:before {
+	background-image: url('../fonts/fa-png/white/cog.png');
+}
+.fa-bars:before {
+	background-image: url('../fonts/fa-png/white/bars.png');	/*!*/
+}
+.fa-trash:before {
+	background-image: url('../fonts/fa-png/white/trash-o.png');	/*!*/
+}
+.fa-plus-circle:before {
+	background-image: url('../fonts/fa-png/white/plus.png');
+}
+.fa-angle-right:before {
+	background-image: url('../fonts/fa-png/white/angle-right.png');
+}
+.fa-chevron-right:before {
+	background-image: url('../fonts/fa-png/white/chevron-right.png');
+}
+.fa-calendar:before {
+	background-image: url('../fonts/fa-png/white/building-o.png');
+}

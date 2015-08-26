@@ -1,0 +1,15 @@
+<div id="im">
+    <div class="panel-body msg col-xs-12" ng-repeat="msg in data.msg| orderBy:'date_add'">
+        <div class="text-center"><time class="text-muted" ng-bind="msg.date_add"></time></div>
+        <img class="pull-left clearfix" ng-click="go('profile/' + contact.id, true)"
+             ng-show="msg.dir === 'i'" ng-src="{{contact.media.user_logo.thumbs.small}}" alt="">
+        <div class="bubble bubble_{{msg.dir}}" ng-bind-html="msg.text"></div>
+    </div>
+    <div ng-if="contact" class="col-xs-12 input-group">
+        <!--<input type="text" ng-model="text" class="form-control" >-->
+		<textarea msd-elastic cols="40" ng-model="im.text" rows="1" class="form-control"></textarea>
+		<span class="input-group-btn btn-send">
+			<button ng-click="send()" class="btn btn-primary" type="button"><i class="fa fa-arrow-right"></i></button>
+		</span>
+    </div>
+</div>

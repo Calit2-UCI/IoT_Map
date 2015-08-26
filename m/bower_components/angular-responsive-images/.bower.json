@@ -1,0 +1,30 @@
+{
+  "name": "angular-responsive-images",
+  "version": "0.0.4",
+  "main": [
+    "dist/angular-responsive-images.js",
+    "dist/angular-responsive-images.min.js"
+  ],
+  "keywords": [
+    "angular",
+    "responsive",
+    "images",
+    "image",
+    "mobile",
+    "directive"
+  ],
+  "dependencies": {
+    "angular": ">= 1.0.6"
+  },
+  "homepage": "https://github.com/c0bra/angular-responsive-images",
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.4",
+    "commit": "4de899ccc23f5350e5d5e2778f3c7c8803209770"
+  },
+  "_source": "git://github.com/c0bra/angular-responsive-images.git",
+  "_target": "~0.0.4",
+  "_originalSource": "angular-responsive-images",
+  "_direct": true
+}

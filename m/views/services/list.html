@@ -1,0 +1,35 @@
+<div ng-if="$parent.packages" class="inter">
+	<b ng-bind="l('packages')"></b>
+</div>
+<div ng-if="$parent.packages">
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-click="go('/services/view_package/' + package.gid, true)" ng-repeat="package in $parent.packages">
+			<span ng-bind="package.name"></span> <span class="text-muted">(<span ng-bind="package.price|cur"></span>)</span>
+			<div class="text-muted small">
+				<div><span ng-bind="l('package_available_days')"></span>: <span ng-bind="package.available_days"></span></div>
+				<div ng-bind="package.description"></div>
+				<div ng-repeat="data_admin in package.template.data_admin_array">
+					<span ng-bind="data_admin.name"></span>: <span ng-bind="package.data_admin[data_admin.gid]"></span>
+				</div>
+			</div>
+			<i class="fa fa-angle-right"></i>
+		</li>
+	</ul>
+</div>
+<div ng-if="$parent.services" class="inter">
+	<b ng-bind="l('services')"></b>
+</div>
+<div ng-if="$parent.services">
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-click="go('/services/view_service/' + service.gid, true)" ng-repeat="service in $parent.services">
+			<span ng-bind="service.name"></span> <span class="text-muted">(<span ng-bind="service.price|cur"></span>)</span>
+			<div class="text-muted small">
+				<div ng-bind="service.description"></div>
+				<div ng-repeat="data_admin in service.template.data_admin_array">
+					<span ng-bind="data_admin.name"></span>: <span ng-bind="service.data_admin[data_admin.gid]"></span>
+				</div>
+			</div>
+			<i class="fa fa-angle-right"></i>
+		</li>
+	</ul>
+</div>

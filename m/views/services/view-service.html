@@ -1,0 +1,43 @@
+<div class="inter">
+	<b ng-bind="service.name"></b>
+</div>
+<div class="view-fields">
+	<div class="row wells">
+		<div ng-if="service.template.data_admin_array" class="col-xs-6">
+			<div class="well well-sm text-center">
+				<div ng-repeat="data_admin in service.template.data_admin_array">
+					<p class="h5" ng-bind="data_admin.name"></p>
+					<p><span ng-bind="service.data_admin[data_admin.gid]"></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-{{service.template.data_admin_array ? 6 : 12}}">
+			<div class="well well-sm text-center">
+				<p class="h5" ng-bind="l('services_cost')"></p>
+				<p><span ng-show="service.price" ng-bind="service.price|cur"></span></p>
+			</div>
+		</div>
+	</div>
+	<div ng-if="service.price < $parent.user.account" class="form-group">
+		<span ng-bind="l('services_activate_now')"></span>
+		<toggle-switch class="pull-right" on-label="On" off-label="Off" model="form.activate"><toggle-switch>
+		<div class="form-group btn-group pull-right">
+			<button type="button" class="btn text-muted" ng-click="activateClicked(true)"
+					ng-class="{'btn-success': true === form.activate}">&nbsp;l&nbsp;</button>
+			<button type="button" class="btn text-muted" ng-click="activateClicked(false)"
+					ng-class="{'btn-success': false === form.activate}">0</button>
+		</div>
+	</div>
+	<div class="form-group">
+		<div ng-if="service.price > $parent.user.account">
+			<p ng-bind="l('services_not_enough_money')"></p>
+			<p class="col-xs-12 text-center" ng-show="device!='iosDevice'" ng-cloak>
+				<a class="underline" ng-bind="l('services_add_money')"
+				   target="blank" href="{{apd.data.services_add_money}}"></a>
+			</p>
+		</div>
+		<button ng-if="service.price <= $parent.user.account" type="button"
+				ng-click="writeOff()" ng-bind="l('services_btn_pay')"
+				class="btn-lg btn-default col-xs-12 text-muted"></button>
+	</div>
+</div>

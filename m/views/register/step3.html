@@ -1,0 +1,32 @@
+<form class="view-fields" role="form" name="registerForm" ng-submit="submit()">
+	<b ng-bind="l('field_looking_for')"></b>
+	<div class="form-group">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary btn-lg" ng-click="$parent.regData.looking_user_type = id"
+					ng-repeat="(id, userType) in userTypes.option track by id"
+					ng-class="{'active': id == $parent.regData.looking_user_type}" ng-bind="userType"></button>
+		</div>
+	</div>
+	<b ng-bind="l('field_age_range')"></b>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="form-group" ng-class="{'has-error': errors.min_age}">
+				<input popover="{{alerts.min_age||''}}" autocomplete="off" class="form-control"
+					   placeholder="{{l('field_age_from')}}" type="number" min="{{age.min}}" max="{{$parent.regData.age_max}}"
+					   ng-model="$parent.regData.age_min"/>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<input popover="{{alerts.max_age}}" autocomplete="off" class="form-control"
+					   placeholder="{{l('field_age_to')}}" type="number" min="{{$parent.regData.age_min}}" max="{{age.max}}"
+					   ng-model="$parent.regData.age_max" />
+			</div>
+		</div>
+	</div>
+        <b ng-bind="l('field_my_location')"></b>
+	<div pg-location="$parent.regData"></div>
+	<div class="form-group">
+		<button type="submit" class="col-xs-12 btn btn-primary btn-lg" ng-bind="l('btn_finish_reg')"></button>
+	</div>
+</form>

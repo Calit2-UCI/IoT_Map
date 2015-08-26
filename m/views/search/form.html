@@ -1,0 +1,37 @@
+<form class="col-xs-12" role="form" name="searchForm" ng-submit="search()">
+	<b ng-bind="l('field_looking_for')"></b>
+	<div class="form-group">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary" ng-click="userTypeClicked(id)"
+					ng-repeat="(id, userType) in userTypes.option track by id"
+					ng-class="{'active': id === form.user_type}" ng-bind="userType"></button>
+		</div>
+	</div>
+	<b ng-bind="l('field_age_range')"></b>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="form-group" ng-class="{'has-error': errors.minAge}">
+				<input popover="{{alerts.minAge||''}}" autocomplete="off" class="form-control"
+					   placeholder="{{age.proposedMin}}" type="number" min="{{age.min}}" max="{{form.age_max}}"
+					   ng-model="form.age_min" required />
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="form-group">
+				<input popover="{{alerts.maxAge}}" autocomplete="off" class="form-control"
+					   placeholder="{{age.proposedMax}}" type="number" min="{{form.age_min}}" max="{{age.max}}"
+					   ng-model="form.age_max" required />
+			</div>
+		</div>
+	</div>
+        <b ng-bind="l('field_location')"></b>
+	<div pg-location="form"></div>
+	<div class="form-group">
+		<span ng-bind="l('online_now')"></span>
+		<toggle-switch class="pull-right" on-label="{{l('btn_on')}}" off-label="{{l('btn_off')}}" model="form.online_status"><toggle-switch>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="col-xs-12 btn btn-primary "
+				ng-disabled="isSearchDisabled()" ng-bind="l('btn_search')"></button>
+	</div>
+</form>

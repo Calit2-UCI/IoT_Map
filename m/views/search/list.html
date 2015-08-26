@@ -1,0 +1,24 @@
+<div infinite-scroll="loadPage()" infinite-scroll-distance="1" infinite-scroll-immediate-check="true"
+     class="infinite-scroll user-list col-xs-12" ng-if="users.length">
+    <div class="item col-xs-12 col-ms-6 col-sm-4 col-lg-3"
+         ng-repeat="(id, user) in users track by id">
+        <div class="pointer view-fields" ng-click="go('profile/' + user.id, true)">
+            <div>
+                <span class="user-name" ng-bind="user.nickname"></span>,
+                <span class="text-muted" ng-bind="user.age"></span>
+            </div>
+            <div class="text-muted small" ng-bind="user.location"></div>
+            <div class="image-container">
+                <!--bh-src-responsive="[['(min-width: 10px)', '{{user.media.user_logo.thumbs.great}}'], ['(min-width: 305px)', '{{user.media.user_logo.thumbs.great}}' ], ['(min-width: 765px)', '{{user.media.user_logo.thumbs.great}}' ]]"-->
+                <div ng-if="mediaCount[user.id]" ng-click="go('gallery/' + user.id); $event.stopPropagation();" class="photos-count">
+                    <i class="fa fa-camera"></i><span ng-if="mediaCount" ng-bind="mediaCount[user.id]"></span>
+                </div>
+                <img class="img" alt="{{l('text_photo')}}" title="{{user.output_name}}"
+                     ng-src="{{user.media.user_logo.thumbs.great}}">
+            </div>
+            <div class="text-muted small">
+                <span ng-bind="l('last_seen')"></span>: <time ng-bind="user.date_last_activity"></time>
+            </div>
+        </div>
+    </div>
+</div>

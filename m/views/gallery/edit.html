@@ -1,0 +1,28 @@
+<form class="view-fields" role="form" name="mediaForm" ng-submit="submit()">
+	<div class="form-group text-center">
+		<div ng-if="'gallery_video'!==media_type">
+			<div ng-click="form.multiUpload=null" ng-if="form.multiUpload" ng-thumb="{file:form.multiUpload, height:100}"></div>
+			<div ng-if="!form.multiUpload && !preview" class="default-avatar btn-file fa fa-user">
+				<span class="fa fa-plus-circle"></span>
+				<input type="file" accept="image/*;capture=camera" class="form-control" ng-file-select="fileSelect($files)">
+			</div>
+		</div>
+		<img ng-if="preview" ng-src="{{preview}}">
+	</div>
+	<b ng-bind="l('gallery_field_access_' + media_type) + '*'"></b>
+	<div class="radio" ng-repeat="(id, access) in accesses">
+		<label>
+			<input type="radio" name="access" ng-model="form.permissions" value="{{id}}" required>
+			<span ng-bind="access"></span>
+		</label>
+	</div>
+	<b ng-bind="l('gallery_field_description_' + media_type)"></b>
+	<div id="nickname" class="form-group">
+		<input type="text" autocomplete="off" class="form-control" placeholder=""
+			   ng-model="form.description"/>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="col-xs-12 btn btn-primary btn-lg"
+				ng-disabled="isSaveDisabled" ng-bind="l('gallery_btn_save')"></button>
+	</div>
+</form>

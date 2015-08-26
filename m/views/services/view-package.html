@@ -1,0 +1,38 @@
+<div class="inter">
+	<b ng-bind="package.name"></b>
+</div>
+<div ng-if="package.services_list">
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-click="go('services/view_service/' + service.gid, true)" ng-repeat="service in package.services_list">
+			<span class="pull-right small text-muted">
+				<span class="small" ng-if="service.service_count" ng-bind="service.service_count+' x '"></span><span ng-bind="service.price|cur"></span>
+			</span>
+			<span ng-bind="service.name"></span> <span ng-if="service.service_count" ng-bind="'('+service.service_count+')'"></span>
+			<div class="text-muted small">
+				<div ng-repeat="data_admin in service.template.data_admin_array">
+					<span ng-bind="data_admin.name"></span>: <span ng-bind="service.data_admin[data_admin.gid]"></span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="pull-right small">
+				<div class="pull-right text-muted"><del ng-bind="package.totalPrice|cur"></del></div>
+				<div><span class="pull-right total-price" ng-bind-html="package.price|curf"></span></div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="view-fields">
+	<div class="form-group">
+		<div ng-if="package.price > $parent.user.account">
+			<p ng-bind="l('services_not_enough_money')"></p>
+			<p class="col-xs-12 text-center" ng-show="device!='iosDevice'" ng-cloak>
+				<a class="underline" ng-bind="l('services_add_money')"
+				   target="blank" href="{{apd.data.services_add_money}}"></a>
+			</p>
+		</div>
+		<button ng-if="package.price <= $parent.user.account" ng-click="writeOff()"
+				type="button" ng-bind="l('services_btn_pay')"
+				class="btn-lg btn-default col-xs-12 text-muted"></button>
+	</div>
+</div>

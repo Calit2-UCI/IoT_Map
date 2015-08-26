@@ -1,0 +1,51 @@
+<form class="view-fields" role="form" name="registerForm" ng-submit="submit()">
+	<div class="form-group">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary btn-lg"
+					ng-click="$parent.regData.user_type = id"
+					ng-repeat="(id, userType) in userTypes.option track by id"
+					ng-class="{'active': id === $parent.regData.user_type}"
+					ng-bind="userType"></button>
+		</div>
+	</div>
+	<div id="nickname" class="form-group" ng-class="{'has-error': alerts.nickname}">
+		<label ng-bind="l('field_nickname')"></label>
+		<input type="text" autocomplete="off"
+			   placeholder="{{l('field_nickname')}}" class="form-control"
+			   ng-model="$parent.regData.nickname" required/>
+	</div>
+	<div id="email" class="form-group" ng-class="{'has-error': alerts.email}">
+		<label ng-bind="l('field_email')"></label>
+		<input autocomplete="off" class="form-control"
+			   placeholder="{{l('field_email')}}" type="email"
+			   ng-model="$parent.regData.email" required/>
+	</div>
+	<div id="password" class="form-group" ng-class="{'has-error': alerts.password}">
+		<label ng-bind="l('field_password')"></label>
+		<input type="password" autocomplete="off"
+			   placeholder="{{l('field_password')}}" class="form-control"
+			   ng-model="$parent.regData.password" required/>
+	</div>
+	<div id="birthday" class="form-group" ng-class="{'has-error': alerts.birthDay}">
+		<label ng-bind="l('field_bd')"></label>
+		<div class="datepicker" ng-class="{'opened': bdIsOpen}">
+			<input type="text" class="form-control" ng-model="$parent.regData.birth_date"
+				   datepicker-popup="{{dateFormat}}" is-open="bdIsOpen"
+				   min="date.min" max="date.max" datepicker-options="dateOptions"
+				   date-disabled="disabled(date, mode)" ng-required="true"
+				   show-weeks="false" close-text="close"
+				   autocomplete="off" required>
+			<i class="fa fa-calendar pull-right"></i>
+		</div>
+	</div>
+	<div id="agreed" class="form-group checkbox" ng-class="{'has-error': alerts.agreed}">
+		<label>
+			<input type="checkbox" ng-model="$parent.regData.confirmation" required/>
+			<span ng-click="showTerms()" ng-bind-html="l('agree')"></span>
+		</label>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="col-xs-12 btn btn-primary btn-lg"
+				ng-disabled="checkForm()" ng-bind="l('btn_next')"></button>
+	</div>
+</form>

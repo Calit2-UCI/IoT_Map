@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked">
+	<li ng-click="setLang(id)" ng-if="lang.status" ng-repeat="(id, lang) in langs track by id">
+		<span ng-bind="lang.name"></span> <i ng-if="lang.id===apd.lang.id" class="fa fa-circle"></i>
+	</li>
+</ul>

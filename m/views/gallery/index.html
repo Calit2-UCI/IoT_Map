@@ -1,0 +1,38 @@
+<input ng-file-select="fileSelect($files)" ng-hide=true 
+	   file-dialog="fileDialog" id="frm-img" type="file" accept="image/*;capture=camera">
+<div ng-if="!carousel" class="media-list">
+	<div class="image-container" ng-click="setSlider(id)" ng-repeat="(id, item) in media">
+		<img ng-if="item.upload_gid === 'gallery_image'" ng-src="{{item.media.mediafile.thumbs.middle}}" alt="">
+		<img ng-if="item.upload_gid === 'gallery_video'" ng-src="{{item.video_content.thumbs.middle}}" alt="">
+	</div>
+</div>
+<div ng-show="carousel">
+	<div pg-blink="showHeart" show-duration="200" hide-duration="400" class="fullscreen">
+		<i class="content fa fa-heart"></i>
+	</div>
+	<ul id="slider" rn-carousel="true" rn-carousel-index="slideIndex" rn-carousel-control="true">
+		<li class="col-xs-12" ng-repeat="item in media"
+			ng-style="item.media.mediafile.thumbs.grand?{'background-image': 'url(' + item.media.mediafile.thumbs.grand + ')'}:{}">
+			<videogular ng-if="item.upload_gid == 'gallery_video'" 
+						vg-player-ready="onPlayerReady"
+						vg-error="onPlayerError"
+						vg-theme="bower_components/videogular-themes-default/videogular.css">
+				<vg-video vg-src="videogularSources[item.id]" 
+						  vg-native-controls="true">
+				</vg-video>
+			</videogular>
+			<div ng-dblclick="like(item.likes.id, !item.likes.has_mine)" class="col-xs-12 like-area"></div>
+			<footer class="col-xs-12 row">
+				<div class="descr small">
+					<span ng-bind="user.nickname"></span>
+					<time ng-bind="item.date_add_ts*1000 | date:'dd MMMM, yyyy'"></time>
+				</div>
+				<a class="like col-xs-4 col-sm-2 col-sm-offset-2 col-md-offset-3 text-center" 
+				   href="javascript:void(0);" ng-click="like(item.likes.id, !item.likes.has_mine)">
+					<i class="fa" ng-class="item.likes.has_mine ? 'fa-heart' : 'fa-heart-o'"></i>
+					<span ng-bind='item.likes.count'></span>
+				</a>
+			</footer>
+		</li>
+	</ul>
+</div>

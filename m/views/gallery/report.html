@@ -1,0 +1,18 @@
+<form class="view-fields" role="form" name="reportForm" ng-submit="Layout.modal.scope.reportSubmit()">
+	<div class="form-group">
+		<label class="col-xs-12">
+			<span ng-bind="Layout.modal.scope.reportReasons.header"></span>
+			<select ng-model="Layout.modal.scope.reportReason" class="form-control">
+				<option value="{{key}}" 
+						ng-repeat="key in keys(Layout.modal.scope.reportReasons.option)"
+						ng-bind="Layout.modal.scope.reportReasons.option[key]"></option>
+			</select>
+		</label>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-12">
+			<span ng-bind="l('message')"></span>
+			<textarea ng-model="Layout.modal.scope.reportComment" class="form-control"></textarea>
+		</label>
+	</div>
+</form>

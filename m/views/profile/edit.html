@@ -1,0 +1,147 @@
+<form class="col-xs-12 view-fields" ng-submit="save()">
+    <div ng-if="'personal' === section">
+        <div ng-if="notEditable.indexOf('user_type') === - 1">
+            <b ng-bind="l('field_im')"></b>
+            <div class="form-group">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-lg"
+                            ng-click="formData.user_type = id"
+                            ng-repeat="(id, userType) in userTypes.option track by id"
+                            ng-class="{'active': id === formData.user_type}"
+                            ng-bind="userType"></button>
+                </div>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('looking_user_type') === - 1">
+            <b ng-bind="l('field_looking_for')"></b>
+            <div class="form-group">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-lg"
+                            ng-click="formData.looking_user_type = id"
+                            ng-repeat="(id, userType) in userTypes.option track by id"
+                            ng-class="{'active': id === formData.looking_user_type}"
+                            ng-bind="userType"></button>
+                </div>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('partner_age') === - 1">
+            <b ng-bind="l('field_partner_age')"></b>
+            <div class="form-group">
+                <div class="col-xs-6">
+                    <div class="form-group" ng-class="{'has-error': errors.age_min}">
+                        <input popover="{{alerts.age_min}}" autocomplete="off" class="form-control"
+                               placeholder="{{age.proposedMin}}" type="number" min="{{age.min}}" max="{{formData.age_max}}"
+                               ng-model="formData.age_min"/>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input popover="{{alerts.age_max}}" autocomplete="off" class="form-control"
+                               placeholder="{{age.proposedMax}}" type="number" min="{{formData.age_min}}" max="{{age.max}}"
+                               ng-model="formData.age_max" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('nickname') === - 1">
+            <b ng-bind="l('field_nickname')"></b>
+            <div id="nickname" class="form-group" ng-class="{'has-error': alerts.nickname}">
+                <input popover="{{alerts.nickname}}" type="text" autocomplete="off"
+                       placeholder="{{l('field_nickname')}}" class="form-control"
+                       ng-model="formData.nickname" required/>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('fname') === - 1">
+            <b ng-bind="l('field_fname')"></b>
+            <div id="fname" class="form-group" ng-class="{'has-error': alerts.fname}">
+                <input popover="{{alerts.fname}}" autocomplete="off" class="form-control"
+                       placeholder="{{l('field_fname')}}" type="text"
+                       ng-model="formData.fname"/>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('sname') === - 1">
+            <b ng-bind="l('field_sname')"></b>
+            <div id="sname" class="form-group" ng-class="{'has-error': alerts.sname}">
+                <input popover="{{alerts.sname}}" autocomplete="off" class="form-control"
+                       placeholder="{{l('field_sname')}}" type="text"
+                       ng-model="formData.sname"/>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('user_icon') === - 1">
+            <b ng-bind="l('field_icon')"></b>
+            <div id="user_icon" class="form-group" ng-class="{'has-error': alerts.user_icon}">
+                <!-- <preview> -->
+                <div ng-if="formData.user_icon" class="btn-file">
+                    <div ng-thumb="{file:formData.user_icon, height:100}"></div>
+                    <input type="file" accept="image/*;capture=camera" class="form-control" 
+                           ng-file-select="fileSelect($files)">
+                </div>
+                <!-- </preview> -->
+                <!-- <user logo> -->
+                <div ng-if="userLogo && !formData.user_icon" class="btn-file">
+                    <img ng-src="{{userLogo}}">
+                    <input type="file" accept="image/*;capture=camera" class="form-control" 
+                           ng-file-select="fileSelect($files)">
+                </div>
+                <!-- </user logo> -->
+                <!-- <default> -->
+                <div ng-if="!userLogo && !formData.user_icon" 
+                     class="text-center default-avatar btn-file fa fa-user">
+                    <span class="fa fa-plus-circle"></span>
+                    <input type="file" accept="image/*;capture=camera" class="form-control" 
+                           ng-file-select="fileSelect($files)">
+                </div>
+                <!-- </default> -->
+                <input type="checkbox" ng-model="formData.user_icon_delete" value="1" id="uichb">
+                <label for="uichb" ng-bind="l('btn_delete')"></label>
+            </div>
+        </div>
+        <div ng-if="notEditable.indexOf('birth_date') === - 1">
+            <b ng-bind="l('field_bd')"></b>
+            <div id="birthday" class="form-group" ng-class="{'has-error': alerts.birthDay}">
+                <div class="datepicker" ng-class="{'opened': bdIsOpen}">
+                    <input type="text" class="form-control" ng-model="formData.birth_date"
+                           datepicker-popup="{{dateFormat}}" is-open="bdIsOpen"
+                           min="date.min" max="date.max" datepicker-options="dateOptions"
+                           date-disabled="disabled(date, mode)" ng-required="true"
+                           show-weeks="false" close-text="close"
+                           autocomplete="off" required>
+                    <i class="icon-calendar pull-right"></i>
+                </div>
+            </div>
+        </div>
+        <b ng-bind="l('field_my_location')"></b>
+        <div pg-location="location"></div>
+    </div>
+    <div ng-if="'personal' !== section">
+        <div ng-class="{'has-error': alerts[field.field_name]}" 
+             ng-repeat="field in fieldsData" 
+             ng-switch on="field.field_type">
+            <div class="text-muted"><span ng-bind="field.name"></span>:</div>
+            <div ng-switch-when="select" class="form-group">
+                <select ng-model="formData[field.field_name]" class="form-control">
+                    <option value="0">...</option>
+                    <option value="{{key}}" title="{{key}}" 
+                            ng-repeat="key in keys(field.options.option)"
+                            ng-selected="key === field.value" 
+                            ng-bind="field.options.option[key]"></option>
+                </select>
+            </div>
+            <div ng-switch-when="multiselect" class="form-group">
+                <select multiple ng-model="formData[field.field_name]" class="form-control">
+                    <option value="{{key}}" title="{{key}}" 
+                            ng-repeat="key in keys(field.options.option)"
+                            ng-selected="field.value.has(key)"
+                            ng-bind="field.options.option[key]"></option>
+                </select>
+            </div>
+            <div ng-switch-when="textarea" class="form-group">
+                <textarea class="form-control" ng-model="formData[field.field_name]"></textarea>
+            </div>
+            <div ng-switch-default ng-bind="field.field_type"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="col-xs-12 btn btn-primary btn-lg" ng-bind="l('btn_save')"></button>
+    </div>
+</form>

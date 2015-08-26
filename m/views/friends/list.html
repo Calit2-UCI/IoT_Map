@@ -1,0 +1,19 @@
+<ul class="friends nav nav-pills nav-stacked">
+    <li ng-repeat="friend in requests.concat(friends)"
+        ng-show="removeIds.indexOf(friend.id_dest_user) === -1"
+        ng-click="editMode || (!!friend.user.id && go('profile/' + friend.user.id, true))"
+        ng-class="{'highlight': '1' !== friend.status}">
+        <div class="image-container">
+            <img ng-src="{{friend.user.media.user_logo.thumbs.middle}}" alt="{{friend.user.output_name}}" class="pull-left span2 clearfix">
+        </div>
+        <div class="info">
+            <div ng-if="editMode && friend.status === '1'" class="btn-delete pull-right">
+                <a ng-click="toRemove(friend.id_dest_user)" class="fa fa-trash-o fa-2x"></a>
+            </div>
+            <div ng-bind="friend.user.output_name"></div>
+            <small class="text-muted">
+                <span ng-bind="l('last_seen')"></span>:&nbsp;<time class="date font_main" ng-bind="friend.date_update"></time>
+            </small>
+        </div>
+    </li>
+</ul>

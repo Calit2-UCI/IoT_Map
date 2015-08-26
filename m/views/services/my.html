@@ -1,0 +1,40 @@
+<div ng-if="$parent.myPackages">
+	<div ng-if="package.user_services" ng-repeat="package in $parent.myPackages">
+		<div class="inter">
+			<b class="small" ng-bind="package.package_info.name"></b>
+			<span ng-bind="l('services_activate_until', {'days': ngFilter('pgDate')(package.till_date_ts, 'daysLeft')})"
+				  class="pull-right text-muted"></span>
+		</div>
+		<ul class="nav nav-pills nav-stacked">
+			<li ng-repeat="service in package.user_services">
+				<button type="button" class="pull-right btn btn-default"
+						ng-if="service.is_active"
+						ng-click="confirmActivation(service.id, service.service_gid)"
+						ng-bind="l('services_activate')"></button>
+				<i ng-if="!service.is_active" class="pull-right fa fa-check"></i>
+				<span ng-bind="service.name"></span>
+				<div class="text-muted small">
+					<div ng-bind="service.description"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div ng-if="$parent.myServices" class="inter">
+	<b ng-bind="l('services')"></b>
+</div>
+<div ng-if="$parent.myServices">
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-repeat="service in $parent.myServices">
+			<button type="button" class="pull-right btn btn-default"
+					ng-if="service.is_active"
+					ng-click="confirmActivation(service.id, service.service_gid)"
+					ng-bind="l('services_activate')"></button>
+			<i ng-if="!service.is_active" class="pull-right fa fa-check"></i>
+			<span ng-bind="service.name"></span>
+			<div class="text-muted">
+				<div ng-bind="service.description"></div>
+			</div>
+		</li>
+	</ul>
+</div>

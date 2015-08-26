@@ -1,0 +1,11 @@
+<div ng-hide="showRestoreForm">
+	<form role="form" name="confirmForm" ng-submit="confirm()">
+		<div class="form-group">
+			<label ng-bind="l('confirmation_code')"></label>
+			<input autocomplete="off" placeholder="{{l('confirmation_code')}}" type="text" class="form-control" ng-model="form.confirmation_code" required/>
+		</div>
+		<p>
+			<button type="submit" class="btn btn-primary btn-lg" ng-bind="l('btn_confirm')"></button>
+		</p>
+	</form>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+	<ul class="nav nav-pills nav-stacked">
+		<li ng-if="apd.isLogged" ng-click="go('/settings/email')">
+			<span ng-bind="l('btn_change_email')"></span> <i class="fa fa-angle-right"></i>
+		</li>
+		<li ng-if="apd.isLogged" ng-click="go('/settings/password')">
+			<span ng-bind="l('btn_change_password')"></span> <i class="fa fa-angle-right"></i>
+		</li>
+		<li ng-click="go('/settings/lang')">
+			<span ng-bind="l('btn_change_lang')"></span> <i class="fa fa-angle-right"></i>
+		</li>
+		<li ng-if="apd.isLogged" ng-controller="LoginCtrl" ng-click="logOff()">
+			<span ng-bind="l('btn_logout')"></span> <i class="fa fa-angle-right"></i>
+		</li>
+	</ul>
+</div>

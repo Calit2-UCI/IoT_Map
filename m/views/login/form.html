@@ -1,0 +1,32 @@
+<div ng-hide="showRestoreForm">
+	<form role="form" name="loginForm" ng-submit="login()">
+		<div class="form-group">
+			<label ng-bind="l('email')"></label>
+			<input autocomplete="off" placeholder="{{l('email')}}" type="text" class="form-control" ng-model="form.email" required/>
+		</div>
+		<div class="form-group">
+			<label ng-bind="l('password')"></label>
+			<input autocomplete="off" placeholder="{{l('password')}}" type="password" class="form-control" ng-model="form.password"  required/>
+		</div>
+		<p>
+		<button type="submit" class="btn btn-primary btn-lg" ng-disabled="isSaveDisabled()" ng-bind="l('btn_login')"></button>
+		</p>
+	</form>
+	<div>
+		<a ng-click="toggleRestoreForm()" href="javascript:void(0);" ng-bind="l('forgot_password')"></a>
+	</div>
+	<div  ng-show="canRegister" ng-cloak>
+		<a ng-click="go('/register')" href="javascript:void(0);" ng-bind="l('sign_up_now')"></a>
+	</div>
+</div>
+<div ng-show="showRestoreForm">
+	<form role="form" name="restoerForm" ng-submit="restore()">
+		<div class="form-group">
+			<span ng-bind="l('text_restore')"></span>
+			<input autocomplete="off" placeholder="{{l('email')}}" type="text" class="form-control" ng-model="restoreForm.email" required/>
+		</div>
+		<p>
+			<button type="submit" class="btn btn-primary btn-lg" ng-disabled="isSendDisabled()" ng-bind="l('btn_send')"></button>
+		</p>
+	</form>
+</div>

@@ -1,0 +1,12 @@
+<div class="inter">
+	<b><span ng-bind="l('services_your_account')"></span> (<span ng-bind="user.account|cur"></span>)</b>
+</div>
+<ul ng-if="apd.data.siteUrl && device!='iosBrowser'" class="nav nav-pills nav-stacked">
+	<li>
+		<a class="underline" target="blank" href="{{apd.data.services_add_money}}">
+			<span ng-bind="l('services_add_money')"></span>
+			<span class="pull-right"><i class="fa fa-chevron-right small "></i></span>
+		</a>
+	</li>
+</ul>
+<div app-view-segment="1"></div>
