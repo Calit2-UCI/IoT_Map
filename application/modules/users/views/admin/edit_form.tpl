@@ -107,9 +107,9 @@
 					{/if}
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" hide>
 				<div class="h">{l i='birth_date' gid='users'}: </div>
-				<div class="v"><input type='text' value='{$$data.birth_date}' name="birth_date" id="datepicker" maxlength="10" class="middle"></div>
+				<div class="v"><input type='text' value='0' name="birth_date" id="datepicker" maxlength="10" class="middle"></div>
 				{js file='jquery-ui.custom.min.js'}
 				<link href='{$site_root}{$js_folder}jquery-ui/jquery-ui.custom.css' rel='stylesheet' type='text/css' media='screen' />
 				<script>{literal}

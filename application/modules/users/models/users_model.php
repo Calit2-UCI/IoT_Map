@@ -104,7 +104,7 @@ class Users_model extends \Model
         'views_count',
     );
     public $fields_register = array(
-        'birth_date',
+        //'birth_date',              // JL commented it for removing the birthday field
         'email',
         'looking_user_type',
         'nickname',
@@ -719,6 +719,7 @@ class Users_model extends \Model
         }
 
         if (!empty($data["birth_date"])) {
+		/*                                      // JL commented for removing the birthday
             $return["data"]["birth_date"] = trim(strip_tags($data["birth_date"]));
             $user_age = date_create($return["data"]["birth_date"])->diff(date_create('today'))->y;
             if ($user_age < $age_min) {
@@ -728,7 +729,9 @@ class Users_model extends \Model
             } else {
                 $return["success"]["birth_date"] = "";
             }
-        }
+        */
+			$return["data"]["birth_date"] = 0;
+		}
 
         if (isset($data["age"])) {
             $return["data"]["age"] = intval($data["age"]);
