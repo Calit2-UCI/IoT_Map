@@ -38,7 +38,7 @@
 						<div class="v"><input type="password" name="repassword"></div>
 					</div>
 				{/if}
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='birth_date' gid='users'}: </div>
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
@@ -76,8 +76,8 @@
 						);
 					});
 				{/literal}</script>
-				{helper func_name='get_user_subscriptions_form' module='subscriptions' func_param='register'}
-				<br>
+				<!--"{helper func_name='get_user_subscriptions_form' module='subscriptions' func_param='register'}"-->
+				<!--br--> <!--remove-->
 				<div class="r">
 					<div class="f">{l i='field_captcha' gid='users'}: </div>
 					<div class="v captcha">{$data.captcha_image} <input type="text" name="captcha_confirmation" value="" maxlength="{$data.captcha_word_length}" /></div>

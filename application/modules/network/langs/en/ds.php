@@ -410,7 +410,7 @@ $install_lang["lang"]["option"]["YO"] = "Yoruba";
 $install_lang["lang"]["option"]["ZH"] = "Chinese";
 $install_lang["lang"]["option"]["ZU"] = "Zulu";
 
-$install_lang["looking_user_type"]["header"] = "Looking for";
+$install_lang["looking_user_type"]["header"] = "Interested in";
 $install_lang["looking_user_type"]["option"]["all"] = "All";
 $install_lang["looking_user_type"]["option"]["female"] = "Female";
 $install_lang["looking_user_type"]["option"]["male"] = "Male";

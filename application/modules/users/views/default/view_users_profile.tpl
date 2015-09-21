@@ -14,13 +14,13 @@
 	</div>
 	{/if}
 	{if $data.age_min}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_partner_age' gid='users'} {l i='from' gid='users'}:</div>
 		<div class="v">{$data.age_min}</div>
 	</div>
 	{/if}
 	{if $data.age_max}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_partner_age' gid='users'} {l i='to' gid='users'}:</div>
 		<div class="v">{$data.age_max}</div>
 	</div>
@@ -41,7 +41,7 @@
 			<div class="v">{$data.sname}</div>
 		</div>
 	{/if}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='birth_date' gid='users'}:</div>
 		<div class="v">{$data.birth_date}</div>
 	</div>

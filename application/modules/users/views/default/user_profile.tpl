@@ -16,9 +16,12 @@
 				<span style="font-size:30px;line-height:28px;">{$data.output_name}</span>
 				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span>
 			</h1>
+			<!--remove age-->
 			<div>
 				<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
-				{l i='field_age' gid='users'}: {$data.age}{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
+				<!--remove age-->
+				<!--{l i='field_age' gid='users'}: {$data.age}-->
+				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>
 		</div>
 		<div class="actions noPrint">

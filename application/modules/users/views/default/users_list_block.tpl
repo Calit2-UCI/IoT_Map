@@ -48,7 +48,8 @@
 						<div class="photo">
 							<a href="{seolink module='users' method='view' data=$item}"><img src="{$item.media.user_logo.thumbs.great}" alt="{$text_user_logo}" title="{$text_user_logo}" /></a>
 							<div class="info">
-								<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div>
+								<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
+								<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a></div>
 								{if $item.location}<div class="text-overflow">{$item.location}</div>{/if}
 							</div>
 						</div>

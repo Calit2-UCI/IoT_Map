@@ -20,7 +20,8 @@
 						{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$item}
 						<a href="{seolink module='users' method='view' data=$item}"><img alt="{$text_user_logo}" title="{$text_user_logo}" src="{$item.media.user_logo.thumbs[$thumb_name]}" /></a>
 						<div class="info">
-							<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a>, {$item.age}</div>
+							<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
+							<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a></div>
 							{if $item.location}<div class="text-overflow" title="{$item.location|escape}">{$item.location}</div>{/if}
 						</div>
 					</div>

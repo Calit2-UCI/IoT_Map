@@ -48,9 +48,9 @@
 					</select>
 				</div>
 			</div>
-			<div class="row">
-				<div class="h">{l i='field_partner_age' gid='users'}: </div>
-				<div class="v">
+			<div class="row hide">
+				<div class="h hide">{l i='field_partner_age' gid='users'}: </div>
+				<div class="v hide">
 					{l i='from' gid='users'}
 					<select name="age_min" class="short">
 						{foreach from=$age_range item=age}
@@ -107,7 +107,7 @@
 					{/if}
 				</div>
 			</div>
-			<div class="row" hide>
+			<div class="row hide">
 				<div class="h">{l i='birth_date' gid='users'}: </div>
 				<div class="v"><input type='text' value='0' name="birth_date" id="datepicker" maxlength="10" class="middle"></div>
 				{js file='jquery-ui.custom.min.js'}

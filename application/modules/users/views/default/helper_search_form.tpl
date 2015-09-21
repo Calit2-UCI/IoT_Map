@@ -19,10 +19,7 @@
 					</div>
 					<div class="table">
 						<div class="search-fields">
-							<div class="search-field age">
-								<span class="inline vmiddle">{l i='field_age' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_min' id='age_min' value=$age_range selected=$data.age_min}</div>
-								&nbsp;-&nbsp;<div class="ib vmiddle">{selectbox input='age_max' id='age_max' value=$age_range selected=$data.age_max}</div>
-							</div>
+							<!--remove search age-->
 							<div class="search-field country">
 								{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}
 							</div>
@@ -55,12 +52,14 @@
 						<div class="search-field">
 							{selectbox input='user_type' id='looking_user_type' value=$user_types.option selected=$data.user_type default=$all_select_lang}
 						</div>
-						<div class="search-field age">
-							<div>
-								<span class="inline vmiddle">{l i='field_age' gid='users'}&nbsp;{l i='from' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_min' id='age_min' value=$age_range selected=$data.age_min}</div>
-								<span class="inline vmiddle">&nbsp;{l i='to' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_max' id='age_max' value=$age_range selected=$data.age_max}</div>
-							</div>
-						</div>
+						<!--remove search age-->
+						<!--div class="search-field age"-->
+							<!--div-->
+								<!--span class="inline vmiddle">{l i='field_age' gid='users'}&nbsp;{l i='from' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_min' id='age_min' value=$age_range selected=$data.age_min}</div-->
+								<!--span class="inline vmiddle">&nbsp;{l i='to' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_max' id='age_max' value=$age_range selected=$data.age_max}</div-->
+							<!--/div-->
+						<!--/div-->
+						<!---->
 						<div class="search-field country">
 							{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}
 						</div>

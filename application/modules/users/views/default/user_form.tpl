@@ -23,9 +23,9 @@
 				</div>
 			{/if}
 			{if !$not_editable_fields.age_min && !$not_editable_fields.age_max}
-				<div class="r">
-					<div class="f">{l i='field_partner_age' gid='users'}: </div>
-					<div class="v">
+				<div class="r hide">
+					<div class="f hide">{l i='field_partner_age' gid='users'}: </div>
+					<div class="v hide">
 						{if !$not_editable_fields.age_min}
 							{l i='from' gid='users'}&nbsp;
 							<select name="age_min" class="short">
@@ -79,7 +79,7 @@
 				</div>
 			</div>
 			{if !$not_editable_fields.birth_date}
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='birth_date' gid='users'}: </div>
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>

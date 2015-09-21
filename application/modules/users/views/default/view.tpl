@@ -16,7 +16,10 @@
 				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span></h1>
 				<div>
 					<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
-					{l i='field_age' gid='users'}: {$data.age}
+					
+					<!--remove age-->
+					<!--{l i='field_age' gid='users'}: {$data.age}-->
+					
 					{if $data.location}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>
 						{depends module=geomap}
@@ -36,7 +39,10 @@
 					<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
 					<div class="fleft clearfix">
 						<div class="fleft">
-							{l i='field_age' gid='users'}: {$data.age}
+						
+							<!--remove age-->
+							<!--{l i='field_age' gid='users'}: {$data.age}-->						
+						
 							{if $data.location}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>
 								{depends module=geomap}

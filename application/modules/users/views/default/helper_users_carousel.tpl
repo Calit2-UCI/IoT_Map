@@ -45,7 +45,8 @@
 										<ins><i class="{$item.carousel_data.icon_class}"></i></ins>
 									{else}
 										<div class="info">
-											<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a>, {$item.age}</div>
+											<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a>, {$item.age}</div--> <!--take away age-->										
+											<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a></div>
 											{if !empty($item.location)}<div class="text-overflow" title="{$item.location|escape}">{$item.location}</div>{/if}
 										</div>
 									{/if}
