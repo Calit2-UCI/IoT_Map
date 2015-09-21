@@ -10,7 +10,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
 $this->register_block("strip", "tpl_block_strip"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
-$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-31 23:06:43 Pacific Daylight Time */ ?>
+$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-15 02:28:08 Pacific Daylight Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
@@ -76,9 +76,9 @@ admin/users/edit/personal/<?php echo $this->_vars['data']['id']; ?>
 					</select>
 				</div>
 			</div>
-			<div class="row">
-				<div class="h"><?php echo l('field_partner_age', 'users', '', 'text', array()); ?>: </div>
-				<div class="v">
+			<div class="row hide">
+				<div class="h hide"><?php echo l('field_partner_age', 'users', '', 'text', array()); ?>: </div>
+				<div class="v hide">
 					<?php echo l('from', 'users', '', 'text', array()); ?>
 					<select name="age_min" class="short">
 						<?php if (is_array($this->_vars['age_range']) and count((array)$this->_vars['age_range'])): foreach ((array)$this->_vars['age_range'] as $this->_vars['age']): ?>
@@ -145,7 +145,7 @@ admin/users/edit/personal/<?php echo $this->_vars['data']['id']; ?>
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="row" hide>
+			<div class="row hide">
 				<div class="h"><?php echo l('birth_date', 'users', '', 'text', array()); ?>: </div>
 				<div class="v"><input type='text' value='0' name="birth_date" id="datepicker" maxlength="10" class="middle"></div>
 				<?php echo tpl_function_js(array('file' => 'jquery-ui.custom.min.js'), $this);?>

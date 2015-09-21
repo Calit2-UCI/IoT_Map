@@ -1,3 +1,136 @@
 
-<script type="text/javascript">selects = [];checkboxes = [];hlboxes = [];</script><div class="search-box index"><div id="search-form-block_user_index">
-<form action="http://128.195.185.103/users/search" method="POST" id="main_search_form_user_index"><div class="search-form index"><div class="fields-block aligned-fields"><div id="short-search-form_user_index"><div><div class="hlBox" id="looking_user_type_box" data-multiselect="1" data-defaults=1 data-input="user_type"><div class="data"><div id="looking_user_type_inputs"></div><ul><li data-value="1">Aerospace/Aircraft Industries</li><li data-value="2">Audio/Visual-Services</li><li data-value="3">Cellular/Wireless</li><li data-value="4">Computers-Business Applications Sales/Svc</li><li data-value="5">Computers-Consultants</li><li data-value="6">Computers-Hardware Sales/Service</li><li data-value="7">Computers-Hardware/Software Sales</li><li data-value="8">Computers-Networking</li><li data-value="9">Computers-Security</li><li data-value="10">Consulting & IT Services</li><li data-value="11">Data Hosting/Processing</li><li data-value="12">Electronics</li><li data-value="13">Electronics-Component</li><li data-value="14">Electronics-Equipment</li><li data-value="15">Employment/Staffing-Technical</li><li data-value="16">Entrepreneur Co - Workspace</li><li data-value="17">Environmental Services-Consultants</li><li data-value="18">Graphic Design/Desktop Publishing</li><li data-value="19">Internet-Consultants</li><li data-value="20">Internet-E-Commerce/Business Solutions</li><li data-value="21">Internet-Marketing</li><li data-value="22">Manufacturers (all)</li><li data-value="23">Manufacturers-Biomedical</li><li data-value="24">Manufacturers-Clothing</li><li data-value="25">Manufacturers-Computers/Equipment</li><li data-value="26">Manufacturers-Electronics</li><li data-value="27">Manufacturers-Eye Care</li><li data-value="28">Manufacturers-Medical Devices</li><li data-value="29">Manufacturers-Nutritional Products</li><li data-value="30">Manufacturers-Pharmaceutical</li><li data-value="31">Technology</li><li data-value="32">Telecommunications (all)</li><li data-value="33">Telecommunications-Equip/Systems/Repair</li><li data-value="34">Telecommunications-Networking</li><li data-value="35">Web Design/Development</li></ul></div></div><script>hlboxes.push('looking_user_type');</script>					</div><div class="table"><div class="search-fields"><div class="search-field age"><span class="inline vmiddle">Age&nbsp;</span><div class="ib vmiddle"><input type="hidden" name="age_min" id="age_min" value="18"><div class="selectBox" id="age_min_box"><div class="label">&nbsp;</div><div class="arrow"></div><div class="data"><ul><li gid="18"><span>18</span></li><li gid="19"><span>19</span></li><li gid="20"><span>20</span></li><li gid="21"><span>21</span></li><li gid="22"><span>22</span></li><li gid="23"><span>23</span></li><li gid="24"><span>24</span></li><li gid="25"><span>25</span></li><li gid="26"><span>26</span></li><li gid="27"><span>27</span></li><li gid="28"><span>28</span></li><li gid="29"><span>29</span></li><li gid="30"><span>30</span></li><li gid="31"><span>31</span></li><li gid="32"><span>32</span></li><li gid="33"><span>33</span></li><li gid="34"><span>34</span></li><li gid="35"><span>35</span></li><li gid="36"><span>36</span></li><li gid="37"><span>37</span></li><li gid="38"><span>38</span></li><li gid="39"><span>39</span></li><li gid="40"><span>40</span></li><li gid="41"><span>41</span></li><li gid="42"><span>42</span></li><li gid="43"><span>43</span></li><li gid="44"><span>44</span></li><li gid="45"><span>45</span></li><li gid="46"><span>46</span></li><li gid="47"><span>47</span></li><li gid="48"><span>48</span></li><li gid="49"><span>49</span></li><li gid="50"><span>50</span></li><li gid="51"><span>51</span></li><li gid="52"><span>52</span></li><li gid="53"><span>53</span></li><li gid="54"><span>54</span></li><li gid="55"><span>55</span></li><li gid="56"><span>56</span></li><li gid="57"><span>57</span></li><li gid="58"><span>58</span></li><li gid="59"><span>59</span></li><li gid="60"><span>60</span></li><li gid="61"><span>61</span></li><li gid="62"><span>62</span></li><li gid="63"><span>63</span></li><li gid="64"><span>64</span></li><li gid="65"><span>65</span></li><li gid="66"><span>66</span></li><li gid="67"><span>67</span></li><li gid="68"><span>68</span></li><li gid="69"><span>69</span></li><li gid="70"><span>70</span></li><li gid="71"><span>71</span></li><li gid="72"><span>72</span></li><li gid="73"><span>73</span></li><li gid="74"><span>74</span></li><li gid="75"><span>75</span></li><li gid="76"><span>76</span></li><li gid="77"><span>77</span></li><li gid="78"><span>78</span></li><li gid="79"><span>79</span></li><li gid="80"><span>80</span></li>		</ul></div></div><script>if(typeof selects === 'undefined') selects = []; selects.push('age_min');</script></div>&nbsp;-&nbsp;<div class="ib vmiddle"><input type="hidden" name="age_max" id="age_max" value="80"><div class="selectBox" id="age_max_box"><div class="label">&nbsp;</div><div class="arrow"></div><div class="data"><ul><li gid="18"><span>18</span></li><li gid="19"><span>19</span></li><li gid="20"><span>20</span></li><li gid="21"><span>21</span></li><li gid="22"><span>22</span></li><li gid="23"><span>23</span></li><li gid="24"><span>24</span></li><li gid="25"><span>25</span></li><li gid="26"><span>26</span></li><li gid="27"><span>27</span></li><li gid="28"><span>28</span></li><li gid="29"><span>29</span></li><li gid="30"><span>30</span></li><li gid="31"><span>31</span></li><li gid="32"><span>32</span></li><li gid="33"><span>33</span></li><li gid="34"><span>34</span></li><li gid="35"><span>35</span></li><li gid="36"><span>36</span></li><li gid="37"><span>37</span></li><li gid="38"><span>38</span></li><li gid="39"><span>39</span></li><li gid="40"><span>40</span></li><li gid="41"><span>41</span></li><li gid="42"><span>42</span></li><li gid="43"><span>43</span></li><li gid="44"><span>44</span></li><li gid="45"><span>45</span></li><li gid="46"><span>46</span></li><li gid="47"><span>47</span></li><li gid="48"><span>48</span></li><li gid="49"><span>49</span></li><li gid="50"><span>50</span></li><li gid="51"><span>51</span></li><li gid="52"><span>52</span></li><li gid="53"><span>53</span></li><li gid="54"><span>54</span></li><li gid="55"><span>55</span></li><li gid="56"><span>56</span></li><li gid="57"><span>57</span></li><li gid="58"><span>58</span></li><li gid="59"><span>59</span></li><li gid="60"><span>60</span></li><li gid="61"><span>61</span></li><li gid="62"><span>62</span></li><li gid="63"><span>63</span></li><li gid="64"><span>64</span></li><li gid="65"><span>65</span></li><li gid="66"><span>66</span></li><li gid="67"><span>67</span></li><li gid="68"><span>68</span></li><li gid="69"><span>69</span></li><li gid="70"><span>70</span></li><li gid="71"><span>71</span></li><li gid="72"><span>72</span></li><li gid="73"><span>73</span></li><li gid="74"><span>74</span></li><li gid="75"><span>75</span></li><li gid="76"><span>76</span></li><li gid="77"><span>77</span></li><li gid="78"><span>78</span></li><li gid="79"><span>79</span></li><li gid="80"><span>80</span></li>		</ul></div></div><script>if(typeof selects === 'undefined') selects = []; selects.push('age_max');</script></div></div><div class="search-field country"><input name="region_name" type="text" id="country_text_737948"value=""autocomplete="off"placeholder="Location"><span id="country_msg_737948"class="hide pginfo msg region_name info">Please select from the list</span><input name="id_country" type="hidden"id="country_hidden_737948"value=""><input name="id_region" type="hidden"id="region_hidden_737948"value=""><input name="id_city" type="hidden"id="city_hidden_737948"value=""><script type='text/javascript'>$(function(){loadScripts("/application/modules/countries/js/location-autocomplete.js",function(){new locationAutocomplete({siteUrl: 'http://128.195.185.103/',rand: '737948',id_country: '',id_region: '',id_city: ''});},'region_737948');});</script>							</div><div class="search-field search-btn righted"><button type="submit" id="main_search_button_user_index" name="search_button">Search</button></div></div></div></div><div class="clr"></div></div></div></form></div></div><script type="text/javascript">$(function(){loadScripts(["/application/modules/start/js/search.js","/application/modules/start/js/selectbox.js","/application/modules/start/js/checkbox.js","/application/modules/start/js/hlbox.js"],function(){userindex = new search({siteUrl: 'http://128.195.185.103/',currentForm: 'user',currentFormType: 'index',hide_popup: true,popup_autoposition: false});},'userindex',{async: false});});</script>
+<script type="text/javascript">selects = [];checkboxes = [];hlboxes = [];</script>
+	<div class="search-box index">
+		<div id="search-form-block_user_index">
+			<form action="http://128.195.185.103/users/search" method="POST" id="main_search_form_user_index">
+			<div class="search-form index">
+				<div class="fields-block aligned-fields">
+					<div id="short-search-form_user_index">
+						<div>
+							<div class="hlBox" id="looking_user_type_box" data-multiselect="1" data-defaults=1 data-input="user_type">
+								<div class="data">
+									<div id="looking_user_type_inputs">
+						</div>
+	
+	<ul>
+		<li data-value="1">Aerospace/Aircraft Industries</li>
+		<li data-value="2">Audio/Visual-Services</li>
+		<li data-value="3">Cellular/Wireless</li>
+		<li data-value="4">Computers-Business Applications Sales/Svc</li>
+		<li data-value="5">Computers-Consultants</li>
+		<li data-value="6">Computers-Hardware Sales/Service</li>
+		<li data-value="7">Computers-Hardware/Software Sales</li>
+		<li data-value="8">Computers-Networking</li>
+		<li data-value="9">Computers-Security</li>
+		<li data-value="10">Consulting & IT Services</li>
+		<li data-value="11">Data Hosting/Processing</li>
+		<li data-value="12">Electronics</li>
+		<li data-value="13">Electronics-Component</li>
+		<li data-value="14">Electronics-Equipment</li>
+		<li data-value="15">Employment/Staffing-Technical</li>
+		<li data-value="16">Entrepreneur Co - Workspace</li>
+		<li data-value="17">Environmental Services-Consultants</li>
+		<li data-value="18">Graphic Design/Desktop Publishing</li>
+		<li data-value="19">Internet-Consultants</li>
+		<li data-value="20">Internet-E-Commerce/Business Solutions</li>
+		<li data-value="21">Internet-Marketing</li>
+		<li data-value="22">Manufacturers (all)</li>
+		<li data-value="23">Manufacturers-Biomedical</li>
+		<li data-value="24">Manufacturers-Clothing</li>
+		<li data-value="25">Manufacturers-Computers/Equipment</li>
+		<li data-value="26">Manufacturers-Electronics</li>
+		<li data-value="27">Manufacturers-Eye Care</li>
+		<li data-value="28">Manufacturers-Medical Devices</li>
+		<li data-value="29">Manufacturers-Nutritional Products</li>
+		<li data-value="30">Manufacturers-Pharmaceutical</li>
+		<li data-value="31">Technology</li>
+		<li data-value="32">Telecommunications (all)</li>
+		<li data-value="33">Telecommunications-Equip/Systems/Repair</li>
+		<li data-value="34">Telecommunications-Networking</li>
+		<li data-value="35">Web Design/Development</li>
+	</ul></div></div>
+	<script>hlboxes.push('looking_user_type');</script>					</div>
+	
+	<div class="table">
+		<div class="search-fields">
+		<div class="search-field age">
+	<span class="inline vmiddle">Age&nbsp;</span>
+	<div class="ib vmiddle"><input type="hidden" name="age_min" id="age_min" value="18">
+	<div class="selectBox" id="age_min_box"><div class="label">&nbsp;
+	</div><div class="arrow"></div><div class="data"><ul>
+	<li gid="18"><span>18</span></li>
+	<li gid="19"><span>19</span></li>
+	<li gid="20"><span>20</span></li>
+	<li gid="21"><span>21</span></li>
+	<li gid="22"><span>22</span></li>
+	<li gid="23"><span>23</span></li>
+	<li gid="24"><span>24</span></li>
+	<li gid="25"><span>25</span></li>
+	<li gid="26"><span>26</span></li>
+	<li gid="27"><span>27</span></li>
+	<li gid="28"><span>28</span></li>
+	<li gid="29"><span>29</span></li>
+	<li gid="30"><span>30</span></li>
+	<li gid="31"><span>31</span></li><li gid="32"><span>32</span></li><li gid="33"><span>33</span></li>
+	<li gid="34"><span>34</span></li><li gid="35"><span>35</span></li><li gid="36"><span>36</span></li>
+	<li gid="37"><span>37</span></li><li gid="38"><span>38</span></li><li gid="39"><span>39</span></li>
+	<li gid="40"><span>40</span></li><li gid="41"><span>41</span></li><li gid="42"><span>42</span></li>
+	<li gid="43"><span>43</span></li><li gid="44"><span>44</span></li><li gid="45"><span>45</span></li>
+	<li gid="46"><span>46</span></li><li gid="47"><span>47</span></li><li gid="48"><span>48</span></li>
+	<li gid="49"><span>49</span></li><li gid="50"><span>50</span></li><li gid="51"><span>51</span></li>
+	<li gid="52"><span>52</span></li><li gid="53"><span>53</span></li><li gid="54"><span>54</span></li>
+	<li gid="55"><span>55</span></li><li gid="56"><span>56</span></li><li gid="57"><span>57</span></li>
+	<li gid="58"><span>58</span></li><li gid="59"><span>59</span></li><li gid="60"><span>60</span></li>
+	<li gid="61"><span>61</span></li><li gid="62"><span>62</span></li><li gid="63"><span>63</span></li>
+	<li gid="64"><span>64</span></li><li gid="65"><span>65</span></li><li gid="66"><span>66</span></li>
+	<li gid="67"><span>67</span></li><li gid="68"><span>68</span></li><li gid="69"><span>69</span></li>
+	<li gid="70"><span>70</span></li><li gid="71"><span>71</span></li><li gid="72"><span>72</span></li>
+	<li gid="73"><span>73</span></li><li gid="74"><span>74</span></li><li gid="75"><span>75</span></li>
+	<li gid="76"><span>76</span></li><li gid="77"><span>77</span></li><li gid="78"><span>78</span></li>
+	<li gid="79"><span>79</span></li><li gid="80"><span>80</span></li>		</ul></div></div>
+	
+	<script>if(typeof selects === 'undefined') selects = []; selects.push('age_min');</script></div>
+	&nbsp;-&nbsp;<div class="ib vmiddle"><input type="hidden" name="age_max" id="age_max" value="80">
+	<div class="selectBox" id="age_max_box"><div class="label">&nbsp;</div><div class="arrow"></div>
+	<div class="data">
+	<ul>
+	<li gid="18"><span>18</span></li><li gid="19"><span>19</span></li><li gid="20"><span>20</span></li>
+	<li gid="21"><span>21</span></li><li gid="22"><span>22</span></li><li gid="23"><span>23</span></li>
+	<li gid="24"><span>24</span></li><li gid="25"><span>25</span></li><li gid="26"><span>26</span></li>
+	<li gid="27"><span>27</span></li><li gid="28"><span>28</span></li><li gid="29"><span>29</span></li>
+	<li gid="30"><span>30</span></li><li gid="31"><span>31</span></li><li gid="32"><span>32</span></li>
+	<li gid="33"><span>33</span></li><li gid="34"><span>34</span></li><li gid="35"><span>35</span></li>
+	<li gid="36"><span>36</span></li><li gid="37"><span>37</span></li><li gid="38"><span>38</span></li>
+	<li gid="39"><span>39</span></li><li gid="40"><span>40</span></li><li gid="41"><span>41</span></li>
+	<li gid="42"><span>42</span></li><li gid="43"><span>43</span></li><li gid="44"><span>44</span></li>
+	<li gid="45"><span>45</span></li><li gid="46"><span>46</span></li><li gid="47"><span>47</span></li>
+	<li gid="48"><span>48</span></li><li gid="49"><span>49</span></li><li gid="50"><span>50</span></li>
+	<li gid="51"><span>51</span></li><li gid="52"><span>52</span></li><li gid="53"><span>53</span></li>
+	<li gid="54"><span>54</span></li><li gid="55"><span>55</span></li><li gid="56"><span>56</span></li>
+	<li gid="57"><span>57</span></li><li gid="58"><span>58</span></li><li gid="59"><span>59</span></li>
+	<li gid="60"><span>60</span></li><li gid="61"><span>61</span></li><li gid="62"><span>62</span></li>
+	<li gid="63"><span>63</span></li><li gid="64"><span>64</span></li><li gid="65"><span>65</span></li>
+	<li gid="66"><span>66</span></li><li gid="67"><span>67</span></li><li gid="68"><span>68</span></li>
+	<li gid="69"><span>69</span></li><li gid="70"><span>70</span></li><li gid="71"><span>71</span></li>
+	<li gid="72"><span>72</span></li><li gid="73"><span>73</span></li><li gid="74"><span>74</span></li>
+	<li gid="75"><span>75</span></li><li gid="76"><span>76</span></li><li gid="77"><span>77</span></li>
+	<li gid="78"><span>78</span></li><li gid="79"><span>79</span></li><li gid="80"><span>80</span></li>		</ul></div></div>
+	
+	<script>if(typeof selects === 'undefined') selects = []; selects.push('age_max');</script></div></div>
+	
+	<div class="search-field country"><input name="region_name" type="text" id="country_text_737948"value=""autocomplete="off"placeholder="Location">
+	<span id="country_msg_737948"class="hide pginfo msg region_name info">Please select from the list</span>
+	<input name="id_country" type="hidden"id="country_hidden_737948"value=""><input name="id_region" type="hidden"id="region_hidden_737948"value="">
+	<input name="id_city" type="hidden"id="city_hidden_737948"value="">
+	<script type='text/javascript'>
+	$(function(){loadScripts("/application/modules/countries/js/location-autocomplete.js",
+		function(){new locationAutocomplete({siteUrl: 'http://128.195.185.103/',rand: '737948',id_country: '',id_region: '',id_city: ''});},
+			'region_737948');});</script>							</div>
+			
+			<div class="search-field search-btn righted">
+			<button type="submit" id="main_search_button_user_index" name="search_button">Search</button></div></div></div></div>
+			
+			<div class="clr"></div></div></div></form></div></div><script type="text/javascript">
+			
+			$(function(){loadScripts(["/application/modules/start/js/search.js","/application/modules/start/js/selectbox.js","/application/modules/start/js/checkbox.js","/application/modules/start/js/hlbox.js"],function(){userindex = new search({siteUrl: 'http://128.195.185.103/',currentForm: 'user',currentFormType: 'index',hide_popup: true,popup_autoposition: false});},'userindex',{async: false});});</script>
+		

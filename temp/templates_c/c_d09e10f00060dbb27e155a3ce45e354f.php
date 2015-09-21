@@ -2,7 +2,7 @@
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
 $this->register_block("capture", "tpl_block_capture"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
-$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-31 20:06:00 Pacific Daylight Time */ ?>
+$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-15 02:16:20 Pacific Daylight Time */ ?>
 
 <h2 class="line top bottom linked">
 	<?php echo l('table_header_personal', 'users', '', 'text', array()); ?>
@@ -24,14 +24,14 @@ $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
 	</div>
 	<?php endif; ?>
 	<?php if ($this->_vars['data']['age_min']): ?>
-	<div class="r">
+	<div class="r hide">
 		<div class="f"><?php echo l('field_partner_age', 'users', '', 'text', array()); ?> <?php echo l('from', 'users', '', 'text', array()); ?>:</div>
 		<div class="v"><?php echo $this->_vars['data']['age_min']; ?>
 </div>
 	</div>
 	<?php endif; ?>
 	<?php if ($this->_vars['data']['age_max']): ?>
-	<div class="r">
+	<div class="r hide">
 		<div class="f"><?php echo l('field_partner_age', 'users', '', 'text', array()); ?> <?php echo l('to', 'users', '', 'text', array()); ?>:</div>
 		<div class="v"><?php echo $this->_vars['data']['age_max']; ?>
 </div>
@@ -56,7 +56,7 @@ $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
 </div>
 		</div>
 	<?php endif; ?>
-	<div class="r">
+	<div class="r hide">
 		<div class="f"><?php echo l('birth_date', 'users', '', 'text', array()); ?>:</div>
 		<div class="v"><?php echo $this->_vars['data']['birth_date']; ?>
 </div>

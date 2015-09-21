@@ -10,7 +10,7 @@ $this->register_function("seotag", "tpl_function_seotag");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-31 19:47:35 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-21 01:58:57 Pacific Daylight Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
@@ -44,8 +44,11 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 </div>
 					<div class="fleft clearfix">
 						<div class="fleft">
-							<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
-
+						
+							<!--remove age-->
+							<!--<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
+-->						
+						
 							<?php if ($this->_vars['data']['location']): ?>
 								<i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span>

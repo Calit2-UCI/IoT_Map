@@ -8,7 +8,7 @@ $this->register_function("json_encode", "tpl_function_json_encode");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.js.php');
 $this->register_function("js", "tpl_function_js"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-25 02:01:51 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-12 08:54:19 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 <?php if ($this->_vars['users_carousel_data']['users']): ?>
@@ -66,10 +66,13 @@ $this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 Jan
 "></i></ins>
 									<?php else: ?>
 										<div class="info">
-											<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>" title="<?php echo $this->_run_modifier($this->_vars['item']['output_name'], 'escape', 'plugin', 1); ?>
+											<!--div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>" title="<?php echo $this->_run_modifier($this->_vars['item']['output_name'], 'escape', 'plugin', 1); ?>
 "><?php echo $this->_vars['item']['output_name']; ?>
 </a>, <?php echo $this->_vars['item']['age']; ?>
-</div>
+</div--> <!--take away age-->										
+											<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>" title="<?php echo $this->_run_modifier($this->_vars['item']['output_name'], 'escape', 'plugin', 1); ?>
+"><?php echo $this->_vars['item']['output_name']; ?>
+</a></div>
 											<?php if (! empty ( $this->_vars['item']['location'] )): ?><div class="text-overflow" title="<?php echo $this->_run_modifier($this->_vars['item']['location'], 'escape', 'plugin', 1); ?>
 "><?php echo $this->_vars['item']['location']; ?>
 </div><?php endif; ?>

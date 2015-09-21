@@ -12,7 +12,7 @@ $this->register_modifier("escape", "tpl_modifier_escape");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
-$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-30 23:55:26 Pacific Daylight Time */ ?>
+$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-15 01:48:50 Pacific Daylight Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => 'ui'));
@@ -65,7 +65,7 @@ unset($_templatelite_tpl_vars);
 						<div class="v"><input type="password" name="repassword"></div>
 					</div>
 				<?php endif; ?>
-				<div class="r">
+				<div class="r hide">
 					<div class="f"><?php echo l('birth_date', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type='text' value='<?php echo $this->_vars['data']['birth_date']; ?>
 ' name="birth_date" id="datepicker" maxlength="10"></div>
@@ -97,8 +97,8 @@ unset($_templatelite_tpl_vars);
 					});
 				'; ?>
 </script>
-				<?php echo tpl_function_helper(array('func_name' => 'get_user_subscriptions_form','module' => 'subscriptions','func_param' => 'register'), $this);?>
-				<br>
+				<!--"<?php echo tpl_function_helper(array('func_name' => 'get_user_subscriptions_form','module' => 'subscriptions','func_param' => 'register'), $this);?>"-->
+				<!--br--> <!--remove-->
 				<div class="r">
 					<div class="f"><?php echo l('field_captcha', 'users', '', 'text', array()); ?>: </div>
 					<div class="v captcha"><?php echo $this->_vars['data']['captcha_image']; ?>

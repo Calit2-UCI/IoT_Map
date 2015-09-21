@@ -12,7 +12,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.sorter.php');
 $this->register_function("sorter", "tpl_function_sorter"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-01 00:42:06 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-12 09:06:57 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 	<?php if ($this->_vars['users']): ?>
@@ -75,9 +75,11 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 " title="<?php echo $this->_vars['text_user_logo']; ?>
 " /></a>
 							<div class="info">
-								<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
+								<!--div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
 </a>, <?php echo $this->_vars['item']['age']; ?>
-</div>
+</div--> <!--remove age-->
+								<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
+</a></div>
 								<?php if ($this->_vars['item']['location']): ?><div class="text-overflow"><?php echo $this->_vars['item']['location']; ?>
 </div><?php endif; ?>
 							</div>
