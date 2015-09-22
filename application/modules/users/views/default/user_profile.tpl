@@ -114,8 +114,7 @@
 	<div class="view-user">
 		{if !$action || $action eq 'view'}
 			{include file="view_my_profile.tpl" module="users"}
-		{elseif $action eq 'wall'}
-			{block name='wall_block' module='wall_events' place='myprofile' id_wall=$user_id}
+
 		{elseif $action eq 'gallery'}
 			{block name='media_block' module='media' param=$subsection page='1' location_base_url=$location_base_url}
 		{/if}
