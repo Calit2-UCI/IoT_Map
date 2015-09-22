@@ -9,4 +9,5 @@
 	{/if}
 </li>
 {/foreach}
+<div> <a href="http://uci.edu/"> <img src="http://bme240.eng.uci.edu/students/09s/ysantoro/Images/UCIrvine.gif" align="right" > </a> </div>
 </ul>

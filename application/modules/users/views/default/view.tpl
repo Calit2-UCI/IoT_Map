@@ -85,15 +85,15 @@
 			<div class="actions noPrint">
 				{block name='send_message_button' module='mailbox' id_user=$data.id}
 				{*helper func_name='lists_links' module='users_lists' func_param=$data.id*}
-				{block name='friendlist_links' module='friendlist' id_user=$data.id}
-				{block name='blacklist_button' module='blacklist' id_user=$data.id}
+				<!--{block name='friendlist_links' module='friendlist' id_user=$data.id}-->
+				<!--{block name='blacklist_button' module='blacklist' id_user=$data.id}-->
 				{block name='favourites_button' module='favourites' id_user=$data.id}
-				{helper func_name='im_chat_add_button' module='im' func_param=$data.id}
-				{block name='video_chat_button' module='video_chat' user_id=$data.id}
-				{block name='wink' module='winks' user_id=$data.id}
-				{block name='kisses_list' module='kisses' user_id=$data.id}
-				{block name='button' module='associations' id_user=$data.id}
-				{block name='mark_as_spam_block' module='spam' object_id=$data.id type_gid='users_object' template='button'}
+				<!--{helper func_name='im_chat_add_button' module='im' func_param=$data.id}-->
+				<!--{block name='video_chat_button' module='video_chat' user_id=$data.id}-->
+				<!--{block name='wink' module='winks' user_id=$data.id}-->
+				<!--{block name='kisses_list' module='kisses' user_id=$data.id}-->
+				<!--{block name='button' module='associations' id_user=$data.id}-->
+				<!--{block name='mark_as_spam_block' module='spam' object_id=$data.id type_gid='users_object' template='button'}-->
 			</div>
 		</div>
 	</div>
@@ -103,8 +103,8 @@
 		<div class="view-user">
 			{if !$profile_section || $profile_section eq 'profile'}
 				{include file="view_users_profile.tpl" module="users"}
-			{elseif $profile_section eq 'wall'}
-				{block name='wall_block' module='wall_events' place='viewprofile' id_wall=$user_id}
+			<!--remove wall-->
+
 			{elseif $profile_section eq 'gallery'}
 				{block name='media_block' module='media' param=$subsection page='1' user_id=$user_id location_base_url=$location_base_url}
 			{/if}
