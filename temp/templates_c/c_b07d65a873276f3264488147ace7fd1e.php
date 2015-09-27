@@ -2,7 +2,7 @@
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.js.php');
 $this->register_function("js", "tpl_function_js"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
-$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-25 02:00:53 Pacific Daylight Time */ ?>
+$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-23 00:39:55 Pacific Daylight Time */ ?>
 
 <div id="im_chat">
 	<div id="im_chat_btn" data-status-class="<?php echo $this->_vars['im_data']['user_status']['current_site_status_text']; ?>

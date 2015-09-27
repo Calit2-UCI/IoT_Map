@@ -10,7 +10,7 @@ $this->register_function("seotag", "tpl_function_seotag");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-21 01:58:57 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-22 03:32:39 Pacific Daylight Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
@@ -83,15 +83,15 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 			<div class="actions noPrint">
 				<?php echo tpl_function_block(array('name' => 'send_message_button','module' => 'mailbox','id_user' => $this->_vars['data']['id']), $this);?>
 				
-				<?php echo tpl_function_block(array('name' => 'friendlist_links','module' => 'friendlist','id_user' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'blacklist_button','module' => 'blacklist','id_user' => $this->_vars['data']['id']), $this);?>
+				<!--<?php echo tpl_function_block(array('name' => 'friendlist_links','module' => 'friendlist','id_user' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'blacklist_button','module' => 'blacklist','id_user' => $this->_vars['data']['id']), $this);?>-->
 				<?php echo tpl_function_block(array('name' => 'favourites_button','module' => 'favourites','id_user' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_helper(array('func_name' => 'im_chat_add_button','module' => 'im','func_param' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'video_chat_button','module' => 'video_chat','user_id' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'wink','module' => 'winks','user_id' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'kisses_list','module' => 'kisses','user_id' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'button','module' => 'associations','id_user' => $this->_vars['data']['id']), $this);?>
-				<?php echo tpl_function_block(array('name' => 'mark_as_spam_block','module' => 'spam','object_id' => $this->_vars['data']['id'],'type_gid' => 'users_object','template' => 'button'), $this);?>
+				<!--<?php echo tpl_function_helper(array('func_name' => 'im_chat_add_button','module' => 'im','func_param' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'video_chat_button','module' => 'video_chat','user_id' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'wink','module' => 'winks','user_id' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'kisses_list','module' => 'kisses','user_id' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'button','module' => 'associations','id_user' => $this->_vars['data']['id']), $this);?>-->
+				<!--<?php echo tpl_function_block(array('name' => 'mark_as_spam_block','module' => 'spam','object_id' => $this->_vars['data']['id'],'type_gid' => 'users_object','template' => 'button'), $this);?>-->
 			</div>
 		</div>
 	</div>
@@ -109,8 +109,8 @@ echo $this->_fetch_compile_include( $this->module_path. "users". $this->module_t
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
  ?>
-			<?php elseif ($this->_vars['profile_section'] == 'wall'): ?>
-				<?php echo tpl_function_block(array('name' => 'wall_block','module' => 'wall_events','place' => 'viewprofile','id_wall' => $this->_vars['user_id']), $this);?>
+			<!--remove wall-->
+
 			<?php elseif ($this->_vars['profile_section'] == 'gallery'): ?>
 				<?php echo tpl_function_block(array('name' => 'media_block','module' => 'media','param' => $this->_vars['subsection'],'page' => '1','user_id' => $this->_vars['user_id'],'location_base_url' => $this->_vars['location_base_url']), $this);?>
 			<?php endif; ?>
