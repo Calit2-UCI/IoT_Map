@@ -1009,13 +1009,13 @@ class Users_model extends \Model
 
         $this->CI->load->helper('seo');
 
-        if ($this->CI->pg_module->is_module_installed('wall_events')) {
+        /*if ($this->CI->pg_module->is_module_installed('wall_events')) {
             $section_code = 'wall';
             $section_name = l('filter_section_wall', 'users');
-        } else {
+        } else {*/
             $section_code = 'profile';
             $section_name = l('filter_section_profile', 'users');
-        }
+        //}
 
         // seo data
         foreach ($data as $key => $user) {
@@ -1083,13 +1083,13 @@ class Users_model extends \Model
             $data["media"]["user_logo"] = $this->CI->Uploads_model->format_default_upload($this->upload_config_id);
         }
 
-        if ($this->CI->pg_module->is_module_installed('wall_events')) {
+        /*if ($this->CI->pg_module->is_module_installed('wall_events')) {
             $section_code = 'wall';
             $section_name = l('filter_section_wall', 'users');
-        } else {
+        } else {*/
             $section_code = 'profile';
             $section_name = l('filter_section_profile', 'users');
-        }
+        //}
 
         // seo data
         $data['type-code'] = 'unknown';

@@ -1,6 +1,6 @@
 <?php
 
-$install_lang["btn_search"] = "Find people";
+$install_lang["btn_search"] = "Find company";
 $install_lang["error_is_pending"] = "You have already sent a wink to this person";
 $install_lang["error_is_on_list"] = "[username] is already on your list";
 $install_lang["error_wink_someone_else"] = "Try sending a wink to someone else";

@@ -24,5 +24,5 @@ $install_lang["user_top_menu_user-menu-people_visits_item"] = "Visits";
 $install_lang["user_top_menu_user-menu-people_visits_item_tooltip"] = "";
 $install_lang["user_top_menu_user-menu-people_perfect_match_item"] = "My matches";
 $install_lang["user_top_menu_user-menu-people_perfect_match_item_tooltip"] = "";
-$install_lang["user_top_menu_user-menu-people_search_item"] = "Find people";
+$install_lang["user_top_menu_user-menu-people_search_item"] = "Find company";
 $install_lang["user_top_menu_user-menu-people_search_item_tooltip"] = "";
