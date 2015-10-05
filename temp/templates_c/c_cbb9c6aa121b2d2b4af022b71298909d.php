@@ -12,7 +12,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.sorter.php');
 $this->register_function("sorter", "tpl_function_sorter"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-12 09:06:57 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-03 00:27:31 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 	<?php if ($this->_vars['users']): ?>
@@ -60,7 +60,7 @@ $this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 Jan
 		</div>
 	<?php endif; ?>
 		
-	<div<?php if ($this->_vars['page_data']['view_type'] == 'gallery'): ?> class="user-gallery big"<?php endif; ?>>
+	<div<?php if ($this->_vars['page_data']['view_type'] == 'gallery'): ?> class="user-gallery medium"<?php endif; ?>>   <!-- make change on this line, big to medium -->
 		<?php if (is_array($this->_vars['users']) and count((array)$this->_vars['users'])): foreach ((array)$this->_vars['users'] as $this->_vars['item']): ?>
 			<?php 
 $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array_merge(array(),$this->_vars['item'])));
@@ -69,8 +69,8 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 				<div id="item-block-<?php echo $this->_vars['item']['id']; ?>
 " class="item<?php if ($this->_vars['item']['is_highlight_in_search'] || $this->_vars['item']['leader_bid'] || ( $this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader'] )): ?> highlight<?php endif; ?>">
 					<div class="user">
-						<div class="photo">
-							<a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><img src="<?php echo $this->_vars['item']['media']['user_logo']['thumbs']['great']; ?>
+						<div class="photo">													 <!--at the line below, change great to big-->
+							<a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><img src="<?php echo $this->_vars['item']['media']['user_logo']['thumbs']['big']; ?>
 " alt="<?php echo $this->_vars['text_user_logo']; ?>
 " title="<?php echo $this->_vars['text_user_logo']; ?>
 " /></a>

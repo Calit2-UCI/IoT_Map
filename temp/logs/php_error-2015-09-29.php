@@ -1,0 +1,5 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-09-29 20:06:44 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/users/views/default/helper_search_form.tpl line 63]: syntax error: expecting '=' after 'input' (class.compiler.php, line 642) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-09-29 20:07:13 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/users/views/default/helper_search_form.tpl line 63]: syntax error: expecting '=' after 'input' (class.compiler.php, line 642) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-09-29 20:07:43 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/users/views/default/helper_search_form.tpl line 63]: syntax error: expecting '=' after 'input' (class.compiler.php, line 642) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798

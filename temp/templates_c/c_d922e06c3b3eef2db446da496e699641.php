@@ -1,14 +1,12 @@
 <?php
-require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.selectbox.php');
-$this->register_function("selectbox", "tpl_function_selectbox"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.block.php');
 $this->register_function("block", "tpl_function_block"); 
-require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.hlbox.php');
-$this->register_function("hlbox", "tpl_function_hlbox"); 
+require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.selectbox.php');
+$this->register_function("selectbox", "tpl_function_selectbox"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-21 01:22:39 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-01 08:17:49 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start();  
 $this->assign('default_select_lang', l('select_default', 'start', '', 'text', array()));
@@ -33,25 +31,11 @@ $this->assign('location_lang', l('field_search_country', 'users', '', 'text', ar
 			</div>
 		<?php elseif ($this->_vars['form_settings']['type'] == 'index'): ?>
 			<div class="fields-block aligned-fields">
-				<div id="short-search-form_<?php echo $this->_vars['form_settings']['form_id']; ?>
-">
-					<div>
-						<?php echo tpl_function_hlbox(array('input' => 'user_type','id' => 'looking_user_type','value' => $this->_vars['user_types']['option'],'multiselect' => true,'selected' => $this->_vars['data']['user_type']), $this);?>
-					</div>
-					<div class="table">
-						<div class="search-fields">
-							<!--remove search age-->
-							<div class="search-field country">
-								<?php echo tpl_function_block(array('name' => 'location_select','module' => 'countries','select_type' => 'city','placeholder' => $this->_vars['location_lang'],'id_country' => $this->_vars['data']['id_country'],'id_region' => $this->_vars['data']['id_region'],'id_city' => $this->_vars['data']['id_city']), $this);?>
-							</div>
-							<div class="search-field search-btn righted">
-								<button type="submit" id="main_search_button_<?php echo $this->_vars['form_settings']['form_id']; ?>
-" name="search_button"><?php echo l('btn_search', 'start', '', 'button', array()); ?></button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clr"></div>
+				<input type="text" name="search" placeholder="<?php echo l('search_people', 'start', '', 'text', array()); ?>" style="width: 183px;"/>
+				<button type="submit" id="main_search_button_<?php echo $this->_vars['form_settings']['form_id']; ?>
+" name="search_button" >
+					<?php echo l('btn_search', 'start', '', 'button', array()); ?>
+				</button>
 			</div>
 		<?php else: ?>
 			<div class="inside">

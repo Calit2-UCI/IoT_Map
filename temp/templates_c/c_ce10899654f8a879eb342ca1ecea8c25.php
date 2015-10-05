@@ -1,6 +1,6 @@
-<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-26 01:25:13 Pacific Daylight Time */ ?>
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-05 21:17:29 Pacific Daylight Time */ ?>
 
-<div> <a href="http://uci.edu/"> <img src="https://communications.uci.edu/img/graphic-identity/seal/seal-blue.png" alt="UCI" !--style="width:165px;height:63px;"-- align="right" > </a> </div>
+<div> <a href="http://uci.edu/" target="_blank"> <img src="https://communications.uci.edu/img/graphic-identity/seal/seal-blue.png" alt="UCI Seal LOGO" !--style="width:165px;height:63px;"-- align="right" > </a> </div>
 <!--big: http://bme240.eng.uci.edu/students/09s/ysantoro/Images/UCIrvine.gif-->
 <!--median: http://www.calit2.net/images/articles/UCILogo.jpg-->
 <!--small: https://upload.wikimedia.org/wikipedia/en/archive/a/ad/20150908000018%21Ucirvine_logo.png-->
