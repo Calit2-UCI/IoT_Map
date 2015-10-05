@@ -13,23 +13,10 @@
 			</div>
 		{elseif $form_settings.type eq 'index'}
 			<div class="fields-block aligned-fields">
-				<div id="short-search-form_{$form_settings.form_id}">
-					<div>
-						{hlbox input='user_type' id='looking_user_type' value=$user_types.option multiselect=true selected=$data.user_type}
-					</div>
-					<div class="table">
-						<div class="search-fields">
-							<!--remove search age-->
-							<div class="search-field country">
-								{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}
-							</div>
-							<div class="search-field search-btn righted">
-								<button type="submit" id="main_search_button_{$form_settings.form_id}" name="search_button">{l i='btn_search' gid='start' type='button'}</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clr"></div>
+				<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="width: 183px;"/>
+				<button type="submit" id="main_search_button_{$form_settings.form_id}" name="search_button" >
+					{l i='btn_search' gid='start' type='button'}
+				</button>
 			</div>
 		{else}
 			<div class="inside">

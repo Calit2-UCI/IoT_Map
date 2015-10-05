@@ -1,4 +1,4 @@
-<div> <a href="http://uci.edu/"> <img src="https://communications.uci.edu/img/graphic-identity/seal/seal-blue.png" alt="UCI" !--style="width:165px;height:63px;"-- align="right" > </a> </div>
+<div> <a href="http://uci.edu/" target="_blank"> <img src="https://communications.uci.edu/img/graphic-identity/seal/seal-blue.png" alt="UCI Seal LOGO" !--style="width:165px;height:63px;"-- align="right" > </a> </div>
 <!--big: http://bme240.eng.uci.edu/students/09s/ysantoro/Images/UCIrvine.gif-->
 <!--median: http://www.calit2.net/images/articles/UCILogo.jpg-->
 <!--small: https://upload.wikimedia.org/wikipedia/en/archive/a/ad/20150908000018%21Ucirvine_logo.png-->

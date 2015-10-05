@@ -39,14 +39,14 @@
 		</div>
 	{/if}
 		
-	<div{if $page_data.view_type == 'gallery'} class="user-gallery big"{/if}>
+	<div{if $page_data.view_type == 'gallery'} class="user-gallery medium"{/if}>   <!-- make change on this line, big to medium -->
 		{foreach item=item from=$users}
 			{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$item}
 			{if $page_data.view_type == 'gallery'}
 				<div id="item-block-{$item.id}" class="item{if $item.is_highlight_in_search || $item.leader_bid || ($item.is_up_in_search && $page_data.use_leader)} highlight{/if}">
 					<div class="user">
-						<div class="photo">
-							<a href="{seolink module='users' method='view' data=$item}"><img src="{$item.media.user_logo.thumbs.great}" alt="{$text_user_logo}" title="{$text_user_logo}" /></a>
+						<div class="photo">													 <!--at the line below, change great to big-->
+							<a href="{seolink module='users' method='view' data=$item}"><img src="{$item.media.user_logo.thumbs.big}" alt="{$text_user_logo}" title="{$text_user_logo}" /></a>
 							<div class="info">
 								<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
 								<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a></div>
