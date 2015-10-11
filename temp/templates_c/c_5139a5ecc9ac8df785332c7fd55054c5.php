@@ -4,7 +4,7 @@ $this->register_function("js", "tpl_function_js");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.block.php');
 $this->register_function("block", "tpl_function_block"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
-$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-31 23:09:08 Pacific Daylight Time */ ?>
+$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 00:30:43 Pacific Daylight Time */ ?>
 
 <menu id="users-top-menu" class="header-item" label="<?php echo l('on_account_header', 'users_payments', '', 'text', array()); ?>">
 	<i class="fa-comments"></i>&nbsp;<b class="sum"></b>&nbsp;

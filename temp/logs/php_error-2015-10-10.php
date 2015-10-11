@@ -1,0 +1,7 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-10-10 07:15:59 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/user_form.tpl line 169]: syntax error: unidentified token '{' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-10 07:16:00 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/user_form.tpl line 169]: syntax error: unidentified token 'span' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-10 07:16:00 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/user_form.tpl line 169]: syntax error: unidentified token 'style' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-10 07:16:00 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/user_form.tpl line 169]: syntax error: unidentified token '=' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-10 07:16:00 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/user_form.tpl line 171]: syntax error: span function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798

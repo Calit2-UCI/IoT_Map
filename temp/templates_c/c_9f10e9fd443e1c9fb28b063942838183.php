@@ -10,7 +10,7 @@ $this->register_function("seolink", "tpl_function_seolink");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-21 01:52:59 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:03:10 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 <div class="view small">
@@ -46,6 +46,10 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 				<!--remove age-->
 				<!--<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
 -->
+				
+				<!--website hyper link-->
+				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				
 				<?php if ($this->_vars['data']['location']): ?><i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span><?php endif; ?>
 			</div>
@@ -155,8 +159,7 @@ echo $this->_fetch_compile_include( $this->module_path. "users". $this->module_t
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
  ?>
-		<?php elseif ($this->_vars['action'] == 'wall'): ?>
-			<?php echo tpl_function_block(array('name' => 'wall_block','module' => 'wall_events','place' => 'myprofile','id_wall' => $this->_vars['user_id']), $this);?>
+
 		<?php elseif ($this->_vars['action'] == 'gallery'): ?>
 			<?php echo tpl_function_block(array('name' => 'media_block','module' => 'media','param' => $this->_vars['subsection'],'page' => '1','location_base_url' => $this->_vars['location_base_url']), $this);?>
 		<?php endif; ?>

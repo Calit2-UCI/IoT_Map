@@ -12,12 +12,21 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
 $this->register_block("strip", "tpl_block_strip"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
-$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-15 02:11:43 Pacific Daylight Time */ ?>
+$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:11:16 Pacific Daylight Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_capture', array('assign' => 'user_form_block')); tpl_block_capture(array('assign' => 'user_form_block'), null, $this); ob_start(); ?>
 	<?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 	<form method="post" enctype="multipart/form-data">
 		<?php if ($this->_vars['action'] == 'personal'): ?>
+			
+			<?php if (! $this->_vars['not_editable_fields']['fname']): ?>
+				<div class="r">
+					<div class="f"><?php echo l('field_fname', 'users', '', 'text', array()); ?>: </div>
+					<div class="v"><input type="text" name="fname" value="<?php echo $this->_run_modifier($this->_vars['data']['fname'], 'escape', 'plugin', 1); ?>
+"></div>
+				</div>
+			<?php endif; ?>
+			
 			<?php if (! $this->_vars['not_editable_fields']['user_type']): ?>
 				<div class="r">
 					<div class="f"><?php echo l('field_user_type', 'users', '', 'text', array()); ?>:</div>
@@ -70,26 +79,28 @@ $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4
 				</div>
 			<?php endif; ?>
 			<?php if (! $this->_vars['not_editable_fields']['nickname']): ?>
-				<div class="r">
+				<div class="r hide">
 					<div class="f"><?php echo l('field_nickname', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type="text" name="nickname" value="<?php echo $this->_run_modifier($this->_vars['data']['nickname'], 'escape', 'plugin', 1); ?>
 "></div>
 				</div>
 			<?php endif; ?>
-			<?php if (! $this->_vars['not_editable_fields']['fname']): ?>
-				<div class="r">
-					<div class="f"><?php echo l('field_fname', 'users', '', 'text', array()); ?>: </div>
-					<div class="v"><input type="text" name="fname" value="<?php echo $this->_run_modifier($this->_vars['data']['fname'], 'escape', 'plugin', 1); ?>
-"></div>
-				</div>
-			<?php endif; ?>
+
 			<?php if (! $this->_vars['not_editable_fields']['sname']): ?>
-				<div class="r">
+				<div class="r hide">
 					<div class="f"><?php echo l('field_sname', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type="text" name="sname" value="<?php echo $this->_run_modifier($this->_vars['data']['sname'], 'escape', 'plugin', 1); ?>
 "></div>
 				</div>
 			<?php endif; ?>
+			
+			<?php if (true): ?>
+				<div class="r">
+					<div class="f">Website: </div>
+					<div class="v">Empty</div>
+				</div>
+			<?php endif; ?>
+			
 			<div class="r">
 				<div class="f"><?php echo l('field_icon', 'users', '', 'text', array()); ?>: </div>
 				<div class="v">
@@ -120,6 +131,16 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 ' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
 			<?php endif; ?>
+			
+					
+			
+			<?php if (true): ?>
+				<div class="r">
+					<div class="f">Address (street): </div>
+					<div class="v">Empty</div>
+				</div>
+			<?php endif; ?>
+			
 			<div class="r">
 				<div class="f"><?php echo l('field_region', 'users', '', 'text', array()); ?>: </div>
 				<div class="v">
@@ -209,7 +230,11 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 			<div>
 				<div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
 </div>
-				<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age'];  if ($this->_vars['data']['location']): ?><i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
+				<!--<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
+-->
+				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				
+				<?php if ($this->_vars['data']['location']): ?><i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span><?php endif; ?>
 			</div>
 		</div>

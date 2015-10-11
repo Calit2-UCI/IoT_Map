@@ -1,3 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 ERROR - 2015-10-05 21:21:44 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/users/views/default/view.tpl line 24]: syntax error: text function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-05 23:52:56 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/view_users_profile.tpl line 48]: syntax error: missing 'i' (name of the language variable) attribute in 'l' (compiler.l.php, line 19) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-05 23:54:02 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/view_users_profile.tpl line 48]: syntax error: expecting '=' after '"Address"' (class.compiler.php, line 642) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-05 23:54:02 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/view_users_profile.tpl line 48]: syntax error: missing 'i' (name of the language variable) attribute in 'l' (compiler.l.php, line 19) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798

@@ -2,7 +2,7 @@
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
 $this->register_block("capture", "tpl_block_capture"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
-$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-15 02:16:20 Pacific Daylight Time */ ?>
+$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 00:42:29 Pacific Daylight Time */ ?>
 
 <h2 class="line top bottom linked">
 	<?php echo l('table_header_personal', 'users', '', 'text', array()); ?>
@@ -11,6 +11,15 @@ $this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 Janua
 	<?php 
 $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
  ?>
+	
+	<?php if ($this->_vars['data']['fname']): ?>
+		<div class="r">
+			<div class="f"><?php echo l('field_fname', 'users', '', 'text', array()); ?>:</div>
+			<div class="v"><?php echo $this->_vars['data']['fname']; ?>
+</div>
+		</div>
+	<?php endif; ?>
+	
 	<div class="r">
 		<div class="f"><?php echo l('field_user_type', 'users', '', 'text', array()); ?>:</div>
 		<div class="v"><?php echo $this->_vars['data']['user_type_str']; ?>
@@ -37,20 +46,14 @@ $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
 </div>
 	</div>
 	<?php endif; ?>
-	<div class="r">
+	<div class="r hide">
 		<div class="f"><?php echo l('field_nickname', 'users', '', 'text', array()); ?>:</div>
 		<div class="v"><?php echo $this->_vars['data']['nickname']; ?>
 </div>
 	</div>
-	<?php if ($this->_vars['data']['fname']): ?>
-		<div class="r">
-			<div class="f"><?php echo l('field_fname', 'users', '', 'text', array()); ?>:</div>
-			<div class="v"><?php echo $this->_vars['data']['fname']; ?>
-</div>
-		</div>
-	<?php endif; ?>
+
 	<?php if ($this->_vars['data']['sname']): ?>
-		<div class="r">
+		<div class="r hide">
 			<div class="f"><?php echo l('field_sname', 'users', '', 'text', array()); ?>:</div>
 			<div class="v"><?php echo $this->_vars['data']['sname']; ?>
 </div>
@@ -61,6 +64,21 @@ $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
 		<div class="v"><?php echo $this->_vars['data']['birth_date']; ?>
 </div>
 	</div>
+	
+	<?php if (true): ?>	
+	<div class="r">
+		<div class="f">Website:</div>
+		<div class="v">Empty</div>
+	</div>
+	<?php endif; ?>
+	
+	<?php if (true): ?>	
+	<div class="r">
+		<div class="f">Address (street):</div>
+		<div class="v">Empty</div>
+	</div>
+	<?php endif; ?>
+	
 	<?php if ($this->_vars['data']['location']): ?>
 	<div class="r">
 		<div class="f"><?php echo l('field_region', 'users', '', 'text', array()); ?>:</div>

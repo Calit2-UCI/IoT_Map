@@ -8,7 +8,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
 $this->register_function("seotag", "tpl_function_seotag"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-01 23:20:43 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:48:20 Pacific Daylight Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
@@ -59,7 +59,7 @@ unset($_templatelite_tpl_vars);
 					<div class="v"><input type="text" name="phone" value="<?php echo $this->_vars['user']['phone']; ?>
 "></div>
 				</div>
-				<div class="r">
+				<div class="r hide">
 					<div class="v"><input type="checkbox" name="show_adult" id="show_adult" value="1"<?php if ($this->_vars['user']['show_adult']): ?> checked<?php endif; ?> /> <label for="show_adult"><?php echo l('field_show_adult', 'users', '', 'text', array()); ?></label></div>
 				</div>
 				<div class="r">
@@ -94,7 +94,7 @@ unset($_templatelite_tpl_vars);
 					<div class="v"><input type="text" name="phone" value="<?php echo $this->_vars['user']['phone']; ?>
 "></div>
 				</div>
-				<div class="r">
+				<div class="r hide">
 					<div class="v"><input type="checkbox" name="show_adult" id="show_adult" value="1"<?php if ($this->_vars['user']['show_adult']): ?> checked<?php endif; ?> /> <label for="show_adult"><?php echo l('field_show_adult', 'users', '', 'text', array()); ?></label></div>
 				</div>
 				<div class="r">
@@ -120,7 +120,7 @@ unset($_templatelite_tpl_vars);
 		<?php endif; ?>
 		<?php echo tpl_function_helper(array('func_name' => 'show_social_networking_link','module' => 'users_connections'), $this);?>
 	</div>
-	<div class="ptb10">
+	<div class="ptb10 hide">
 		<?php echo tpl_function_helper(array('func_name' => 'get_user_subscriptions_form','module' => 'subscriptions','func_param' => 'account'), $this);?>
 	</div>
 	<div class="ptb10 line top">
