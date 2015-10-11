@@ -3,6 +3,14 @@
 </h2>
 <div class="view-section">
 	{l i='no_information' gid='users' assign='no_info_str'}
+	
+	{if $data.fname}
+		<div class="r">
+			<div class="f">{l i='field_fname' gid='users'}:</div>
+			<div class="v">{$data.fname}</div>
+		</div>
+	{/if}
+	
 	<div class="r">
 		<div class="f">{l i='field_user_type' gid='users'}:</div>
 		<div class="v">{$data.user_type_str}</div>
@@ -25,18 +33,13 @@
 		<div class="v">{$data.age_max}</div>
 	</div>
 	{/if}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_nickname' gid='users'}:</div>
 		<div class="v">{$data.nickname}</div>
 	</div>
-	{if $data.fname}
-		<div class="r">
-			<div class="f">{l i='field_fname' gid='users'}:</div>
-			<div class="v">{$data.fname}</div>
-		</div>
-	{/if}
+
 	{if $data.sname}
-		<div class="r">
+		<div class="r hide">
 			<div class="f">{l i='field_sname' gid='users'}:</div>
 			<div class="v">{$data.sname}</div>
 		</div>
@@ -45,6 +48,21 @@
 		<div class="f">{l i='birth_date' gid='users'}:</div>
 		<div class="v">{$data.birth_date}</div>
 	</div>
+	
+	{if true}	
+	<div class="r">
+		<div class="f">Website:</div>
+		<div class="v">Empty</div>
+	</div>
+	{/if}
+	
+	{if true}	
+	<div class="r">
+		<div class="f">Address (street):</div>
+		<div class="v">Empty</div>
+	</div>
+	{/if}
+	
 	{if $data.location}
 	<div class="r">
 		<div class="f">{l i='field_region' gid='users'}:</div>

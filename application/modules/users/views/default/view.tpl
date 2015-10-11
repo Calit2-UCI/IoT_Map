@@ -19,7 +19,8 @@
 					
 					<!--remove age-->
 					<!--{l i='field_age' gid='users'}: {$data.age}-->
-					<a href="https://www.google.com/" target="_blank" class="target_blank">Website Link</a>  
+					<!--website hyper link-->
+					<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>
 					{if $data.location}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>
 						{depends module=geomap}
@@ -41,11 +42,13 @@
 						<div class="fleft">
 						
 							<!--remove age-->
-							<!--{l i='field_age' gid='users'}: {$data.age}-->						
-							<a href="https://www.google.com/" target="_blank" class="target_blank">Website Link</a>  <!--user website link-->
+							<!--{l i='field_age' gid='users'}: {$data.age}-->		
+
+							<!--website hyper link-->
+							
+							<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>
 							{if $data.location}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>
-								
 								{depends module=geomap}
 									<i class="delim-alone"></i>
 									<a href="javascript:void(0);" id="view_map_link" class="target_blank">{l i='link_view_map' gid='geomap'}</a>

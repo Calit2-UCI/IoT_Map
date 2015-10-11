@@ -1,7 +1,7 @@
 {strip}
 <ul id="ajax_login_link_menu_{$dynamic_block_auth_links_data.rand}" class="index-menu{if $dynamic_block_auth_links_data.params.right_align} righted{/if}">
-	<li><a id="dynblocks_link_register" href="{$site_url}users/registration">{l i='link_register' gid='users'}</a></li>
-	<li><a href="{$site_url}users/login_form" onclick="return false;" id="ajax_login_link">{l i='header_login' gid='users'}</a></li>
+	<li><a style="font-size:16.5px; font-family:Arial; font-weight: normal;" id="dynblocks_link_register" href="{$site_url}users/registration">{l i='link_register' gid='users'}</a></li>
+	<li><a style="font-size:16.5px; font-family:Arial; font-weight: normal;" href="{$site_url}users/login_form" onclick="return false;" id="ajax_login_link">{l i='header_login' gid='users'}</a></li>
 </ul>
 
 <script>{literal}

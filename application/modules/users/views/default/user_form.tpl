@@ -2,6 +2,14 @@
 	{strip}
 	<form method="post" enctype="multipart/form-data">
 		{if $action eq 'personal'}
+			
+			{if !$not_editable_fields.fname}
+				<div class="r">
+					<div class="f">{l i='field_fname' gid='users'}: </div>
+					<div class="v"><input type="text" name="fname" value="{$data.fname|escape}"></div>
+				</div>
+			{/if}
+			
 			{if !$not_editable_fields.user_type}
 				<div class="r">
 					<div class="f">{l i='field_user_type' gid='users'}:</div>
@@ -46,23 +54,26 @@
 				</div>
 			{/if}
 			{if !$not_editable_fields.nickname}
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='field_nickname' gid='users'}: </div>
 					<div class="v"><input type="text" name="nickname" value="{$data.nickname|escape}"></div>
 				</div>
 			{/if}
-			{if !$not_editable_fields.fname}
-				<div class="r">
-					<div class="f">{l i='field_fname' gid='users'}: </div>
-					<div class="v"><input type="text" name="fname" value="{$data.fname|escape}"></div>
-				</div>
-			{/if}
+
 			{if !$not_editable_fields.sname}
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='field_sname' gid='users'}: </div>
 					<div class="v"><input type="text" name="sname" value="{$data.sname|escape}"></div>
 				</div>
 			{/if}
+			
+			{if true}
+				<div class="r">
+					<div class="f">Website: </div>
+					<div class="v">Empty</div>
+				</div>
+			{/if}
+			
 			<div class="r">
 				<div class="f">{l i='field_icon' gid='users'}: </div>
 				<div class="v">
@@ -84,6 +95,16 @@
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
 			{/if}
+			
+					
+			
+			{if true}
+				<div class="r">
+					<div class="f">Address (street): </div>
+					<div class="v">Empty</div>
+				</div>
+			{/if}
+			
 			<div class="r">
 				<div class="f">{l i='field_region' gid='users'}: </div>
 				<div class="v">
@@ -163,7 +184,10 @@
 			</h1>
 			<div>
 				<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
-				{l i='field_age' gid='users'}: {$data.age}{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
+				<!--{l i='field_age' gid='users'}: {$data.age}-->
+				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				
+				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>
 		</div>
 		<div class="actions noPrint">

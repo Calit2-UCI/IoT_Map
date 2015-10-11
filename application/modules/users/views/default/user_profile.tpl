@@ -21,7 +21,10 @@
 				<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
 				<!--remove age-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
-				<a href="https://www.google.com/" target="_blank" class="target_blank">Website Link</a>  <!--user website link-->
+				
+				<!--website hyper link-->
+				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				
 				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>
 		</div>

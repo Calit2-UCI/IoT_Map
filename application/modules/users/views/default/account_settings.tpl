@@ -38,7 +38,7 @@
 					<div class="f">{l i='field_phone' gid='users'}: </div>
 					<div class="v"><input type="text" name="phone" value="{$user.phone}"></div>
 				</div>
-				<div class="r">
+				<div class="r hide">
 					<div class="v"><input type="checkbox" name="show_adult" id="show_adult" value="1"{if $user.show_adult} checked{/if} /> <label for="show_adult">{l i='field_show_adult' gid='users'}</label></div>
 				</div>
 				<div class="r">
@@ -71,7 +71,7 @@
 					<div class="f">{l i='field_phone' gid='users'}: </div>
 					<div class="v"><input type="text" name="phone" value="{$user.phone}"></div>
 				</div>
-				<div class="r">
+				<div class="r hide">
 					<div class="v"><input type="checkbox" name="show_adult" id="show_adult" value="1"{if $user.show_adult} checked{/if} /> <label for="show_adult">{l i='field_show_adult' gid='users'}</label></div>
 				</div>
 				<div class="r">
@@ -97,7 +97,7 @@
 		{/if}
 		{helper func_name='show_social_networking_link' module='users_connections'}
 	</div>
-	<div class="ptb10">
+	<div class="ptb10 hide">
 		{helper func_name='get_user_subscriptions_form' module='subscriptions' func_param='account'}
 	</div>
 	<div class="ptb10 line top">
