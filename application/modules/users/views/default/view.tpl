@@ -15,12 +15,12 @@
 				<span class="users-profile-h1">{seotag tag='header_text'}</span>
 				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span></h1>
 				<div>
-					<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
+					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 					
 					<!--remove age-->
 					<!--{l i='field_age' gid='users'}: {$data.age}-->
 					<!--website hyper link-->
-					<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>
+					<a href={$data.website} target="_blank" class="target_blank">Website</a>  
 					{if $data.location}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>
 						{depends module=geomap}
@@ -37,7 +37,7 @@
 					<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span>
 				</h1>
 				<div>
-					<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
+					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 					<div class="fleft clearfix">
 						<div class="fleft">
 						
@@ -46,7 +46,7 @@
 
 							<!--website hyper link-->
 							
-							<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>
+							<a href={$data.website} target="_blank" class="target_blank">Website</a>  
 							{if $data.location}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>
 								{depends module=geomap}
@@ -91,7 +91,7 @@
 				{*helper func_name='lists_links' module='users_lists' func_param=$data.id*}
 				<!--{block name='friendlist_links' module='friendlist' id_user=$data.id}-->
 				<!--{block name='blacklist_button' module='blacklist' id_user=$data.id}-->
-				{block name='favourites_button' module='favourites' id_user=$data.id}
+				<!--{block name='favourites_button' module='favourites' id_user=$data.id}-->
 				<!--{helper func_name='im_chat_add_button' module='im' func_param=$data.id}-->
 				<!--{block name='video_chat_button' module='video_chat' user_id=$data.id}-->
 				<!--{block name='wink' module='winks' user_id=$data.id}-->

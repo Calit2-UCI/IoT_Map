@@ -49,12 +49,10 @@
 		<div class="v">{$data.birth_date}</div>
 	</div>
 	
-	{if true}	
 	<div class="r">
 		<div class="f">Website:</div>
-		<div class="v">Empty</div>
+		<div class="v">{$data.website}</div>
 	</div>
-	{/if}
 	
 	{if true}	
 	<div class="r">

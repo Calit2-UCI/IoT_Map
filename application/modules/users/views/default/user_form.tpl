@@ -6,7 +6,7 @@
 			{if !$not_editable_fields.fname}
 				<div class="r">
 					<div class="f">{l i='field_fname' gid='users'}: </div>
-					<div class="v"><input type="text" name="fname" value="{$data.fname|escape}"></div>
+					<div class="v" style="height:29px"><input type="text" name="fname" value="{$data.fname|escape}"></div>
 				</div>
 			{/if}
 			
@@ -183,9 +183,9 @@
 				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span>
 			</h1>
 			<div>
-				<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
+				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
-				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				<a href={$data.website} target="_blank" class="target_blank">Website</a>  
 				
 				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>

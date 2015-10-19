@@ -4,19 +4,19 @@ html {
 a, 
 a:hover,
 a:focus {
-	color: #82BAB3;
+	color: #28AAD7;
 	text-decoration: none;
 }
 body {
 	background-color: #FFFFFF;
 }
 .badge {
-	background-color: #ED8F8E;
+	background-color: #0E7EA4;
 }
 .btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
 .open .dropdown-toggle.btn-default {
 	background-color: #FFFFFF;
-	color: #82BAB3;
+	color: #28AAD7;
 }
 .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
 .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary,
@@ -24,44 +24,44 @@ body {
 .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
 .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active, .btn-primary.active[disabled], fieldset[disabled] .btn-primary.active {
-	background-color: #82BAB3;
-	border-color: #82BAB3;
+	background-color: #28AAD7;
+	border-color: #28AAD7;
 }
 .btn-group > .btn-primary {
-	color: #82BAB3;
+	color: #28AAD7;
 	background-color: #FFF;
 	border-color: #FFF;
 }
 .btn-group > .btn-primary:hover, .btn-group > .btn-primary.active {
 	color: #FFF;
-	background-color: #82BAB3;
-	border-color: #82BAB3;
+	background-color: #28AAD7;
+	border-color: #28AAD7;
 }
 .suggest .btn-primary {
-	color: #82BAB3;
+	color: #28AAD7;
 }
 .datepicker button strong,
 .datepicker button strong:active,
 .datepicker button span,
 .datepicker button span:active {
-	color: #82BAB3;
+	color: #28AAD7;
 }
 
 .default-avatar  span {
-	color: #82BAB3;
+	color: #28AAD7;
 }
 .form-control:focus {
-	border-color: #82BAB3;
+	border-color: #28AAD7;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 103, 103, 0.6);
 }
 .left-menu{
 	background-color: #FFFFFF;
 }
 .menu-central .nav-stacked {
-	background-color: #82BAB3;
+	background-color: #28AAD7;
 }
 .menu-central .nav-stacked > li {
-	background-color: #82BAB3;
+	background-color: #28AAD7;
 }
 .menu-central .nav-stacked > li > a {
 	color: #FFF;
@@ -70,16 +70,16 @@ body {
 	background-color: #FFF;
 }
 .navbar-default {
-	background: #82BAB3;
+	background: #28AAD7;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-	background-color: #82BAB3;
+	background-color: #28AAD7;
 }
 .nav-pills > li > i {
-	color: #ED8F8E;
+	color: #0E7EA4;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-	background-color: #82BAB3;
+	background-color: #28AAD7;
 	color: #FFF;
 }
 .nav > .ng-click-active {
@@ -99,7 +99,7 @@ body {
 	border-left-color: #FFFFFF;
 }
 .switch {
-	background-color: #82BAB3;
+	background-color: #28AAD7;
 }
 .view-fields {
 	background-color: #FFF;
@@ -110,5 +110,5 @@ body {
 	border-radius: 0;
 }
 .wells span {
-	color: #ED8F8E;
+	color: #0E7EA4;
 }

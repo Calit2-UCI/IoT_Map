@@ -18,12 +18,12 @@
 			</h1>
 			<!--remove age-->
 			<div>
-				<div class="fright">{l i='views' gid='users'}: {$data.views_count}</div>
+				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--remove age-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
 				
 				<!--website hyper link-->
-				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				<a href={$data.website} target="_blank" class="target_blank">Website</a>  
 				
 				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>

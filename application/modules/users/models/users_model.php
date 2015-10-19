@@ -110,6 +110,7 @@ class Users_model extends \Model
         'nickname',
         'password',
         'user_type',
+
     );
     public $fields_not_editable = array(
         //'birth_date',
@@ -718,6 +719,10 @@ class Users_model extends \Model
 
         if (isset($data["address"])) {
             $return["data"]["address"] = trim(strip_tags($data["address"]));
+        }
+		
+		if (isset($data["website"])) {
+            $return["data"]["website"] = strip_tags($data["website"]);
         }
 		
 		/*

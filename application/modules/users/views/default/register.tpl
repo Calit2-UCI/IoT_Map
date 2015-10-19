@@ -42,6 +42,12 @@
 					<div class="f">{l i='birth_date' gid='users'}: </div>
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
+				
+				<div class="r">
+					<div class="f">Website: </div>
+					<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
+				</div>
+				
 				<div class="r">
 					<div class="f">{l i='field_location' gid='users'}: </div>
 					<div class="v">
