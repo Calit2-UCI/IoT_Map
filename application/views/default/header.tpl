@@ -136,7 +136,7 @@
 		{/if}
 		<div class="main">
 			<div class="content">
-				{breadcrumbs}
+				<!--{breadcrumbs}-->    <!--JL commented it-->
 				
                 {helper func_name='show_banner_place' module='banners' func_param='top-banner'}
 				{helper func_name='show_banner_place' module='banners' func_param='left-top-banner'}
