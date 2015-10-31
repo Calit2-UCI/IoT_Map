@@ -139,6 +139,7 @@ class Users_model extends \Model
         //'birth_date',
         'age_min',
         'age_max',
+		'website',
     );
     public $services_buy_gids = array(
         'users_featured',

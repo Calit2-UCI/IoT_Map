@@ -14,48 +14,17 @@
 			</div>
 			</div>
 		{elseif $form_settings.type eq 'index'}    <!--The one on the homepage-->
-			{/strip}{include file="homepage.html" module="users"}{strip}
+			{/strip}{include file="homepage_header.html" module="users"}{strip}
 
 
 			
 		{else}									   <!--The one on the middle of the user/search page-->
 			<div class="search-form {$form_settings.type}">
-			<div class="inside">
-				<div class="btn-block">
-					<div class="search-btn">
-						{if $form_settings.use_advanced}
-							<span class="collapse-links">
-								<a href="#" class="hide btn-link" id="more-options-link_{$form_settings.form_id}"><i>{l i='link_more_options' gid='start'}</i><i class="fa-caret-down icon-big text-icon"></i></a>
-								<a href="#" class="hide btn-link" id="less-options-link_{$form_settings.form_id}"><i>{l i='link_less_options' gid='start'}</i><i class="fa-caret-up icon-big text-icon"></i></a>
-							</span>
-							&nbsp;&nbsp;&nbsp;
-						{/if}
-						<button type="submit" id="main_search_button_{$form_settings.form_id}" name="search_button">
-							{if $form_settings.object == 'perfect_match'}{l i='btn_refresh' gid='start' type='button'}{else}{l i='btn_search' gid='start' type='button'}{/if}
-						</button>
-					</div>
-				</div>
+			<div>
 				<div class="fields-block aligned-fields">
-					<div id="short-search-form_{$form_settings.form_id}">
-						<div class="search-field">
-							{selectbox input='user_type' id='looking_user_type' value=$user_types.option selected=$data.user_type default=$all_select_lang}
-						</div>
-						<!--remove search age-->
-						<!--div class="search-field age"-->
-							<!--div-->
-								<!--span class="inline vmiddle">{l i='field_age' gid='users'}&nbsp;{l i='from' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_min' id='age_min' value=$age_range selected=$data.age_min}</div-->
-								<!--span class="inline vmiddle">&nbsp;{l i='to' gid='users'}&nbsp;</span><div class="ib vmiddle">{selectbox input='age_max' id='age_max' value=$age_range selected=$data.age_max}</div-->
-							<!--/div-->
-						<!--/div-->
-						<!---->
-						<div class="search-field" >
-							<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="height:2em"/>
-						</div>
-						<div class="search-field">
-							{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}
-						</div>
-					</div>
-					<div class="clr"></div>
+					{/strip}{include file="search.html" module="users"}{strip}
+				
+				
 					<div id="full-search-form_{$form_settings.form_id}" {if $form_settings.type eq 'short'}class="hide"{/if}>
 						{if $form_settings.use_advanced}
 							<div class="clr"></div>

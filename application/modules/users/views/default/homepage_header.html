@@ -1,52 +1,56 @@
-{strip}
-{l i='select_default' gid='start' assign='default_select_lang'}
-{l i='filter_all' gid='users' assign='all_select_lang'}
-{l i='field_search_country' gid='users' assign='location_lang'}
 
 
-<form action="{$form_settings.action}" method="POST" id="main_search_form_{$form_settings.form_id}">
-	<div style="
-	height: 105px;
-	background-color: #668284;
-	
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-    ">
-			<!----->
-			<div style="height: 20px; margin: auto">
-			</div>
-			
-			<h1 class="logo_header" style="display: inline-block; width: 350px;">
-				<a href="{$site_url}" class="logo-block">
+
+		<h1 style="display: inline-block; width: 160px; position: relative; top: 5pt;">
+			<a href="{$site_url}" class="logo-block">
 				<img src="{$site_root}{$logo_settings.path}" alt="{helper func_name='seo_tags_default' func_param='header_text'}" width="{$logo_settings.width}" height="{$logo_settings.height}">
-				</a>
-			</h1>
-			<!------>
+			</a>
+		</h1>
 		
-			<div class="fields-block aligned-fields" style="display: inline-block; width: 508px; position: relative; top: -30px; border:1px;">
-				<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="width: 340px; height: 30px; "/>
-				<button type="submit" id="main_search_button_{$form_settings.form_id}" name="search_button" >
-					{l i='btn_search' gid='start' type='button'}
-				</button>
+		
+		<div style="display: inline-block; width: 660px; position: relative; top: -36px; border:1px;
+		/*
+		    background-color: #eaf8fc;
+    background-image: linear-gradient(#fff, #d4e8ec);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;            
+    padding: 10px;
+	*/
+		">
+			<div style="display: inline-block; width: 270px; position: relative; top: 10px; "><!--border: 0.1em solid #1e90ff;-->
+			{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
 			</div>
-			<!------->
-			<ul style="display: inline-block; position: relative; top: -15px; height: 29px;"  align="center">
-				<div style="	height: 27px; width: 110px;
-	background-color: green;
+			<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="display: inline-block; width: 270px; height: 25px; padding: 3px 8px; "/>
+			<input type="submit" id="main_search_button_{$form_settings.form_id}" name="search_button" style="height: 34px;
+			">
+		</div>
+		
+		
+					<ul style="display: inline-block; position: relative; top: -22px; left: 30px; height: 29px;"  align="center">
+				<!-- <div style="	height: 25px; width: 110px;
+	background-color: #C0DFDE;
 	margin: 0px 0px 2px 0px;
-	border-radius: 1px;">
-				<li><a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 29px; margin: 0px 0px 0px 0px; !--background-color: green; border-color: green;-- position: relative; top: 0px;" href="{$site_url}users/registration" style="">REGISTER</a></li>
-				</div>
-				<div style="	height: 26px; width: 80px;
-	background-color: green;
+	border-radius: 1px;"> -->
+				<div style="line-height:30%;">
+				<li>
+				<a href="{$site_url}users/registration" style="font-size:1px"><button type="button">REGISTER</button></a>
+				<!-- <a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 29px; margin: auto; !--background-color: green; border-color: green;-- position: relative; top: 0px;" href="{$site_url}users/registration" style="">REGISTER</a> -->
+				</li>
+				<br>
+				</br>
+				<!-- </div> -->
+				<!-- <div style="	height: 26px; width: 80px;
+	background-color: #C0DFDE;
 	margin: auto;
-	border-radius: 1px;">
-				<li><a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 30px; margin: 0px 0px 0px 0px; !--background-color: green; border-color: green;-- position: relative; top: -2px;" href="{$site_url}users/login_form">LOGIN</a></li>
+	border-radius: 1px;"> -->
+				<!-- <div> -->
+				<li>
+				<a href="{$site_url}users/login_form"><button type="button">LOGIN</button></a>
+				<!-- <a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 30px; margin: 0px 0px 0px 0px; !--background-color: green; border-color: green;-- position: relative; top: -2px;" href="{$site_url}users/login_form">LOGIN</a> -->
+				</li>
 				</div>
 			</ul>
-			<!-------->
 			
-	</div>
-</form>
-{/strip}
+
 
