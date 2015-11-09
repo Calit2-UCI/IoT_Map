@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div class="content">
 {strip}
 	<h1>{seotag tag='header_text'} - {$page_data.total_rows} {l i='header_users_found' gid='users'}</h1>
 
@@ -54,4 +55,5 @@
 	</div>
 	{if $users}<div id="pages_block_2">{pagination data=$page_data type='full'}</div>{/if}
 {/strip}
+</div>
 {include file="footer.tpl"}

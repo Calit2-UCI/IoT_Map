@@ -94,16 +94,20 @@
 					<menu id="header-menu">
 						{if $auth_type eq 'user'}
 							{*block name='auth_links' module='users'*}
+							
+							<!---change it to a hyper link to service-->
 							<li>
-								{block name='user_account' module='users_payments'}
+								<a href="{$site_url}users/account/services">Services</a>
 							</li>
+							
+							
 							<li>
 								{block name='top_menu' module='users'}
 							</li>
 							<li>
 								{block name='users_lang_select' module='users' type='menu'}
 							</li>
-							<li>
+							<li>  <!-----user menu----->
 								{menu gid='settings_menu' template='settings_menu'}
 							</li>
 						{else}
@@ -112,7 +116,7 @@
 							</li>
 							<li>
 								<ul>
-									<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration" onclick="return false;">Register</a></li>
+									<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration">Register</a></li>
 								</ul>
 							</li>
 							<li class="login">

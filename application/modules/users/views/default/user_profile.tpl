@@ -1,4 +1,5 @@
 {strip}
+<div class="content">
 <div class="view small">
 	<div class="image">
 		<div id="user_photo" class="pos-rel dimp100 pointer">
@@ -107,7 +108,7 @@
 			});
 		</script>{/literal}
 		<div>
-			<input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="{l i='link_activate_profile' gid='users'}" />
+			<a href="{$site_url}users/account/services"><button type="button" class="inline-btn">{l i='link_activate_profile' gid='users'}</button></a>
 			<span class="ml10">{l i='text_activate_profile' gid='users'}</span>
 		</div>
 	</div>
@@ -123,5 +124,6 @@
 			{block name='media_block' module='media' param=$subsection page='1' location_base_url=$location_base_url}
 		{/if}
 	</div>
+</div>
 </div>
 {/strip}

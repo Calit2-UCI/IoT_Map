@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div class="content">
 <div class="content-block">
 	<h1>{l i='header_services_list' gid='services'}</h1>
     {block name='services_buy_list' module='services' template_gid=$template_gid}
@@ -6,5 +7,6 @@
     {block name='packages_list' module='packages' template_gid=$template_gid headline=1}
 </div>
 <div class="clr"></div>
+</div>
 {include file="footer.tpl"}
 

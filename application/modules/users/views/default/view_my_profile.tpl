@@ -26,7 +26,7 @@
 						);
 					});
 				</script>{/literal}
-				<div class="pt10"><input type="button" onclick="activate_available_view.check_available();" value="{l i='btn_activate' gid='start'}" name="btn_activate_save" id="btn_activate_save"></div>
+				<!--div class="pt10"><input type="button" onclick="activate_available_view.check_available();" value="{l i='btn_activate' gid='start'}" name="btn_activate_save" id="btn_activate_save"></div-->
 			{else}
 				<div>{l i="text_need_for_activation" gid='users'}</div>
 				<ul>

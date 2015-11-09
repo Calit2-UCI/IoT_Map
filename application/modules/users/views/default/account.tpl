@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-
+<div class="content">
 {strip}
 <div class="content-block">
 	<h1>{seotag tag='header_text'}: {l i='header_'$action gid='users'}</h1>
@@ -43,8 +43,10 @@
 		<div class="memberships ptb20">
 			{block name='memberships_list' module='memberships'}
 		</div>
+		
 	{elseif $action eq 'update'}
-		{helper func_name='update_account_block' module='users_payments'}
+		</br><p style="font-size: 12px">No update account yet</p>
+		<!--{helper func_name='update_account_block' module='users_payments'}-->
 	{elseif $action eq 'payments_history'}
 		<div>{block name='user_payments_history' module='payments' id_user=$user_id page=$page base_url=$base_url}</div>
 	{elseif $action eq 'banners'}
@@ -72,4 +74,5 @@
 </script>
 {/literal}
 {/strip}
+</div>
 {include file="footer.tpl"}

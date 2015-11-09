@@ -30,7 +30,7 @@
 			<li{if $action eq 'update'} class="active"{/if}><a data-pjax-no-scroll="1" href="{seolink module='users' method='account' action='update'}">{l i='header_account_update' gid='users'}</a></li>
 		{/depends}
 		{depends module=payments}
-			<li{if $action eq 'payments_history'} class="active"{/if}><a data-pjax-no-scroll="1" href="{seolink module='users' method='account' action='payments_history'}">{l i='header_my_payments_statistic' gid='payments'}</a></li>
+			<li{if $action eq 'payments_history'} class="active"{/if}><a data-pjax-no-scroll="1" href="{seolink module='users' method='account' action='payments_history'}">History</a></li>
 		{/depends}
 		{depends module=banners}
 			<li{if $action eq 'banners'} class="active"{/if}><a data-pjax-no-scroll="1" href="{seolink module='users' method='account' action='banners'}">{l i='header_my_banners' gid='banners'}</a></li>

@@ -1,6 +1,55 @@
 
+<!-------------script.js----------------->
+<script>{literal}
+	$(function(){
+		user_ajax_login = new loadingContent({
+			loadBlockWidth: '520px',
+			linkerObjID: 'ajax_login_link_menu',
+			loadBlockLeftType: 'right',
+			loadBlockTopType: 'bottom',
+			closeBtnClass: 'w'
+		}).update_css_styles({'z-index': 2000}).update_css_styles({'z-index': 2000}, 'bg');
+		$('#ajax_login_link').unbind('click').click(function(){
+			$.ajax({
+				url: site_url + 'users/ajax_login_form',
+				cache: false,
+				success: function(data){
+					user_ajax_login.show_load_block(data);
+				}
+			});
+			return false;
+		});
+	});
 
-	<div style="display:inline-block; margin-left:none; margin-right:none; padding:0; background-color:#ff751a; width:100%;">
+	<!-----add js here------>
+	
+	
+</script>{/literal}
+
+
+<!--------------style.css---------------->
+<style type="text/css">
+{literal}
+.background{
+	background-color:#ff751a;
+
+}
+
+.searchPart {
+	display: inline-block; 
+	width: 660px; 
+	position: relative; 
+	top: -36px; 
+	border:1px;
+}
+	<!-----add style here------>
+
+{/literal}
+</style>
+<!---------------------------------------->
+
+
+	<div class="background">
 		<div class="content">
 		<div style="display: inline-block; width: 160px; position: relative; top: 5pt;">
 			<a href="{$site_url}" class="logo-block">
@@ -9,7 +58,7 @@
 		</div>
 		
 		
-		<div style="display: inline-block; width: 660px; position: relative; top: -36px; border:1px;
+		<div class="searchPart">
 		<!--/*
 		    background-color: #eaf8fc;
     background-image: linear-gradient(#fff, #d4e8ec);
@@ -18,7 +67,7 @@
     border-color: #c4d9df #a4c3ca #83afb7;            
     padding: 10px;
 	*/-->
-		">
+		
 			<div style="display: inline-block; width: 270px; position: relative; top: 10px; "><!--border: 0.1em solid #1e90ff;-->
 			{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
 			</div>
@@ -45,8 +94,10 @@
 	margin: auto;
 	border-radius: 1px;"> -->
 				<!-- <div> -->
-				<li>
-				<a href="{$site_url}users/login_form"><button type="button">LOGIN</button></a>
+				<li>				
+					<ul id="ajax_login_link_menu">
+						<a id="ajax_login_link" href="{seolink module='users' method='login_form'}"><button type="button">LOGIN</button></a></li>
+					</ul>
 				<!-- <a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 30px; margin: 0px 0px 0px 0px; !--background-color: green; border-color: green;-- position: relative; top: -2px;" href="{$site_url}users/login_form">LOGIN</a> -->
 				</li>
 				</div>
