@@ -37,82 +37,87 @@
 
 .searchPart {
 	display: inline-block; 
-	width: 660px; 
+	width: 100%; 
 	position: relative; 
-	top: -36px; 
+	top: 15px; 
 	border:1px;
+	align:right;
 }
 	<!-----add style here------>
+
+.pHeader{
+	font-size:15px;
+}
+
+.buttons{
+	float:right;
+}
+
+.ulHeader{
+	display: inline-block;
+	position: relative;
+	top:15px;
+	float:right;
+}
+
+.searchDropdown{
+	display: inline-block;
+	width: 330px;
+	position: relative;
+	top:11px;
+	padding-right:5px;
+}
+
+button{
+}
 
 {/literal}
 </style>
 <!---------------------------------------->
 
-
-	<div class="background">
-		<div class="content">
-		<div style="display: inline-block; width: 160px; position: relative; top: 5pt;">
+<div class="background">
+	<div class="content">
+		<div style="display: inline-block; width: 160px; position: relative; top: 5pt; border: 0.1em solid #1e90ff;">
 			<a href="{$site_url}" class="logo-block">
-				<img src="{$site_root}{$logo_settings.path}" alt="{helper func_name='seo_tags_default' func_param='header_text'}" width="{$logo_settings.width}" height="{$logo_settings.height}">
+			<img src="{$site_root}{$logo_settings.path}" alt="{helper func_name='seo_tags_default' func_param='header_text'}" width="{$logo_settings.width}" height="{$logo_settings.height}">
 			</a>
 		</div>
 		
+		<ul class="ulHeader">
+		<li>
+		<div class="buttons">
+		<!--<div>--> <!--style="line-height:30%;">-->
+			<a href="{$site_url}users/registration"><button type="button">Company Registration</button></a>
+		<!--</div>
+		<div id="ajax_login_link_menu">-->
+			<a id="ajax_login_link_menu" id="ajax_login_link" href="{seolink module='users' method='login_form'}"><button type="button" style="width:87px">Login</button></a>
+		<!--</div>-->
+		</div>
+		</li>
 		
+		<li>
 		<div class="searchPart">
-		<!--/*
-		    background-color: #eaf8fc;
-    background-image: linear-gradient(#fff, #d4e8ec);
-    border-width: 1px;
-    border-style: solid;
-    border-color: #c4d9df #a4c3ca #83afb7;            
-    padding: 10px;
-	*/-->
 		
-			<div style="display: inline-block; width: 270px; position: relative; top: 10px; "><!--border: 0.1em solid #1e90ff;-->
+			<div class="searchDropdown"><!--border: 0.1em solid #1e90ff;-->
 			{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
 			</div>
-			<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="display: inline-block; width: 270px; height: 25px; padding: 3px 8px; "/>
-			<input type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button" style="height: 33px;">
+			<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="width: 380px; height: 30px;"/>
+			<input type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button" style="height: 34px;">
 		</div>
-		
-		
-					<ul style="display: inline-block; position: relative; top: -22px; left: 30px; height: 29px;"  align="center">
-				<!-- <div style="	height: 25px; width: 110px;
-	background-color: #C0DFDE;
-	margin: 0px 0px 2px 0px;
-	border-radius: 1px;"> -->
-				<div style="line-height:30%;">
-				<li>
-				<a href="{$site_url}users/registration" style="font-size:1px"><button type="button">REGISTER</button></a>
-				<!-- <a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 29px; margin: auto; !--background-color: green; border-color: green;-- position: relative; top: 0px;" href="{$site_url}users/registration" style="">REGISTER</a> -->
-				</li>
-				<br>
-				</br>
-				<!-- </div> -->
-				<!-- <div style="	height: 26px; width: 80px;
-	background-color: #C0DFDE;
-	margin: auto;
-	border-radius: 1px;"> -->
-				<!-- <div> -->
-				<li>				
-					<ul id="ajax_login_link_menu">
-						<a id="ajax_login_link" href="{seolink module='users' method='login_form'}"><button type="button">LOGIN</button></a></li>
-					</ul>
-				<!-- <a style="font-size:18px; font-family:Arial; font-weight: normal; text-decoration: none; border-radius: 0px; height: 30px; margin: 0px 0px 0px 0px; !--background-color: green; border-color: green;-- position: relative; top: -2px;" href="{$site_url}users/login_form">LOGIN</a> -->
-				</li>
-				</div>
-			</ul>
-		</div>
+		</li>
+		</ul>
 	</div>
-	<div class="content">
-		<div  style="padding:3% 66% 0 0">
-			<h1>Welcome to Calit2 IoTOC</h1>
-			<p style="font-size:15px">Find your local professional business partner in a snap with Calit2's IoT OC map. Join our growing local IoT OC community.</p>
-			</br><p style="font-size:15px">Create a business profile, post your IoT skills and ideas to communicate with other IoT business professionals like yourself.</p> 
-			</br><p style="font-size:15px">We hope that this non-profit academic research site is the place where you will find your IoT OC partner!</p>
-			</br></br><h1>Want to join in?</h1>
-			<p style="font-size:15px">Just create a simple company profile, post up keywords that best describe your business and soon you'll be networking with other IoT professionals. IoT business simplified! Get started today and find your IoT business match!</p>
-		</div>
+</div>
+
+<div class="content">
+	<div  style="padding:3% 66% 0 0">
+		<h1>Welcome to Calit2 IoTOC</h1>
+		<p class="pHeader">Find your local professional business partner in a snap with Calit2's IoT OC map. Join our growing local IoT OC community.</p>
+		</br><p class="pHeader">Create a business profile, post your IoT skills and ideas to communicate with other IoT business professionals like yourself.</p> 
+		</br><p class="pHeader">We hope that this non-profit academic research site is the place where you will find your IoT OC partner!</p>
+		</br></br><h1>Want to join in?</h1>
+		<p>Just create a simple company profile, post up keywords that best describe your business and soon you'll be networking with other IoT professionals. IoT business simplified! Get started today and find your IoT business match!</p>
 	</div>
+</div>
 
 
