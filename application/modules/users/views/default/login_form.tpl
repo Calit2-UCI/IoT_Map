@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-<div class="content-block">
+<div class="content-block content">
 
 	<div class="inside logform">
 		<h1>{l i='header_login' gid='users'}</h1>

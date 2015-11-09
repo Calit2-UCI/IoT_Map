@@ -5,14 +5,18 @@
 <form action="{$form_settings.action}" method="POST" id="main_search_form_{$form_settings.form_id}">
 	<div >
 		{if $form_settings.type eq 'line'}         <!--The one on the right top of the user/search page-->
-			<div class="search-form {$form_settings.type}">
+			
+			
+			<!--JL commented for no need to have the search bar on the header-->
+			<!--div class="search-form {$form_settings.type}">  
 			<div class="inside">
 				<div id="line-search-form_{$form_settings.form_id}">
 					<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" />
 					<button type="submit" id="main_search_button_{$form_settings.form_id}" class="search"><i class="fa-search w"></i></button>
 				</div>
 			</div>
-			</div>
+			</div-->
+			
 		{elseif $form_settings.type eq 'index'}    <!--The one on the homepage-->
 			{/strip}{include file="homepage_header.html" module="users"}{strip}
 

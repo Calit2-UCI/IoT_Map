@@ -1,4 +1,5 @@
 {strip}
+
 	{if $users}
 		{if !empty($sort_data)}
             <div class="sorter short-line" id="sorter_block">
@@ -43,7 +44,7 @@
 		{foreach item=item from=$users}
 			{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$item}
 			{if $page_data.view_type == 'gallery'}
-				<div id="item-block-{$item.id}" class="item{if $item.is_highlight_in_search || $item.leader_bid || ($item.is_up_in_search && $page_data.use_leader)} highlight{/if}">
+				<div id="item-block-{$item.id}" class="item">    <!--{if $item.is_highlight_in_search || $item.leader_bid || ($item.is_up_in_search && $page_data.use_leader)} highlight{/if}"-->
 					<div class="user">
 						<div class="photo">													 <!--at the line below, change great to big-->
 							<a href="{seolink module='users' method='view' data=$item}"><img src="{$item.media.user_logo.thumbs.big}" alt="{$text_user_logo}" title="{$text_user_logo}" /></a>
@@ -56,7 +57,7 @@
 					</div>
 				</div>
 			{else}
-				<div id="item-block-{$item.id}" class="item user{if $item.is_highlight_in_search || $item.leader_bid || ($item.is_up_in_search && $page_data.use_leader)} highlight{/if}">
+				<div id="item-block-{$item.id}" class="item user">    <!--{if $item.is_highlight_in_search || $item.leader_bid || ($item.is_up_in_search && $page_data.use_leader)} highlight{/if}"-->
 
 					{if $item.is_up_in_search && $page_data.use_leader}<div class="lift_up">{l i='header_up_in_search' gid='users'}</div>{/if}
 					{if $item.leader_bid}<div class="lift_up">{l i='header_leader' gid='users'}</div>{/if}
@@ -93,6 +94,7 @@
 		{/foreach}
 	</div>
 	{if $users}<div id="pages_block_2">{pagination data=$page_data type='full'}</div>{/if}
+
 {/strip}
 
 <script>{literal}

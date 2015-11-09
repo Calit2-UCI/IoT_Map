@@ -1,5 +1,5 @@
 {include file="header.tpl" load_type='ui'}
-	<div>
+	<div class="content">
 		<h1>{seotag tag='header_text'}</h1>
 		<p class="header-comment">{l i='text_register' gid='users'}</p>
 		<div class="edit_block">

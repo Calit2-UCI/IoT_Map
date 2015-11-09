@@ -7,13 +7,13 @@ a.target_blank:hover{text-decoration: none; border-bottom: none;}
 img{border: 1px solid #C4C4C4; outline: none; padding: 4px; background: #FFFFFF;}
 th{font-weight: bold;}
 .index-page {height: auto; position: relative;}
-.index-page:before {background: url('../img/index_bg_image.jpg?ver=2') no-repeat scroll center 0 #FFFFFF ; background-size: auto auto; content: ""; height: 100%; position: absolute; transform: scaleX(-1); width: 100%; z-index: -1;margin-top: -25px;}
+.index-page:before {background: [index_bg]; content: ""; height: 100%; position: absolute; transform: scaleX(-1); width: 100%; z-index: -1;margin-top: -25px;}
 
 /* -- colors --*/
 .bg-main_bg{background-color: #5990B2;} 					.color-main_bg{color: #5990B2;}
 .bg-html_bg{background-color: #FFFFFF;} 					.color-html_bg{color: #FFFFFF;}
 .bg-header_bg{background-color: #E6E6E6;} 				.color-header_bg{color: #E6E6E6;}
-.bg-footer_bg{background-color: #E2EFF7;} 				.color-footer_bg{color: #E2EFF7;}
+.bg-footer_bg{background-color: #FFFFFF;} 				.color-footer_bg{color: #FFFFFF;}
 .bg-menu_hover_bg{background-color: #E6E6E6;} 		.color-menu_hover_bg{color: #E6E6E6;}
 /*.bg-hover_bg{background-color: #;} 				.color-hover_bg{color: #;}*/
 .bg-popup_bg{background-color: #FFFFFF;} 				.color-popup_bg{color: #FFFFFF;}
@@ -108,7 +108,7 @@ th{font-weight: bold;}
 .img-menu dl dt:hover a{color: #5990B2;}*/
 
 /* footer_menu */
-.footer{background: #E2EFF7; padding: 30px 0;}
+.footer{background: #FFFFFF; padding: 30px 0;}
 .footer .copyright{padding-top: 20px;}
 .footer ul{margin: 0px; padding: 0px; overflow: hidden;}
 .footer ul>li{float: right; list-style: none; font-size: 15px; text-transform: uppercase; width: 25%;}
@@ -1087,7 +1087,7 @@ table.widgets td{vertical-align: top;}
 .bg-main_bg [class*="icon-"].edge.fill:before, .bg-main_bg [class*="icon-"].edge.fill, .bg-main_bg [class*="icon-"].edge.hover:hover, .bg-main_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-main_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #5990B2;}
 .bg-html_bg [class*="icon-"].edge.fill:before, .bg-html_bg [class*="icon-"].edge.fill, .bg-html_bg [class*="icon-"].edge.hover:hover, .bg-html_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-html_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #FFFFFF;}
 .bg-header_bg [class*="icon-"].edge.fill:before, .bg-header_bg [class*="icon-"].edge.fill, .bg-header_bg [class*="icon-"].edge.hover:hover, .bg-header_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-header_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #E6E6E6;}
-.bg-footer_bg [class*="icon-"].edge.fill:before, .bg-footer_bg [class*="icon-"].edge.fill, .bg-footer_bg [class*="icon-"].edge.hover:hover, .bg-footer_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-footer_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #E2EFF7;}
+.bg-footer_bg [class*="icon-"].edge.fill:before, .bg-footer_bg [class*="icon-"].edge.fill, .bg-footer_bg [class*="icon-"].edge.hover:hover, .bg-footer_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-footer_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #FFFFFF;}
 .bg-menu_hover_bg [class*="icon-"].edge.fill:before, .bg-menu_hover_bg [class*="icon-"].edge.fill, .bg-menu_hover_bg [class*="icon-"].edge.hover:hover, .bg-menu_hover_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-menu_hover_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #E6E6E6;}
 /*.bg-hover_bg [class*="icon-"].edge.fill:before, .bg-hover_bg [class*="icon-"].edge.fill, .bg-hover_bg [class*="icon-"].edge.hover:hover, .bg-hover_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-hover_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #;}*/
 .bg-popup_bg [class*="icon-"].edge.fill:before, .bg-popup_bg [class*="icon-"].edge.fill, .bg-popup_bg [class*="icon-"].edge.hover:hover, .bg-popup_bg .btn-link:hover [class*="icon-"].edge.hover, .bg-popup_bg.hover-icon:hover [class*="icon-"].edge.hover{color: #FFFFFF;}
@@ -1106,7 +1106,7 @@ table.widgets td{vertical-align: top;}
 .bg-main_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #5990B2, -1px 0 0 #5990B2, 0 1px 0 #5990B2, 0 -1px 0 #5990B2; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#5990B2)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#5990B2);}
 .bg-html_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #FFFFFF, -1px 0 0 #FFFFFF, 0 1px 0 #FFFFFF, 0 -1px 0 #FFFFFF; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#FFFFFF)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#FFFFFF);}
 .bg-header_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #E6E6E6, -1px 0 0 #E6E6E6, 0 1px 0 #E6E6E6, 0 -1px 0 #E6E6E6; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#E6E6E6)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#E6E6E6);}
-.bg-footer_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #E2EFF7, -1px 0 0 #E2EFF7, 0 1px 0 #E2EFF7, 0 -1px 0 #E2EFF7; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#E2EFF7)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#E2EFF7);}
+.bg-footer_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #FFFFFF, -1px 0 0 #FFFFFF, 0 1px 0 #FFFFFF, 0 -1px 0 #FFFFFF; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#FFFFFF)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#FFFFFF);}
 .bg-menu_hover_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #E6E6E6, -1px 0 0 #E6E6E6, 0 1px 0 #E6E6E6, 0 -1px 0 #E6E6E6; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#E6E6E6)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#E6E6E6);}
 /*.bg-hover_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #, -1px 0 0 #, 0 1px 0 #, 0 -1px 0 #; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#);}*/
 .bg-popup_bg [class*="icon-"].edge{text-shadow: 1px 0 0 #FFFFFF, -1px 0 0 #FFFFFF, 0 1px 0 #FFFFFF, 0 -1px 0 #FFFFFF; filter: progid:DXImageTransform.Microsoft.DropShadow(offX=1, offY=1, color=#FFFFFF)progid:DXImageTransform.Microsoft.DropShadow(offX=-1, offY=-1, color=#FFFFFF);}

@@ -1013,9 +1013,9 @@ Class Users extends Controller
             "order" => $order,
             "direction" => $order_direction,
             "links" => array(
-                "default" => l('field_default_sorter', 'users'),
+                "default" => l('field_default_sorter', 'users'),  
                 "name" => l('field_name', 'users'),
-                "views_count" => l('field_views_count', 'users'),
+                //"views_count" => l('field_views_count', 'users'),
                 "date_created" => l('field_date_created', 'users'),
             )
         );

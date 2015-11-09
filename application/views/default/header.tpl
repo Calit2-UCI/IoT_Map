@@ -111,6 +111,11 @@
 								{block name='users_lang_select' module='users' type='menu'}
 							</li>
 							<li>
+								<ul>
+									<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration" onclick="return false;">Register</a></li>
+								</ul>
+							</li>
+							<li class="login">
 								{block name='auth_links' module='users'}
 							</li>
 						{/if}
@@ -120,9 +125,9 @@
 			<div id="top_bar_fixed">
 				<div class="menu-search-bar">
 					<div class="content table-div">
-						<div class="w30">
+						<!--div class="w30">
 							<a href="javascript: history.back();"><i class="fa-arrow-left icon-big w edge hover"></i></a>
-						</div>
+						</div-->
 						<div class="top_menu">
 							{if $auth_type eq 'user'}{menu gid='user_top_menu' template='user_top_menu'}{else}{menu gid='guest_main_menu' template='user_main_menu'}{/if}
 						</div>
@@ -135,9 +140,9 @@
 			<div class="clr"></div>
 		{/if}
 		<div class="main">
-			<div class="content">
+			<div> <!--class="content"-->     <!--JL commented it-->
 				<!--{breadcrumbs}-->    <!--JL commented it-->
-				
+								
                 {helper func_name='show_banner_place' module='banners' func_param='top-banner'}
 				{helper func_name='show_banner_place' module='banners' func_param='left-top-banner'}
 				{helper func_name='show_banner_place' module='banners' func_param='right-top-banner'}
