@@ -32,43 +32,80 @@
 {literal}
 .background{
 	background-color:#ff751a;
-
+    box-shadow: 0 4px 4px -2px #968a88;
+    -moz-box-shadow: 0 4px 4px -2px #968a88;
+    -webkit-box-shadow: 0 4px 4px -2px #968a88;
 }
 
-.searchPart {
-	display: inline-block; 
-	width: 100%; 
-	position: relative; 
-	top: 15px; 
-	border:1px;
-	align:right;
+.logoHeader{
+	display: inline-block;
+	width: 13%;
+	position: relative;
+	padding-top: 1%;
+	padding-bottom: 0.5%;
 }
+
 	<!-----add style here------>
 
 .pHeader{
-	font-size:15px;
+	font-size:100%;
 }
 
 .buttons{
+	width:40%;
 	float:right;
+	padding-top:2%;
+}
+
+.companyRegButton{
+	display:inline-block;
+	float:left;
+	width:68%;
+}
+
+.loginButton{
+	display:inline-block;
+	float:right;
+	width:29.5%;
 }
 
 .ulHeader{
 	display: inline-block;
 	position: relative;
-	top:15px;
 	float:right;
+	width:86%;
+}
+
+.searchPart {
+	display: inline-block; 
+	width: 100%; 
+	align:right;
+	padding-top:2%;
 }
 
 .searchDropdown{
 	display: inline-block;
-	width: 330px;
+	width: 40%;
 	position: relative;
-	top:11px;
-	padding-right:5px;
 }
 
-button{
+.searchBarAndButton{
+	width:59%;
+	float:right;
+}
+
+input[type="text"] {
+	width: 78%;
+	padding-top:1%;
+	padding-bottom:1%;
+	float:left;
+}
+
+input[type="submit"] {
+	width:20%;
+	padding-top:1.1%;
+	padding-bottom:1.1%;
+	float:right;
 }
 
 {/literal}
@@ -77,7 +114,7 @@ button{
 
 <div class="background">
 	<div class="content">
-		<div style="display: inline-block; width: 160px; position: relative; top: 5pt; border: 0.1em solid #1e90ff;">
+		<div class="logoHeader">
 			<a href="{$site_url}" class="logo-block">
 			<img src="{$site_root}{$logo_settings.path}" alt="{helper func_name='seo_tags_default' func_param='header_text'}" width="{$logo_settings.width}" height="{$logo_settings.height}">
 			</a>
@@ -87,10 +124,14 @@ button{
 		<li>
 		<div class="buttons">
 		<!--<div>--> <!--style="line-height:30%;">-->
-			<a href="{$site_url}users/registration"><button type="button">Company Registration</button></a>
+			<div class="companyRegButton">
+				<a href="{$site_url}users/registration"><button type="button" style="width:100%;">Company Registration</button></a>
+			</div>
 		<!--</div>
 		<div id="ajax_login_link_menu">-->
-			<a id="ajax_login_link_menu" id="ajax_login_link" href="{seolink module='users' method='login_form'}"><button type="button" style="width:87px">Login</button></a>
+			<div class="loginButton">
+				<a id="ajax_login_link_menu" id="ajax_login_link" href="{seolink module='users' method='login_form'}"><button type="button" style="width:100%;">Login</button></a>
+			</div>
 		<!--</div>-->
 		</div>
 		</li>
@@ -101,8 +142,10 @@ button{
 			<div class="searchDropdown"><!--border: 0.1em solid #1e90ff;-->
 			{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
 			</div>
-			<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="width: 380px; height: 30px;"/>
-			<input type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button" style="height: 34px;">
+			<div class="searchBarAndButton">
+				<input type="text" name="search" placeholder="{l i='search_people' gid='start'}"/>
+				<input type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button">
+			</div>
 		</div>
 		</li>
 		</ul>
@@ -110,14 +153,18 @@ button{
 </div>
 
 <div class="content">
-	<div  style="padding:3% 66% 0 0">
-		<h1>Welcome to Calit2 IoTOC</h1>
+	</br>
+	<div  style="padding:3% 66% 0 0;">
+		<h1 style="font-size:225%;">Welcome to Calit2 IoTOC</h1>
 		<p class="pHeader">Find your local professional business partner in a snap with Calit2's IoT OC map. Join our growing local IoT OC community.</p>
 		</br><p class="pHeader">Create a business profile, post your IoT skills and ideas to communicate with other IoT business professionals like yourself.</p> 
 		</br><p class="pHeader">We hope that this non-profit academic research site is the place where you will find your IoT OC partner!</p>
 		</br></br><h1>Want to join in?</h1>
 		<p>Just create a simple company profile, post up keywords that best describe your business and soon you'll be networking with other IoT professionals. IoT business simplified! Get started today and find your IoT business match!</p>
 	</div>
+	</br>
+	</br>
+	</br>
 </div>
 
 
