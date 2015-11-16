@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-
+<div class="content">
 <div class="content-block">
 
 <h1>{seotag tag='header_text'}</h1>
@@ -23,4 +23,5 @@
 </div>
 </div>
 <div class="clr"></div>
+</div>
 {include file="footer.tpl"}

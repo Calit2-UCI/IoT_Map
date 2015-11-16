@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div class="content">
 <h1>{seotag tag='header_text'}</h1>
 
 <div class="pos-rel">
@@ -26,5 +27,5 @@
 		});
 	{/literal}</script>		
 </div>
-
+</div>
 {include file="footer.tpl"}

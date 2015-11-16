@@ -1,5 +1,6 @@
 {include file="header.tpl"}
 {strip}
+<div class="content">
 <div class="content-block">
 	<div class="view small">
 		<div class="image">
@@ -134,4 +135,5 @@
 		});
 	</script>{/literal}
 {/if}
+</div>
 {include file="footer.tpl"}

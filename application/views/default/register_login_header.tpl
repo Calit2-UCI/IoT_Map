@@ -114,15 +114,20 @@
 							<li>
 								{block name='users_lang_select' module='users' type='menu'}
 							</li>
+							
+							<!--This file is a copy of header.tpl in the same directry. 
+								JL comment for not showing this when it is on the pages of register and login.--->
+							<!--
 							<li>
 								<ul>
 									<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration">Register</a></li>
 								</ul>
 							</li>
-							<li class="login">  <!--no more popout windown login, link to login page-->
-								<!--{block name='auth_links' module='users'}-->					
+							<li class="login"> 	
 								<a href="{$site_url}users/login_form">Login</a>
 							</li>
+							-->
+							
 						{/if}
 					</menu>
 				</div>

@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+{include file="register_login_header.tpl"}
 
 <div class="content-block content">
 
@@ -29,9 +29,13 @@
 		{helper func_name='show_social_networking_login' module='users_connections'}
 	</div>
 	<div class="clr"></div>
+	
+	<div>
+		<p class="header-comment">{l i='text_register_comment' gid='users'}</p>
+		<a href="{seolink module='users' method='registration'}" class="btn-link"><i class="fa-arrow-right icon-big edge hover"></i><i>{l i='link_register' gid='users'}</i></a>
+	</div>
+	
 </div>
-
-	<br><br><br>
 
 <div class="clr"></div>
 {include file="footer.tpl"}

@@ -1,4 +1,4 @@
-{include file="header.tpl" load_type='ui'}
+{include file="register_login_header.tpl" load_type='ui'}
 	<div class="content">
 		<h1>{seotag tag='header_text'}</h1>
 		<p class="header-comment">{l i='text_register' gid='users'}</p>

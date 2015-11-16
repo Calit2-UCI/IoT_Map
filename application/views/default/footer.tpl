@@ -1,7 +1,7 @@
 			</div>
 		</div>
 		{helper func_name='show_banner_place' module='banners' func_param='bottom-banner'}
-		<div class="footer">
+		<div class="footer" style="background-color:#FFFFFF; height:100px">
 			<div class="content">
 				{menu gid='user_footer_menu'}
 				<!--div class="copyright">{if $DEMO_MODE}{$demo_copyright}{else}&copy;&nbsp;2000-2015&nbsp;<a href="http://www.pilotgroup.net">PilotGroup.NET</a> Powered by <a href="http://www.datingpro.com/">PG Dating Pro</a>{/if}</div-->
