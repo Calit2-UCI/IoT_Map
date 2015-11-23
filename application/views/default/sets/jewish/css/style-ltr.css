@@ -37,14 +37,15 @@ th{font-weight: bold;}
 /*-------------------------Main-------------------------------*/
 .main{height: auto !important; min-height: 100%; margin-bottom: 50px;}
 .content{width: 980px; margin: 0px auto;}
-.header{background: #E6E6E6; min-height: 40px;}
+.header{background: #ff751a; min-height: 40px; }         /*make the header top part to orange color*/
+/*.top_menu ul li{list-style: none; display: inline-block; margin: 0 0px; position: relative; background-color:#5990B2;}*/
 
 /* header(top)_menu */
-#header-menu {float: right; font-size: 12px; line-height: 40px; list-style: none;}
+#header-menu {float: right; font-size: 115%; line-height: 40px; list-style: none; margin-right: -20px;}
 #header-menu li {display: inline-block;}
-#header-menu li > a {display: inline-block;	width: 100%;}
-#header-menu > li {border-right: 1px solid #C4C4C4; color: #5990B2; display: block; float: left; margin-right: -1px; padding: 0 12px; position: relative;}
-#header-menu > li:first-child {border-left: 1px solid #C4C4C4;}
+#header-menu li > a {display: inline-block; width: 100%; font-size: 115%; color: #FFFFFF;}
+#header-menu > li {color: #5990B2; display: block; float: left; margin-right: -1px; padding: 0 12px; position: relative;}
+#header-menu > li:first-child {}
 #header-menu > li:hover, #header-menu > li:hover a, #header-menu > li:hover i {background: #5990B2; color: #FFFFFF;}
 #header-menu > li:hover .drop {display: block}
 #header-menu > li:hover .hover-spin {display:inline-block; -moz-animation:rotate180 1s linear; -o-animation:rotate180 1s linear; -webkit-animation:rotate180 1s linear; animation: rotate180 1s linear;}
@@ -69,7 +70,10 @@ th{font-weight: bold;}
 
 .logo_header{padding: 0; display: inline-block;}
 
-.menu-search-bar{background-color: #5990B2; line-height: 0; width: 100%; z-index: 500;}
+.menu-search-bar{background-color: #ff751a; line-height: 0; width: 100%; z-index: 500;
+    box-shadow: 0 4px 4px -2px #968a88;
+    -moz-box-shadow: 0 4px 4px -2px #968a88;
+    -webkit-box-shadow: 0 4px 4px -2px #968a88;}  /*make the navigation bar to orange color*/
 .menu-search-bar .content > *{vertical-align: middle;}
 .search-box{display: block; float: none; padding: 0; position: relative;}
 .search-box.line{display: inline-block; padding: 0;}
@@ -79,10 +83,11 @@ th{font-weight: bold;}
 /* main_menu */
 .top_menu{line-height: 40px; font-size: 15px; width: 660px; display: inline-block;}
 .top_menu ul{padding: 0; margin: 0;}
-.top_menu ul li{list-style: none; display: inline-block; margin: 0 5px; position: relative;}
-.top_menu a, .top_menu .a{display: inline-block; padding: 0 10px; font-size: 15px; color: #FFFFFF; text-decoration: none; text-transform: uppercase; font-weight: normal;}
+.top_menu ul li{list-style: none; display: inline-block; margin: 0 0px; position: relative;}
+.top_menu a, .top_menu .a{display: inline-block; padding: 0 10px; font-size: 110%; color: #FFFFFF; text-decoration: none; text-transform: uppercase; font-weight: normal;}
 /*.top_menu>ul>li{border-bottom: 4px solid transparent;}
 .top_menu>ul>li.active{border-bottom: 4px solid #5990B2;}*/
+.top_menu li:hover{background: #5990B2; color: #FFFFFF;}
 .top_menu li.active>a{font-weight: bold;}
 .top_menu .submenu{background-color: #5990B2; border: 1px solid #5990B2; display: none; margin-top: 0px; min-width: 160px; padding: 0 1px 5px; position: absolute; z-index:500;}
 .top_menu .submenu li{display: block; margin: 0px; padding: 0;}

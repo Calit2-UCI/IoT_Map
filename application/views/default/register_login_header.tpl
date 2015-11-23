@@ -96,9 +96,11 @@
 							{*block name='auth_links' module='users'*}
 							
 							<!---change it to a hyper link to service-->
+							<!--
 							<li>
 								<a href="{$site_url}users/account/services">Services</a>
 							</li>
+							-->
 							
 							
 							<li>
@@ -111,19 +113,18 @@
 								{menu gid='settings_menu' template='settings_menu'}
 							</li>
 						{else}
+							<!--
 							<li>
 								{block name='users_lang_select' module='users' type='menu'}
 							</li>
-							
+							-->
 							<!--This file is a copy of header.tpl in the same directry. 
 								JL comment for not showing this when it is on the pages of register and login.--->
 							<!--
 							<li>
-								<ul>
-									<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration">Register</a></li>
-								</ul>
+								<li class="register"  {if $auth_type eq 'user'} class="hide-always"{/if}><a href="{$site_url}users/registration">Register</a></li>
 							</li>
-							<li class="login"> 	
+							<li class="login">
 								<a href="{$site_url}users/login_form">Login</a>
 							</li>
 							-->

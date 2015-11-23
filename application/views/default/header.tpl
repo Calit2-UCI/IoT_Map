@@ -96,10 +96,11 @@
 							{*block name='auth_links' module='users'*}
 							
 							<!---change it to a hyper link to service-->
+							<!--
 							<li>
 								<a href="{$site_url}users/account/services">Services</a>
 							</li>
-							
+							-->
 							
 							<li>
 								{block name='top_menu' module='users'}
