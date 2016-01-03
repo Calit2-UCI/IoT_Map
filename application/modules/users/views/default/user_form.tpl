@@ -1,3 +1,6 @@
+<div class="content">
+
+
 {capture assign='user_form_block'}
 	{strip}
 	<form method="post" enctype="multipart/form-data">
@@ -269,7 +272,8 @@
 			});
 		</script>{/literal}
 		<div>
-			<input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="{l i='link_activate_profile' gid='users'}" />
+			<a href="{$site_url}users/account/services"><button type="button" class="inline-btn">{l i='link_activate_profile' gid='users'}</button></a>
+			<!--input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="{l i='link_activate_profile' gid='users'}" /-->
 			<span class="ml10">{l i='text_activate_profile' gid='users'}</span>
 		</div>
 	</div>
@@ -281,4 +285,5 @@
 	<div class="users-user_form">
 		{$user_form_block}
 	</div>
+</div>
 </div>
