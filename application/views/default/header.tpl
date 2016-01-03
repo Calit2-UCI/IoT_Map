@@ -129,7 +129,9 @@
 				</div>
 			</div>
 			<div id="top_bar_fixed">
+				
 				<div class="menu-search-bar">
+				<div class="content">
 					<div class="content table-div">
 						<!--div class="w30">
 							<a href="javascript: history.back();"><i class="fa-arrow-left icon-big w edge hover"></i></a>
@@ -141,6 +143,7 @@
 							{start_search_form type='line'}
 						</div>
 					</div>
+				</div>
 				</div>
 			</div>
 			<div class="clr"></div>

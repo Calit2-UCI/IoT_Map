@@ -81,7 +81,7 @@
 		<div id="error_block">{foreach item=item from=$_PREDEFINED.error}{if $item.text}{$item.text}<br>{/if}{/foreach}</div>
 		<div id="info_block">{foreach item=item from=$_PREDEFINED.info}{if $item.text}{$item.text}<br>{/if}{/foreach}</div>
 		<div id="success_block">{foreach item=item from=$_PREDEFINED.success}{if $item.text}{$item.text}<br>{/if}{/foreach}</div>
-
+		
 		{if empty($header_type) || $header_type ne 'index'}
 			<div class="header">
 				<div class="content">
