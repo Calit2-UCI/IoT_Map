@@ -12,7 +12,7 @@
 						</select>
 					</div>
 				</div>
-				<div class="r">
+				<div class="r hide"> <!--look for type is not needed for register, and users can add this info later-->
 					<div class="f">{l i='field_looking_user_type' gid='users'}:</div>
 					<div class="v">
 						<select name="looking_user_type">
@@ -43,7 +43,7 @@
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
 				
-				<div class="r">
+				<div class="r hide">   <!--website link is not needed for register, and users can add this info later-->
 					<div class="f">Website: </div>
 					<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
 				</div>

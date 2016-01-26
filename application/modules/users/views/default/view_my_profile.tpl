@@ -108,13 +108,14 @@
 	
 	<div class="r">
 		<div class="f">Website:</div>
+		<!--div class="v">{$data.fe_field11}</div-->
 		<div class="v">{$data.website}</div>
 	</div>
 	
 	{if true}	
 	<div class="r">
 		<div class="f">Address (street):</div>
-		<div class="v">Empty</div>
+		<div class="v">{$data.address}</div>
 	</div>
 	{/if}
 	

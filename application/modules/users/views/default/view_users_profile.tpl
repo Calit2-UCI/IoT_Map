@@ -57,7 +57,7 @@
 	{if true}	
 	<div class="r">
 		<div class="f">Address (street):</div>
-		<div class="v">Empty</div>
+		<div class="v">{$data.address}</div>
 	</div>
 	{/if}
 	

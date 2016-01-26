@@ -79,6 +79,7 @@ class Auth_model extends \Model
 				"online_status" => $user_data["online_status"],
 				"site_status" => $user_data["site_status"],
 				"show_adult" => $user_data["show_adult"],
+				"website" => $user_data['website'],
 			);
 		}else{
 			$session = array();

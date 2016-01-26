@@ -76,7 +76,6 @@ class Users_model extends \Model
         'views_count',
         'lat',
         'lon',
-		'website',
     );
     public $fields_all = array();
     public $safe_fields = array(
@@ -103,15 +102,14 @@ class Users_model extends \Model
         'user_type',
         'user_type_str',
         'views_count',
-		'website',
     );
     public $fields_register = array(
         //'birth_date',              // JL commented it for removing the birthday field
-        'email',			// important info for login
-        //'looking_user_type',
-        'nickname',  		// nickname = username
-        'password',			// imporant info
-        'user_type',	
+        'email',
+        'looking_user_type',
+        'nickname',
+        'password',
+        'user_type',
 
     );
     public $fields_not_editable = array(
@@ -126,7 +124,6 @@ class Users_model extends \Model
         'nickname',
         'user_logo',
         'user_type',
-		'website',
     );
     public $fields_completion = array(
         'email',
@@ -726,9 +723,8 @@ class Users_model extends \Model
         }
 		
 		if (isset($data["website"])) {
-			$return["data"]["website"] = trim(strip_tags($data["website"]));
+            $return["data"]["website"] = strip_tags($data["website"]);
         }
-
 		
 		/*
         if (!empty($data["birth_date"])) {
@@ -746,6 +742,7 @@ class Users_model extends \Model
 			$return["data"]["birth_date"] = 0; // specify 0 instead of the birthday
 		} */
 		$return["data"]["birth_date"] = 0; // specify 0 instead of the birthday
+		
         if (isset($data["age"])) {
             $return["data"]["age"] = intval($data["age"]);
         }
@@ -966,7 +963,7 @@ class Users_model extends \Model
                     $user['age_min'] = $age_min;
                 }
             }
-			
+
             if (!empty($user["user_logo"])) {
                 $user["media"]["user_logo"] = $this->CI->Uploads_model->format_upload($this->upload_config_id, $user["postfix"], $user["user_logo"]);
             } else {
@@ -988,10 +985,9 @@ class Users_model extends \Model
                 $user["birth_date"] = strftime($page_data['date_format'], strtotime($user["birth_date"]));
             }
 			*/
-			
 			if(isset($user['rating_sorter'])) $user['rating_sorter'] = round($user['rating_sorter'], 1);
 			if(isset($user['rating_value'])) $user['rating_value'] = round($user['rating_value'], 1);			
-			
+
             $data[$key] = $user;
         }
 
@@ -1064,9 +1060,6 @@ class Users_model extends \Model
             if (isset($user['online_status'])) {
                 $user['online-status-name'] = l('status_online_' . $user['online_status'], 'users');
             }
-			
-			$user['website'] = $user['website'];
-			
             $user['section-code'] = $section_code;
             $user['section-name'] = $section_name;
             $user['link'] = rewrite_link('users', 'view', $user);
@@ -1118,7 +1111,7 @@ class Users_model extends \Model
         $data['online-status-name'] = l('status_online_0', 'users');
         $data['section-code'] = $section_code;
         $data['section-name'] = $section_name;
-		$data['website'] = 'unknown';
+
         return $data;
     }
 
@@ -1246,7 +1239,6 @@ class Users_model extends \Model
             return array(
                 "templates" => array('nickname', 'first-name', 'second-name', 'type-code', 'type-name', 'looking-code', 'looking-name', 'name', 'location', 'country', 'region', 'region-code', 'city', 'age', 
 										//'birth-date', 
-										'website',
 										'registered-date', 'online-status-code', 'online-status-name', 'section-code', 'section-name', 'fname', 'sname', 'user_type', 'output_name'),
                 "url_vars" => array(),
                 "url_postfix" => array(
@@ -1259,7 +1251,6 @@ class Users_model extends \Model
             return array(
                 "templates" => array('nickname', 'first-name', 'second-name', 'type-code', 'type-name', 'looking-code', 'looking-name', 'name', 'location', 'country', 'region', 'region-code', 'city', 'age',
 										//'birth-date', 
-										'website',
 										'registered-date', 'online-status-code', 'online-status-name', 'section-code', 'section-name', 'fname', 'sname', 'user_type', 'output_name'),
                 "url_vars" => array(
                     "id" => array("id" => 'literal', "nickname" => 'literal'),
@@ -1703,7 +1694,6 @@ class Users_model extends \Model
             'address' => $data['address'],
             'postal_code' => $data['postal_code'],
             //'birth_date' => $data['birth_date'],
-			'website' => $data['website'],
         );
         $user_for_location[$data["id"]] = array($data["id_country"], $data["id_region"], $data["id_city"]);
         $this->CI->load->helper('countries');

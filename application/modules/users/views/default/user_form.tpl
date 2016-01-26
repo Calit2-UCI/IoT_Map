@@ -1,5 +1,5 @@
 <div class="content">
-
+<!--This file have control of the "Edit Profile" for each user.-->
 
 {capture assign='user_form_block'}
 	{strip}
@@ -56,14 +56,14 @@
 					</div>
 				</div>
 			{/if}
-			{if !$not_editable_fields.nickname}
+			{if !$not_editable_fields.nickname}  <!--nickname is the user name-->
 				<div class="r hide">
 					<div class="f">{l i='field_nickname' gid='users'}: </div>
 					<div class="v"><input type="text" name="nickname" value="{$data.nickname|escape}"></div>
 				</div>
 			{/if}
 
-			{if !$not_editable_fields.sname}
+			{if !$not_editable_fields.sname}       <!--Leave this in Hide-->
 				<div class="r hide">
 					<div class="f">{l i='field_sname' gid='users'}: </div>
 					<div class="v"><input type="text" name="sname" value="{$data.sname|escape}"></div>
@@ -73,7 +73,8 @@
 			{if true}
 				<div class="r">
 					<div class="f">Website: </div>
-					<div class="v">Empty</div>
+					<!--div class="v">Empty</div-->
+					<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
 				</div>
 			{/if}
 			
@@ -95,7 +96,7 @@
 			{if !$not_editable_fields.birth_date}
 				<div class="r hide">
 					<div class="f">{l i='birth_date' gid='users'}: </div>
-					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
+					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date"></div>
 				</div>
 			{/if}
 			
@@ -104,7 +105,8 @@
 			{if true}
 				<div class="r">
 					<div class="f">Address (street): </div>
-					<div class="v">Empty</div>
+					<!--div class="v">Empty</div-->
+					<div class="v"><input type="text" name="address" value="{$data.address|escape}"></div>
 				</div>
 			{/if}
 			
@@ -188,7 +190,8 @@
 			<div>
 				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
-				<a href={$data.website} target="_blank" class="target_blank">Website</a>  
+				
+				{if $data.location}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
 				
 				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>
