@@ -37,26 +37,27 @@ th{font-weight: bold;}
 /*-------------------------Main-------------------------------*/
 .main{height: auto !important; min-height: 100%; margin-bottom: 50px;}
 .content{width: 980px; margin: 0px auto;}
-.header{background: #ff751a; min-height: 40px; }         /*make the header top part to orange color*/
+.header{background: #089de3; min-height: 40px; }         /*make the header top part to orange color*/
 /*.top_menu ul li{list-style: none; display: inline-block; margin: 0 0px; position: relative; background-color:#5990B2;}*/
 
-/* header(top)_menu */
+/* header(top)_menu -- registration header*/
 #header-menu {float: right; font-size: 115%; line-height: 40px; list-style: none; margin-right: -20px;}
 #header-menu li {display: inline-block;}
 #header-menu li > a {display: inline-block; width: 100%; font-size: 115%; color: #FFFFFF;}
-#header-menu > li {color: #5990B2; display: block; float: left; margin-right: -1px; padding: 0 12px; position: relative;}
+#header-menu > li {color: #5990B2; display: block; float: left; margin-right: -1px; padding: 0 12px; position: relative;} /*number*/
+#header-menu > li, #header-menu > li a, #header-menu > li i {color: #FFFFFF;} /*the stuff on the top right corner*/
 #header-menu > li:first-child {}
-#header-menu > li:hover, #header-menu > li:hover a, #header-menu > li:hover i {background: #5990B2; color: #FFFFFF;}
+#header-menu > li:hover, #header-menu > li:hover a, #header-menu > li:hover i {background: #35994e; color: #FFFFFF;} /*background: login page login tag background; color: login tag text color*/
 #header-menu > li:hover .drop {display: block}
 #header-menu > li:hover .hover-spin {display:inline-block; -moz-animation:rotate180 1s linear; -o-animation:rotate180 1s linear; -webkit-animation:rotate180 1s linear; animation: rotate180 1s linear;}
 @-moz-keyframes rotate180{0%{-moz-transform:rotate(0deg);} 100%{-moz-transform:rotate(180deg);}}@-webkit-keyframes rotate180{0%{-webkit-transform:rotate(0deg);} 100%{-webkit-transform:rotate(180deg);}}@-o-keyframes rotate180{0%{-o-transform:rotate(0deg);} 100%{-o-transform:rotate(180deg);}}@-ms-keyframes rotate180{0%{-ms-transform:rotate(0deg);} 100%{-ms-transform:rotate(180deg);}}@keyframes rotate180{0%{transform:rotate(0deg);} 100%{transform:rotate(180deg);}}
 #header-menu .header-item i {vertical-align: middle;}
 #header-menu .settings-menu i {font-size: 15px;}
-#header-menu .drop {background: #5990B2; display: none; padding: 0 2px 6px;	position: absolute;	right: 0; z-index: 100;}
+#header-menu .drop {background: #35994e; display: none; padding: 0 2px 6px;	position: absolute;	right: 0; z-index: 100;} /*profile drop down list*/
 #header-menu a:hover {text-decoration: none;}
 #header-menu .drop li {padding: 0 5%; text-align: left; line-height: 40px; width: 90%;}
 #header-menu .drop > span, #header-menu .drop > a span{float: left; font-size: 15px; height: 40px; padding: 0 10px; text-transform: uppercase;}
-#header-menu .drop li:hover, #header-menu .drop li:hover a, #header-menu .drop li:hover i {background-color: #E6E6E6; color: #5990B2;}
+#header-menu .drop li:hover, #header-menu .drop li:hover a, #header-menu .drop li:hover i {background-color: #E6E6E6; color: #089de3;} /*profile drop down list*/
 #header-menu .drop > .extra {font-size: 15px;}
 #header-menu .drop li > .extra {font-size: 15px; text-align: right;}
 /* header(top)_menu */
@@ -70,7 +71,8 @@ th{font-weight: bold;}
 
 .logo_header{padding: 0; display: inline-block;}
 
-.menu-search-bar{background-color: #ff751a; line-height: 0; width: 100%; z-index: 500;
+/*header_menu bar*/
+.menu-search-bar{background-color: #089de3; line-height: 0; width: 100%; z-index: 500;
     box-shadow: 0 4px 4px -2px #968a88;
     -moz-box-shadow: 0 4px 4px -2px #968a88;
     -webkit-box-shadow: 0 4px 4px -2px #968a88;}  /*make the navigation bar to orange color*/
@@ -80,20 +82,20 @@ th{font-weight: bold;}
 .menu-search-bar .search-box.line{width: 280px;}
 .menu-search-bar .search-form.line{padding: 0 !important;}
 
-/* main_menu */
+/* main_menu inside of an user profile*/
 .top_menu{line-height: 40px; font-size: 15px; width: 660px; display: inline-block;}
 .top_menu ul{padding: 0; margin: 0;}
 .top_menu ul li{list-style: none; display: inline-block; margin: 0 0px; position: relative;}
 .top_menu a, .top_menu .a{display: inline-block; padding: 0 10px; font-size: 110%; color: #FFFFFF; text-decoration: none; text-transform: uppercase; font-weight: normal;}
 /*.top_menu>ul>li{border-bottom: 4px solid transparent;}
 .top_menu>ul>li.active{border-bottom: 4px solid #5990B2;}*/
-.top_menu li:hover{background: #5990B2; color: #FFFFFF;}
+.top_menu li:hover{background: #35994e; color: #FFFFFF;} /*navigation menu bar*/ 
 .top_menu li.active>a{font-weight: bold;}
-.top_menu .submenu{background-color: #5990B2; border: 1px solid #5990B2; display: none; margin-top: 0px; min-width: 160px; padding: 0 1px 5px; position: absolute; z-index:500;}
+.top_menu .submenu{background-color: #35994e; border: 1px solid #35994e; display: none; margin-top: 0px; min-width: 160px; padding: 0 1px 5px; position: absolute; z-index:500;} /*menu drop down list*/
 .top_menu .submenu li{display: block; margin: 0px; padding: 0;}
 .top_menu .submenu a{box-sizing: border-box; display: inline-block; height: 100%; line-height: 1.2; padding: 0 15px; text-transform: none; vertical-align: middle; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
-.top_menu .submenu li:hover{background-color: #E6E6E6;}
-.top_menu .submenu li:hover a{color: #5990B2;}
+.top_menu .submenu li:hover{background-color: #E6E6E6;} /*navigation bar drop down list*/
+.top_menu .submenu li:hover a{color: #089de3;} /*navigation bar drop down list text*/
 .top_menu>ul li:hover .submenu{display: block;}
 .top_menu .num{display: inline-block; margin-left: 8px;}
 
@@ -222,12 +224,12 @@ p.header-comment{padding: 0px 0px 20px; margin: 0px;}
 .sorter-dir{font-weight: bold;}
 .sorter-dir.asc:after, .sorter-dir.up:after{content: "↓";}
 .sorter-dir.desc:after, .sorter-dir.down:after{content: "↑";}
-/*------------------------Inputs------------------------------*/
+/*------------------------Inputs Main page------------------------------*/
 .a-button, .a-button:hover{text-decoration: none;}
-input[type=text], input[type=password], select, textarea, button, .a-button{border: solid 1px #5990B2; background-color: #FFFFFF; font-size: 15px; height: 23px;}
+input[type=text], input[type=password], select, textarea, button, .a-button{border: solid 1px #089de3; background-color: #FFFFFF; font-size: 15px; height: 23px;} /**/
 select[multiple] {height: auto; max-height: 250px;}
-input[type="image"], input[type="submit"], input[type="button"], input[type="reset"], button, .a-button{ background-color: #5990B2; border: 2px solid #5990B2; color: #FFFFFF; cursor: pointer; font-size: 17px; padding: 5px 15px; text-align: center;}
-input[type="image"]:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover, .a-button:hover{ background-color: #FFFFFF; border: 2px solid #5990B2; color: #5990B2;}
+input[type="image"], input[type="submit"], input[type="button"], input[type="reset"], button, .a-button{ background-color: #f37e0c; border: 2px solid #f37e0c; color: #FFFFFF; cursor: pointer; font-size: 17px; padding: 5px 15px; text-align: center;}
+input[type="image"]:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover, .a-button:hover{ background-color: #35994e; border: 2px solid #35994e; color: #FFF;} /*login registration buttons*/
 button {height: 38px;}
 textarea{font-family: inherit; line-height: 1.2;}
 input[type="submit"].inline-btn, input[type="button"].inline-btn, input[type="reset"].inline-btn, button.inline-btn, .a-button.inline-btn{font-size: 1em; line-height: 1.5em; padding: 0.1em 0.5em; height: auto;}
@@ -489,6 +491,7 @@ table.list .empty:hover{background: transparent;}
 
 #profile_tab_sections{margin-top: 15px;}
 
+/*select type drop down list*/
 .selectBox{background: #FFFFFF; border: 1px solid #C4C4C4; font-size: 15px; color: #4C4C4C; position: relative;}
 .selectBox .label{padding: 5px 24px 4px 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .selectBox .arrow{font-family: FontAwesome; position: absolute; top: 0; right: 0; width: 24px; height: 100%; font-size: 20px; color: #C4C4C4; text-align: center;}
