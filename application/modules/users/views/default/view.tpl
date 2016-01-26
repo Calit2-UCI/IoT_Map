@@ -22,7 +22,7 @@
 					<!--{l i='field_age' gid='users'}: {$data.age}-->
 					<!--website hyper link-->
 					
-					{if $data.location}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
+					{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
 					
 					{if $data.location}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>

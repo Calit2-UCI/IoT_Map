@@ -191,7 +191,7 @@
 				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
 				
-				{if $data.location}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
+				{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
 				
 				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
 			</div>
