@@ -6,7 +6,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.block.php');
 $this->register_function("block", "tpl_function_block"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
-$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-25 02:00:53 Pacific Daylight Time */ ?>
+$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-05 07:30:16 Pacific Standard Time */ ?>
 
 <?php if ($this->_vars['policy_page_gid']): ?>
 	<?php $this->_tag_stack[] = array('tpl_block_capture', array('assign' => 'cookie_policy_link')); tpl_block_capture(array('assign' => 'cookie_policy_link'), null, $this); ob_start(); ?>

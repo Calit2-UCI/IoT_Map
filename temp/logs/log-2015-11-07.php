@@ -1,0 +1,41 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-11-07 00:01:37 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 00:53:25 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 00:54:49 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 00:55:30 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 01:26:56 --> helper not exist (register)
+ERROR - 2015-11-07 02:02:49 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 02:19:02 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 02:57:38 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 03:16:48 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 04:19:49 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 05:04:26 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 05:36:16 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 06:21:15 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 07:08:16 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 07:37:14 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 08:42:16 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 09:28:17 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 09:38:17 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 10:22:13 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 10:46:06 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 11:51:27 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 12:54:01 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 12:58:28 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 13:35:30 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 14:13:17 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 14:29:37 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 15:36:37 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 15:53:49 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 16:22:13 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 17:37:48 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 17:54:37 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 18:23:16 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 20:21:02 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 20:24:15 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 21:11:48 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 22:23:18 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 22:25:19 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 22:38:37 --> 404 Page Not Found --> 
+ERROR - 2015-11-07 23:13:03 --> 404 Page Not Found --> 

@@ -4,8 +4,8 @@
          ng-repeat="(id, user) in users track by id">
         <div class="pointer view-fields" ng-click="go('profile/' + user.id, true)">
             <div>
-                <span class="user-name" ng-bind="user.nickname"></span>,
-                <span class="text-muted" ng-bind="user.age"></span>
+                <span class="user-name" ng-bind="user.nickname"></span>
+                <!--<span class="text-muted" ng-bind="user.age"></span>-->
             </div>
             <div class="text-muted small" ng-bind="user.location"></div>
             <div class="image-container">
@@ -16,9 +16,9 @@
                 <img class="img" alt="{{l('text_photo')}}" title="{{user.output_name}}"
                      ng-src="{{user.media.user_logo.thumbs.great}}">
             </div>
-            <div class="text-muted small">
+            <!--<div class="text-muted small">
                 <span ng-bind="l('last_seen')"></span>: <time ng-bind="user.date_last_activity"></time>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

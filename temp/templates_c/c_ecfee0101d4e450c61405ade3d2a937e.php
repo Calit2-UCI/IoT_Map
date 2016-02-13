@@ -14,7 +14,7 @@ $this->register_function("helper", "tpl_function_helper");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.json_encode.php');
 $this->register_function("json_encode", "tpl_function_json_encode"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
-$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-08-25 02:00:52 Pacific Daylight Time */ ?>
+$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-01-26 05:32:55 Pacific Standard Time */ ?>
 
 <?php if (! $this->_vars['is_pjax']): ?>
 <!DOCTYPE html>
@@ -131,16 +131,22 @@ application/views/default/css/font-awesome.css" rel="stylesheet" type="text/css"
 					<menu id="header-menu">
 						<?php if ($this->_vars['auth_type'] == 'user'): ?>
 							
+							
+							<!---change it to a hyper link to service-->
+							<!--
 							<li>
-								<?php echo tpl_function_block(array('name' => 'user_account','module' => 'users_payments'), $this);?>
+								<a href="<?php echo $this->_vars['site_url']; ?>
+users/account/services">Services</a>
 							</li>
+							-->
+							
 							<li>
 								<?php echo tpl_function_block(array('name' => 'top_menu','module' => 'users'), $this);?>
 							</li>
 							<li>
 								<?php echo tpl_function_block(array('name' => 'users_lang_select','module' => 'users','type' => 'menu'), $this);?>
 							</li>
-							<li>
+							<li>  <!-----user menu----->
 								<?php echo tpl_function_menu(array('gid' => 'settings_menu','template' => 'settings_menu'), $this);?>
 							</li>
 						<?php else: ?>
@@ -148,18 +154,28 @@ application/views/default/css/font-awesome.css" rel="stylesheet" type="text/css"
 								<?php echo tpl_function_block(array('name' => 'users_lang_select','module' => 'users','type' => 'menu'), $this);?>
 							</li>
 							<li>
-								<?php echo tpl_function_block(array('name' => 'auth_links','module' => 'users'), $this);?>
+								<ul>
+									<li class="register"  <?php if ($this->_vars['auth_type'] == 'user'): ?> class="hide-always"<?php endif; ?>><a href="<?php echo $this->_vars['site_url']; ?>
+users/registration">Register</a></li>
+								</ul>
+							</li>
+							<li class="login">  <!--no more popout windown login, link to login page-->
+								<!--<?php echo tpl_function_block(array('name' => 'auth_links','module' => 'users'), $this);?>-->					
+								<a href="<?php echo $this->_vars['site_url']; ?>
+users/login_form">Login</a>
 							</li>
 						<?php endif; ?>
 					</menu>
 				</div>
 			</div>
 			<div id="top_bar_fixed">
+				
 				<div class="menu-search-bar">
+				<div class="content">
 					<div class="content table-div">
-						<div class="w30">
+						<!--div class="w30">
 							<a href="javascript: history.back();"><i class="fa-arrow-left icon-big w edge hover"></i></a>
-						</div>
+						</div-->
 						<div class="top_menu">
 							<?php if ($this->_vars['auth_type'] == 'user'):  echo tpl_function_menu(array('gid' => 'user_top_menu','template' => 'user_top_menu'), $this); else:  echo tpl_function_menu(array('gid' => 'guest_main_menu','template' => 'user_main_menu'), $this); endif; ?>
 						</div>
@@ -168,13 +184,14 @@ application/views/default/css/font-awesome.css" rel="stylesheet" type="text/css"
 						</div>
 					</div>
 				</div>
+				</div>
 			</div>
 			<div class="clr"></div>
 		<?php endif; ?>
 		<div class="main">
-			<div class="content">
-				<?php echo tpl_function_breadcrumbs(array(), $this);?>
-				
+			<div> <!--class="content"-->     <!--JL commented it-->
+				<!--<?php echo tpl_function_breadcrumbs(array(), $this);?>-->    <!--JL commented it-->
+								
                 <?php echo tpl_function_helper(array('func_name' => 'show_banner_place','module' => 'banners','func_param' => 'top-banner'), $this);?>
 				<?php echo tpl_function_helper(array('func_name' => 'show_banner_place','module' => 'banners','func_param' => 'left-top-banner'), $this);?>
 				<?php echo tpl_function_helper(array('func_name' => 'show_banner_place','module' => 'banners','func_param' => 'right-top-banner'), $this);?>

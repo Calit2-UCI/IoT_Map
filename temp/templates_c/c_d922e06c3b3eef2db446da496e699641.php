@@ -1,12 +1,8 @@
 <?php
-require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.block.php');
-$this->register_function("block", "tpl_function_block"); 
-require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.selectbox.php');
-$this->register_function("selectbox", "tpl_function_selectbox"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-01 08:17:49 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-08 11:12:51 Pacific Standard Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start();  
 $this->assign('default_select_lang', l('select_default', 'start', '', 'text', array()));
@@ -18,9 +14,13 @@ $this->assign('location_lang', l('field_search_country', 'users', '', 'text', ar
 <form action="<?php echo $this->_vars['form_settings']['action']; ?>
 " method="POST" id="main_search_form_<?php echo $this->_vars['form_settings']['form_id']; ?>
 ">
-	<div class="search-form <?php echo $this->_vars['form_settings']['type']; ?>
-">
-		<?php if ($this->_vars['form_settings']['type'] == 'line'): ?>
+	<div >
+		<?php if ($this->_vars['form_settings']['type'] == 'line'): ?>         <!--The one on the right top of the user/search page-->
+			
+			
+			<!--JL commented for no need to have the search bar on the header-->
+			<!--div class="search-form <?php echo $this->_vars['form_settings']['type']; ?>
+">  
 			<div class="inside">
 				<div id="line-search-form_<?php echo $this->_vars['form_settings']['form_id']; ?>
 ">
@@ -29,52 +29,29 @@ $this->assign('location_lang', l('field_search_country', 'users', '', 'text', ar
 " class="search"><i class="fa-search w"></i></button>
 				</div>
 			</div>
-		<?php elseif ($this->_vars['form_settings']['type'] == 'index'): ?>
-			<div class="fields-block aligned-fields">
-				<input type="text" name="search" placeholder="<?php echo l('search_people', 'start', '', 'text', array()); ?>" style="width: 183px;"/>
-				<button type="submit" id="main_search_button_<?php echo $this->_vars['form_settings']['form_id']; ?>
-" name="search_button" >
-					<?php echo l('btn_search', 'start', '', 'button', array()); ?>
-				</button>
-			</div>
-		<?php else: ?>
-			<div class="inside">
-				<div class="btn-block">
-					<div class="search-btn">
-						<?php if ($this->_vars['form_settings']['use_advanced']): ?>
-							<span class="collapse-links">
-								<a href="#" class="hide btn-link" id="more-options-link_<?php echo $this->_vars['form_settings']['form_id']; ?>
-"><i><?php echo l('link_more_options', 'start', '', 'text', array()); ?></i><i class="fa-caret-down icon-big text-icon"></i></a>
-								<a href="#" class="hide btn-link" id="less-options-link_<?php echo $this->_vars['form_settings']['form_id']; ?>
-"><i><?php echo l('link_less_options', 'start', '', 'text', array()); ?></i><i class="fa-caret-up icon-big text-icon"></i></a>
-							</span>
-							&nbsp;&nbsp;&nbsp;
-						<?php endif; ?>
-						<button type="submit" id="main_search_button_<?php echo $this->_vars['form_settings']['form_id']; ?>
-" name="search_button">
-							<?php if ($this->_vars['form_settings']['object'] == 'perfect_match'):  echo l('btn_refresh', 'start', '', 'button', array());  else:  echo l('btn_search', 'start', '', 'button', array());  endif; ?>
-						</button>
-					</div>
-				</div>
-				<div class="fields-block aligned-fields">
-					<div id="short-search-form_<?php echo $this->_vars['form_settings']['form_id']; ?>
+			</div-->
+			
+		<?php elseif ($this->_vars['form_settings']['type'] == 'index'): ?>    <!--The one on the homepage-->
+			<?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack);  $_templatelite_tpl_vars = $this->_vars;
+echo $this->_fetch_compile_include( $this->module_path. "users". $this->module_templates.  $this->get_current_theme_gid('', '"users"'). "homepage_header.html", array('load_type' => false));
+$this->_vars = $_templatelite_tpl_vars;
+unset($_templatelite_tpl_vars);
+  $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+
+
+			
+		<?php else: ?>									   <!--The one on the middle of the user/search page-->
+			<div class="search-form <?php echo $this->_vars['form_settings']['type']; ?>
 ">
-						<div class="search-field">
-							<?php echo tpl_function_selectbox(array('input' => 'user_type','id' => 'looking_user_type','value' => $this->_vars['user_types']['option'],'selected' => $this->_vars['data']['user_type'],'default' => $this->_vars['all_select_lang']), $this);?>
-						</div>
-						<!--remove search age-->
-						<!--div class="search-field age"-->
-							<!--div-->
-								<!--span class="inline vmiddle"><?php echo l('field_age', 'users', '', 'text', array()); ?>&nbsp;<?php echo l('from', 'users', '', 'text', array()); ?>&nbsp;</span><div class="ib vmiddle"><?php echo tpl_function_selectbox(array('input' => 'age_min','id' => 'age_min','value' => $this->_vars['age_range'],'selected' => $this->_vars['data']['age_min']), $this);?></div-->
-								<!--span class="inline vmiddle">&nbsp;<?php echo l('to', 'users', '', 'text', array()); ?>&nbsp;</span><div class="ib vmiddle"><?php echo tpl_function_selectbox(array('input' => 'age_max','id' => 'age_max','value' => $this->_vars['age_range'],'selected' => $this->_vars['data']['age_max']), $this);?></div-->
-							<!--/div-->
-						<!--/div-->
-						<!---->
-						<div class="search-field country">
-							<?php echo tpl_function_block(array('name' => 'location_select','module' => 'countries','select_type' => 'city','placeholder' => $this->_vars['location_lang'],'id_country' => $this->_vars['data']['id_country'],'id_region' => $this->_vars['data']['id_region'],'id_city' => $this->_vars['data']['id_city']), $this);?>
-						</div>
-					</div>
-					<div class="clr"></div>
+			<div>
+				<div class="fields-block aligned-fields">
+					<?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack);  $_templatelite_tpl_vars = $this->_vars;
+echo $this->_fetch_compile_include( $this->module_path. "users". $this->module_templates.  $this->get_current_theme_gid('', '"users"'). "search.html", array('load_type' => false));
+$this->_vars = $_templatelite_tpl_vars;
+unset($_templatelite_tpl_vars);
+  $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+				
+				
 					<div id="full-search-form_<?php echo $this->_vars['form_settings']['form_id']; ?>
 " <?php if ($this->_vars['form_settings']['type'] == 'short'): ?>class="hide"<?php endif; ?>>
 						<?php if ($this->_vars['form_settings']['use_advanced']): ?>
@@ -112,7 +89,9 @@ unset($_templatelite_tpl_vars);
 					</div>
 				</div>
 			</div>
+			</div>
 		<?php endif; ?>
 	</div>
 </form>
 <?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>
+

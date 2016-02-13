@@ -1,0 +1,6 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2016-02-13 01:09:29 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/map.html line 6]: syntax error: /literal function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2016-02-13 01:09:38 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/map.html line 6]: syntax error: /literal function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2016-02-13 02:03:14 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/view_users_profile.tpl line 59]: syntax error: unidentified token '=' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2016-02-13 02:03:34 --> Severity: User Error  --> TPL: [in application/modules/users/views/default/view_users_profile.tpl line 59]: syntax error: unidentified token '=' (compile.compile_if.php, line 131) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798

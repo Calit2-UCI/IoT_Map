@@ -12,14 +12,14 @@ $this->register_modifier("escape", "tpl_modifier_escape");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
-$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-10 20:06:35 Pacific Daylight Time */ ?>
+$this->register_function("seotag", "tpl_function_seotag");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-01-26 06:15:33 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
-echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => 'ui'));
+echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "register_login_header.tpl", array('load_type' => 'ui'));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
  ?>
-	<div>
+	<div class="content">
 		<h1><?php echo tpl_function_seotag(array('tag' => 'header_text'), $this);?></h1>
 		<p class="header-comment"><?php echo l('text_register', 'users', '', 'text', array()); ?></p>
 		<div class="edit_block">
@@ -34,7 +34,7 @@ unset($_templatelite_tpl_vars);
 						</select>
 					</div>
 				</div>
-				<div class="r">
+				<div class="r hide"> <!--look for type is not needed for register, and users can add this info later-->
 					<div class="f"><?php echo l('field_looking_user_type', 'users', '', 'text', array()); ?>:</div>
 					<div class="v">
 						<select name="looking_user_type">
@@ -70,6 +70,13 @@ unset($_templatelite_tpl_vars);
 					<div class="v"><input type='text' value='<?php echo $this->_vars['data']['birth_date']; ?>
 ' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
+				
+				<div class="r hide">   <!--website link is not needed for register, and users can add this info later-->
+					<div class="f">Website: </div>
+					<div class="v"><input type="text" name="website" value="<?php echo $this->_run_modifier($this->_vars['data']['website'], 'escape', 'plugin', 1); ?>
+"></div>
+				</div>
+				
 				<div class="r">
 					<div class="f"><?php echo l('field_location', 'users', '', 'text', array()); ?>: </div>
 					<div class="v">

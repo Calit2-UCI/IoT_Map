@@ -10,17 +10,19 @@ $this->register_function("seotag", "tpl_function_seotag");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:02:57 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-02-12 21:41:16 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
   $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+<div class="content">
 <div class="content-block">
 	<div class="view small">
 		<div class="image">
-			<div id="user_photo" class="pos-rel dimp100<?php if ($this->_vars['data']['user_logo']): ?> pointer<?php endif; ?>">
+			<!--<div id="user_photo" class="pos-rel dimp100<?php if ($this->_vars['data']['user_logo']): ?> pointer<?php endif; ?>">-->
+			<div>
 				<?php 
 $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array_merge(array(),$this->_vars['data'])));
  ?>
@@ -40,8 +42,8 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 </s></span>
 				</h1>
 				<div>
-					<div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
-</div>
+					<!--div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
+</div-->
 					<div class="fleft clearfix">
 						<div class="fleft">
 						
@@ -51,13 +53,16 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 
 							<!--website hyper link-->
 							
-							<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>
+							<a href=<?php echo $this->_vars['data']['website']; ?>
+ target="_blank" class="target_blank">Website</a>  
 							<?php if ($this->_vars['data']['location']): ?>
 								<i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span>
 																	<i class="delim-alone"></i>
 									<a href="javascript:void(0);" id="view_map_link" class="target_blank"><?php echo l('link_view_map', 'geomap', '', 'text', array()); ?></a>
-															<?php endif; ?>
+																  
+							<?php endif; ?>
+							
 						</div>
 						<div class="fleft">
 							<?php echo tpl_function_block(array('name' => 'send_rating_block','module' => 'ratings','object_id' => $this->_vars['data']['id'],'type_gid' => 'users_object','responder_id' => $this->_vars['data']['id'],'success' => $this->_vars['rating_callback'],'is_owner' => $this->_vars['is_user_owner'],'template' => 'form'), $this);?>
@@ -88,7 +93,7 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 				
 				<!--<?php echo tpl_function_block(array('name' => 'friendlist_links','module' => 'friendlist','id_user' => $this->_vars['data']['id']), $this);?>-->
 				<!--<?php echo tpl_function_block(array('name' => 'blacklist_button','module' => 'blacklist','id_user' => $this->_vars['data']['id']), $this);?>-->
-				<?php echo tpl_function_block(array('name' => 'favourites_button','module' => 'favourites','id_user' => $this->_vars['data']['id']), $this);?>
+				<!--<?php echo tpl_function_block(array('name' => 'favourites_button','module' => 'favourites','id_user' => $this->_vars['data']['id']), $this);?>-->
 				<!--<?php echo tpl_function_helper(array('func_name' => 'im_chat_add_button','module' => 'im','func_param' => $this->_vars['data']['id']), $this);?>-->
 				<!--<?php echo tpl_function_block(array('name' => 'video_chat_button','module' => 'video_chat','user_id' => $this->_vars['data']['id']), $this);?>-->
 				<!--<?php echo tpl_function_block(array('name' => 'wink','module' => 'winks','user_id' => $this->_vars['data']['id']), $this);?>-->
@@ -138,7 +143,9 @@ unset($_templatelite_tpl_vars);
 		});
 	</script>'; ?>
 
-<?php endif;  $_templatelite_tpl_vars = $this->_vars;
+<?php endif; ?>
+</div>
+<?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "footer.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);

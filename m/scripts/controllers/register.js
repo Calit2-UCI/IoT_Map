@@ -31,8 +31,8 @@ angular.module('datingMobile').controller('RegisterCtrl', function($route, $root
 	var today = new Date();
 	$scope.date = {
 		today: today,
-		min: new Date(new Date(today).setYear(today.getYear() - $scope.$parent.age.max)),
-		max: new Date(new Date(today).setDate(today.getDate() - ($scope.$parent.age.min * 365) - Math.round($scope.$parent.age.min/4)))
+		min: new Date(new Date(today).setDate(today.getDate() - ($scope.$parent.age.min * 365) - Math.round($scope.$parent.age.min/4))),
+		max: new Date(new Date(today).setDate(today.getDate() - ($scope.$parent.age.min * 365) - Math.round($scope.$parent.age.min/4))),
 	};
 	$scope.$parent.regData.birth_date = $scope.date.max;
 	$scope.dateOptions = {

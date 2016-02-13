@@ -12,7 +12,10 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
 $this->register_block("strip", "tpl_block_strip"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
-$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:11:16 Pacific Daylight Time */ ?>
+$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-01-26 06:52:42 Pacific Standard Time */ ?>
+
+<div class="content">
+<!--This file have control of the "Edit Profile" for each user.-->
 
 <?php $this->_tag_stack[] = array('tpl_block_capture', array('assign' => 'user_form_block')); tpl_block_capture(array('assign' => 'user_form_block'), null, $this); ob_start(); ?>
 	<?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
@@ -22,7 +25,7 @@ $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4
 			<?php if (! $this->_vars['not_editable_fields']['fname']): ?>
 				<div class="r">
 					<div class="f"><?php echo l('field_fname', 'users', '', 'text', array()); ?>: </div>
-					<div class="v"><input type="text" name="fname" value="<?php echo $this->_run_modifier($this->_vars['data']['fname'], 'escape', 'plugin', 1); ?>
+					<div class="v" style="height:29px"><input type="text" name="fname" value="<?php echo $this->_run_modifier($this->_vars['data']['fname'], 'escape', 'plugin', 1); ?>
 "></div>
 				</div>
 			<?php endif; ?>
@@ -78,7 +81,7 @@ $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4
 					</div>
 				</div>
 			<?php endif; ?>
-			<?php if (! $this->_vars['not_editable_fields']['nickname']): ?>
+			<?php if (! $this->_vars['not_editable_fields']['nickname']): ?>  <!--nickname is the user name-->
 				<div class="r hide">
 					<div class="f"><?php echo l('field_nickname', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type="text" name="nickname" value="<?php echo $this->_run_modifier($this->_vars['data']['nickname'], 'escape', 'plugin', 1); ?>
@@ -86,7 +89,7 @@ $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4
 				</div>
 			<?php endif; ?>
 
-			<?php if (! $this->_vars['not_editable_fields']['sname']): ?>
+			<?php if (! $this->_vars['not_editable_fields']['sname']): ?>       <!--Leave this in Hide-->
 				<div class="r hide">
 					<div class="f"><?php echo l('field_sname', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type="text" name="sname" value="<?php echo $this->_run_modifier($this->_vars['data']['sname'], 'escape', 'plugin', 1); ?>
@@ -97,7 +100,9 @@ $this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4
 			<?php if (true): ?>
 				<div class="r">
 					<div class="f">Website: </div>
-					<div class="v">Empty</div>
+					<!--div class="v">Empty</div-->
+					<div class="v"><input type="text" name="website" value="<?php echo $this->_run_modifier($this->_vars['data']['website'], 'escape', 'plugin', 1); ?>
+"></div>
 				</div>
 			<?php endif; ?>
 			
@@ -128,7 +133,7 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 				<div class="r hide">
 					<div class="f"><?php echo l('birth_date', 'users', '', 'text', array()); ?>: </div>
 					<div class="v"><input type='text' value='<?php echo $this->_vars['data']['birth_date']; ?>
-' name="birth_date" id="datepicker" maxlength="10"></div>
+' name="birth_date"></div>
 				</div>
 			<?php endif; ?>
 			
@@ -137,7 +142,9 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 			<?php if (true): ?>
 				<div class="r">
 					<div class="f">Address (street): </div>
-					<div class="v">Empty</div>
+					<!--div class="v">Empty</div-->
+					<div class="v"><input type="text" name="address" value="<?php echo $this->_run_modifier($this->_vars['data']['address'], 'escape', 'plugin', 1); ?>
+"></div>
 				</div>
 			<?php endif; ?>
 			
@@ -228,11 +235,13 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 </s></span>
 			</h1>
 			<div>
-				<div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
-</div>
+				<!--div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
+</div-->
 				<!--<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
 -->
-				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				
+				<?php if ($this->_vars['data']['website']): ?><a href=<?php echo $this->_vars['data']['website']; ?>
+ target="_blank" class="target_blank">Website</a><?php endif; ?>  
 				
 				<?php if ($this->_vars['data']['location']): ?><i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span><?php endif; ?>
@@ -324,7 +333,9 @@ $this->assign('personal_section_name', l('filter_section_personal', 'users', '',
 		</script>'; ?>
 
 		<div>
-			<input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="<?php echo l('link_activate_profile', 'users', '', 'text', array()); ?>" />
+			<a href="<?php echo $this->_vars['site_url']; ?>
+users/account/services"><button type="button" class="inline-btn"><?php echo l('link_activate_profile', 'users', '', 'text', array()); ?></button></a>
+			<!--input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="<?php echo l('link_activate_profile', 'users', '', 'text', array()); ?>" /-->
 			<span class="ml10"><?php echo l('text_activate_profile', 'users', '', 'text', array()); ?></span>
 		</div>
 	</div>
@@ -341,4 +352,5 @@ unset($_templatelite_tpl_vars);
 		<?php echo $this->_vars['user_form_block']; ?>
 
 	</div>
+</div>
 </div>

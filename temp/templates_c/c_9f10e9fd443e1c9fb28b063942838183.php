@@ -10,9 +10,10 @@ $this->register_function("seolink", "tpl_function_seolink");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 01:03:10 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-02-06 00:57:31 Pacific Standard Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+<div class="content">
 <div class="view small">
 	<div class="image">
 		<div id="user_photo" class="pos-rel dimp100 pointer">
@@ -41,14 +42,15 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 			</h1>
 			<!--remove age-->
 			<div>
-				<div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
-</div>
+				<!--div class="fright"><?php echo l('views', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['views_count']; ?>
+</div-->
 				<!--remove age-->
 				<!--<?php echo l('field_age', 'users', '', 'text', array()); ?>: <?php echo $this->_vars['data']['age']; ?>
 -->
 				
 				<!--website hyper link-->
-				<a href="http://www.google.com/" target="_blank" class="target_blank">Website</a>  
+				<?php if ($this->_vars['data']['website']): ?><a href=<?php echo $this->_vars['data']['website']; ?>
+ target="_blank" class="target_blank">Website</a><?php endif; ?>    
 				
 				<?php if ($this->_vars['data']['location']): ?><i class="delim-alone"></i><span class=""><?php echo $this->_vars['data']['location']; ?>
 </span><?php endif; ?>
@@ -140,7 +142,8 @@ $this->assign('personal_section_name', l('filter_section_personal', 'users', '',
 		</script>'; ?>
 
 		<div>
-			<input type="button" class="inline-btn" onclick="activate_available_view.check_available();" value="<?php echo l('link_activate_profile', 'users', '', 'text', array()); ?>" />
+			<a href="<?php echo $this->_vars['site_url']; ?>
+users/account/services"><button type="button" class="inline-btn"><?php echo l('link_activate_profile', 'users', '', 'text', array()); ?></button></a>
 			<span class="ml10"><?php echo l('text_activate_profile', 'users', '', 'text', array()); ?></span>
 		</div>
 	</div>
@@ -164,5 +167,6 @@ unset($_templatelite_tpl_vars);
 			<?php echo tpl_function_block(array('name' => 'media_block','module' => 'media','param' => $this->_vars['subsection'],'page' => '1','location_base_url' => $this->_vars['location_base_url']), $this);?>
 		<?php endif; ?>
 	</div>
+</div>
 </div>
 <?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>

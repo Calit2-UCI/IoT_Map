@@ -12,9 +12,10 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.sorter.php');
 $this->register_function("sorter", "tpl_function_sorter"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-03 00:27:31 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-09 01:37:14 Pacific Standard Time */ ?>
 
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+
 	<?php if ($this->_vars['users']): ?>
 		<?php if (! empty ( $this->_vars['sort_data'] )): ?>
             <div class="sorter short-line" id="sorter_block">
@@ -67,7 +68,7 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
  ?>
 			<?php if ($this->_vars['page_data']['view_type'] == 'gallery'): ?>
 				<div id="item-block-<?php echo $this->_vars['item']['id']; ?>
-" class="item<?php if ($this->_vars['item']['is_highlight_in_search'] || $this->_vars['item']['leader_bid'] || ( $this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader'] )): ?> highlight<?php endif; ?>">
+" class="item"> <!--<?php if ($this->_vars['item']['is_highlight_in_search'] || $this->_vars['item']['leader_bid'] || ( $this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader'] )): ?> highlight<?php endif; ?>"-->
 					<div class="user">
 						<div class="photo">													 <!--at the line below, change great to big-->
 							<a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><img src="<?php echo $this->_vars['item']['media']['user_logo']['thumbs']['big']; ?>
@@ -88,7 +89,7 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 				</div>
 			<?php else: ?>
 				<div id="item-block-<?php echo $this->_vars['item']['id']; ?>
-" class="item user<?php if ($this->_vars['item']['is_highlight_in_search'] || $this->_vars['item']['leader_bid'] || ( $this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader'] )): ?> highlight<?php endif; ?>">
+" class="item user">    <!--<?php if ($this->_vars['item']['is_highlight_in_search'] || $this->_vars['item']['leader_bid'] || ( $this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader'] )): ?> highlight<?php endif; ?>"-->
 
 					<?php if ($this->_vars['item']['is_up_in_search'] && $this->_vars['page_data']['use_leader']): ?><div class="lift_up"><?php echo l('header_up_in_search', 'users', '', 'text', array()); ?></div><?php endif; ?>
 					<?php if ($this->_vars['item']['leader_bid']): ?><div class="lift_up"><?php echo l('header_leader', 'users', '', 'text', array()); ?></div><?php endif; ?>
@@ -136,7 +137,9 @@ $this->assign('no_info_str', l('no_information', 'start', '', 'text', array()));
 			<div class="item empty"><?php echo l('empty_search_results', 'users', '', 'text', array()); ?></div>
 		<?php endif; ?>
 	</div>
-	<?php if ($this->_vars['users']): ?><div id="pages_block_2"><?php echo tpl_function_pagination(array('data' => $this->_vars['page_data'],'type' => 'full'), $this);?></div><?php endif;  $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>
+	<?php if ($this->_vars['users']): ?><div id="pages_block_2"><?php echo tpl_function_pagination(array('data' => $this->_vars['page_data'],'type' => 'full'), $this);?></div><?php endif; ?>
+
+<?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>
 
 <script><?php echo '
 	$(\'.user-gallery\').not(\'.w-descr\').find(\'.photo\')

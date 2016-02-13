@@ -23,9 +23,9 @@ angular.module('datingMobile').controller('SearchCtrl', function ($routeSegment,
 	$scope.userTypes = appSettings.get('properties').userTypes;
 	$scope.userData = appSettings.get('userData');
 	$scope.age = {
-		min: 18,
+		min: 0,
 		max: 125,
-		proposedMin: 18,
+		proposedMin: 0,
 		proposedMax: 35
 	};
 	$scope.itemsOnPage = 12;

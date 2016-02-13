@@ -4,7 +4,7 @@ $this->register_function("json_encode", "tpl_function_json_encode");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
 $this->register_compiler("l", "tpl_compiler_l"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.js.php');
-$this->register_function("js", "tpl_function_js");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-02 02:34:11 Pacific Daylight Time */ ?>
+$this->register_function("js", "tpl_function_js");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-02-13 01:55:38 Pacific Standard Time */ ?>
 
 <link href="<?php echo $this->_vars['site_root']; ?>
 application/modules/geomap/views/default/css/googlev3.css" rel="stylesheet" type="text/css">
@@ -25,6 +25,7 @@ application/modules/geomap/views/default/css/googlev3.css" rel="stylesheet" type
 				{crossDomain: true}
 			);
 		});
+		
 	} else {
 		$(function(){setTimeout(map_loader, 100);});
 	}

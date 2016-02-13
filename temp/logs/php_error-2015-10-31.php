@@ -1,0 +1,5 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+ERROR - 2015-10-31 08:05:39 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/menu/views/default/user_footer_menu.tpl line 0]: syntax error: UCIrvine function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-31 08:06:11 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/menu/views/default/user_footer_menu.tpl line 0]: syntax error: UCIrvine function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798
+ERROR - 2015-10-31 08:06:54 --> Severity: User Error  --> TPL: [in C:/xampp/htdocs/iot.calit2.uci.edu/application/modules/menu/views/default/user_footer_menu.tpl line 0]: syntax error: application function does not exist (class.compiler.php, line 530) C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\class.template.php 798

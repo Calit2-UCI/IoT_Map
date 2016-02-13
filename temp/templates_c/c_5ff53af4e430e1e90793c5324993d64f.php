@@ -10,7 +10,7 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
 $this->register_block("strip", "tpl_block_strip"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.capture.php');
-$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 00:29:32 Pacific Daylight Time */ ?>
+$this->register_block("capture", "tpl_block_capture");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-02-06 00:42:35 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
@@ -128,7 +128,7 @@ admin/users/edit/personal/<?php echo $this->_vars['data']['id']; ?>
 				<div class="v"><input type="text" name="fname" value="<?php echo $this->_run_modifier($this->_vars['data']['fname'], 'escape', 'plugin', 1); ?>
 " class="middle"></div>
 			</div>
-			<div class="row">
+			<div class="row hide">
 				<div class="h"><?php echo l('field_sname', 'users', '', 'text', array()); ?>: </div>
 				<div class="v"><input type="text" name="sname" value="<?php echo $this->_run_modifier($this->_vars['data']['sname'], 'escape', 'plugin', 1); ?>
 " class="middle"></div>

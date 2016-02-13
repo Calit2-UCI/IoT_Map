@@ -6,7 +6,7 @@ $this->register_function("seolink", "tpl_function_seolink");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.js.php');
 $this->register_function("js", "tpl_function_js"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\compiler.l.php');
-$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-10-11 00:41:36 Pacific Daylight Time */ ?>
+$this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2016-01-26 05:49:04 Pacific Standard Time */ ?>
 
 <h2 class="line top bottom linked">
 	<?php echo l('table_header_activity', 'users', '', 'text', array()); ?>
@@ -37,7 +37,7 @@ $this->register_compiler("l", "tpl_compiler_l");  /* V2.10 Template Lite 4 Janua
 					});
 				</script>'; ?>
 
-				<div class="pt10"><input type="button" onclick="activate_available_view.check_available();" value="<?php echo l('btn_activate', 'start', '', 'text', array()); ?>" name="btn_activate_save" id="btn_activate_save"></div>
+				<!--div class="pt10"><input type="button" onclick="activate_available_view.check_available();" value="<?php echo l('btn_activate', 'start', '', 'text', array()); ?>" name="btn_activate_save" id="btn_activate_save"></div-->
 			<?php else: ?>
 				<div><?php echo l("text_need_for_activation", 'users', '', 'text', array()); ?></div>
 				<ul>
@@ -131,17 +131,19 @@ $this->assign('no_info_str', l('no_information', 'users', '', 'text', array()));
 </div>
 	</div>
 	
-	<?php if (true): ?>	
 	<div class="r">
 		<div class="f">Website:</div>
-		<div class="v">Empty</div>
+		<!--div class="v"><?php echo $this->_vars['data']['fe_field11']; ?>
+</div-->
+		<div class="v"><?php echo $this->_vars['data']['website']; ?>
+</div>
 	</div>
-	<?php endif; ?>
 	
 	<?php if (true): ?>	
 	<div class="r">
 		<div class="f">Address (street):</div>
-		<div class="v">Empty</div>
+		<div class="v"><?php echo $this->_vars['data']['address']; ?>
+</div>
 	</div>
 	<?php endif; ?>
 	

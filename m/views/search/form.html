@@ -2,15 +2,20 @@
 	<b ng-bind="l('field_looking_for')"></b>
 	<div class="form-group">
 		<div class="btn-group">
-			<button type="button" class="btn btn-primary" ng-click="userTypeClicked(id)"
+			<!-- in progress -->
+			<select class="col-xs-12">
+				<option type="option" ng-click="userTypeClicked(id)" selected>All IoT Categories</option> 
+				<option type="option" ng-click="userTypeClicked(id)"
 					ng-repeat="(id, userType) in userTypes.option track by id"
-					ng-class="{'active': id === form.user_type}" ng-bind="userType"></button>
+					 ng-class="{'active': id === form.user_type}" ng-bind="userType"></option> 
+			</select>
 		</div>
 	</div>
-	<b ng-bind="l('field_age_range')"></b>
-	<div class="row">
+	<!--b ng-bind="l('field_age_range')"></b-->
+	<!--the age part is hid-->
+	<div class="row hide">
 		<div class="col-xs-6">
-			<div class="form-group" ng-class="{'has-error': errors.minAge}">
+			<div class="form-group">
 				<input popover="{{alerts.minAge||''}}" autocomplete="off" class="form-control"
 					   placeholder="{{age.proposedMin}}" type="number" min="{{age.min}}" max="{{form.age_max}}"
 					   ng-model="form.age_min" required />
@@ -24,12 +29,12 @@
 			</div>
 		</div>
 	</div>
-        <b ng-bind="l('field_location')"></b>
+    <b ng-bind="l('field_location')"></b>
 	<div pg-location="form"></div>
-	<div class="form-group">
+	<!--div class="form-group">
 		<span ng-bind="l('online_now')"></span>
 		<toggle-switch class="pull-right" on-label="{{l('btn_on')}}" off-label="{{l('btn_off')}}" model="form.online_status"><toggle-switch>
-	</div>
+	</div-->
 	<div class="form-group">
 		<button type="submit" class="col-xs-12 btn btn-primary "
 				ng-disabled="isSearchDisabled()" ng-bind="l('btn_search')"></button>

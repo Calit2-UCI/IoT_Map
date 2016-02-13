@@ -10,13 +10,15 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
 $this->register_function("seotag", "tpl_function_seotag"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-02 02:04:20 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-09 02:27:31 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
-  $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
+ ?>
+<div class="content">
+<?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 	<h1><?php echo tpl_function_seotag(array('tag' => 'header_text'), $this);?> - <?php echo $this->_vars['page_data']['total_rows']; ?>
  <?php echo l('header_users_found', 'users', '', 'text', array()); ?></h1>
 
@@ -56,9 +58,11 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 					<div class="subtext"><span><?php echo $this->_run_modifier($this->_vars['view_dates'][$this->_vars['viewer_id']], 'date_format', 'plugin', 1, $this->_vars['page_data']['date_time_format']); ?>
 </span></div>
 					<div class="info">
-						<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
+						<!--div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
 </a>, <?php echo $this->_vars['item']['age']; ?>
-</div>
+</div--> <!--remove age-->
+						<div class="text-overflow"><a href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['item']), $this);?>"><?php echo $this->_vars['item']['output_name']; ?>
+</a></div>
 						<?php if ($this->_vars['item']['location']): ?><div class="text-overflow"><?php echo $this->_vars['item']['location']; ?>
 </div><?php endif; ?>
 					</div>
@@ -80,7 +84,9 @@ $this->assign('text_user_logo', l('text_user_logo', 'users', '', 'button', array
 		<div class="item empty"><?php echo l('empty_search_results', 'users', '', 'text', array()); ?></div>
 	<?php endif; ?>
 	</div>
-	<?php if ($this->_vars['users']): ?><div id="pages_block_2"><?php echo tpl_function_pagination(array('data' => $this->_vars['page_data'],'type' => 'full'), $this);?></div><?php endif;  $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack);  $_templatelite_tpl_vars = $this->_vars;
+	<?php if ($this->_vars['users']): ?><div id="pages_block_2"><?php echo tpl_function_pagination(array('data' => $this->_vars['page_data'],'type' => 'full'), $this);?></div><?php endif;  $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>
+</div>
+<?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "footer.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);

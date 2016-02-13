@@ -10,14 +10,14 @@ $this->register_compiler("l", "tpl_compiler_l");
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\function.seotag.php');
 $this->register_function("seotag", "tpl_function_seotag"); 
 require_once('C:\xampp\htdocs\iot.calit2.uci.edu\system\libraries\template_lite\plugins\block.strip.php');
-$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-02 01:40:47 Pacific Daylight Time */ ?>
+$this->register_block("strip", "tpl_block_strip");  /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-09 02:49:03 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
  ?>
-
+<div class="content">
 <?php $this->_tag_stack[] = array('tpl_block_strip', array()); tpl_block_strip(array(), null, $this); ob_start(); ?>
 <div class="content-block">
 	<h1><?php echo tpl_function_seotag(array('tag' => 'header_text'), $this);?>: <?php echo l('header_'.$this->_vars['action'], 'users', '', 'text', array()); ?></h1>
@@ -69,8 +69,10 @@ unset($_templatelite_tpl_vars);
 		<div class="memberships ptb20">
 			<?php echo tpl_function_block(array('name' => 'memberships_list','module' => 'memberships'), $this);?>
 		</div>
+		
 	<?php elseif ($this->_vars['action'] == 'update'): ?>
-		<?php echo tpl_function_helper(array('func_name' => 'update_account_block','module' => 'users_payments'), $this);?>
+		</br><p style="font-size: 12px">No update account yet</p>
+		<!--<?php echo tpl_function_helper(array('func_name' => 'update_account_block','module' => 'users_payments'), $this);?>-->
 	<?php elseif ($this->_vars['action'] == 'payments_history'): ?>
 		<div><?php echo tpl_function_block(array('name' => 'user_payments_history','module' => 'payments','id_user' => $this->_vars['user_id'],'page' => $this->_vars['page'],'base_url' => $this->_vars['base_url']), $this);?></div>
 	<?php elseif ($this->_vars['action'] == 'banners'): ?>
@@ -98,7 +100,9 @@ unset($_templatelite_tpl_vars);
 </script>
 '; ?>
 
-<?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack);  $_templatelite_tpl_vars = $this->_vars;
+<?php $this->_block_content = ob_get_contents(); ob_end_clean(); $this->_block_content = tpl_block_strip($this->_tag_stack[count($this->_tag_stack) - 1][1], $this->_block_content, $this); echo $this->_block_content; array_pop($this->_tag_stack); ?>
+</div>
+<?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "footer.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);

@@ -26,6 +26,8 @@
 			   placeholder="{{l('field_password')}}" class="form-control"
 			   ng-model="$parent.regData.password" required/>
 	</div>
+	<div class="row hide">
+	<div class="col-xs-6">
 	<div id="birthday" class="form-group" ng-class="{'has-error': alerts.birthDay}">
 		<label ng-bind="l('field_bd')"></label>
 		<div class="datepicker" ng-class="{'opened': bdIsOpen}">
@@ -37,6 +39,8 @@
 				   autocomplete="off" required>
 			<i class="fa fa-calendar pull-right"></i>
 		</div>
+	</div>
+	</div>
 	</div>
 	<div id="agreed" class="form-group checkbox" ng-class="{'has-error': alerts.agreed}">
 		<label>

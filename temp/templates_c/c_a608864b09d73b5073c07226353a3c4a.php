@@ -1,4 +1,4 @@
-<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-09-29 04:23:37 Pacific Daylight Time */ ?>
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2015-11-06 07:33:06 Pacific Standard Time */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->general_path.  $this->get_current_theme_gid('', ''). "header.tpl", array('load_type' => 'ui'));
@@ -6,7 +6,7 @@ $this->_vars = $_templatelite_tpl_vars;
 unset($_templatelite_tpl_vars);
  ?>
 <div class="content-block">
-	<?php if ($this->_vars['action'] == 'view' || $this->_vars['action'] == 'gallery'): ?>
+	<?php if ($this->_vars['action'] == 'view' || $this->_vars['action'] == 'wall' || $this->_vars['action'] == 'gallery'): ?>
 		<?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include( $this->module_path. "users". $this->module_templates.  $this->get_current_theme_gid('"default"', '"users"'). "user_profile.tpl", array('load_type' => false));
 $this->_vars = $_templatelite_tpl_vars;
