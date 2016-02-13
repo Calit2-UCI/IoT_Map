@@ -51,12 +51,13 @@ function usersMap(optionArr) {
 		var country = $('input[name=id_country]').val();
 		var region = $('input[name=id_region]').val();
 		var city = $('input[name=id_city]').val();
+		var address = $('input[name=address]').val(); 
 		
 		if (country == '') {
 			_self.setCoordinates(0, 0);
 			return;
 		}
-
+		
 		var country_name = '';
 		var region_name = '';
 		var city_name = '';
@@ -72,9 +73,21 @@ function usersMap(optionArr) {
 			city_name = locations[2];
 		}
 
-		_self.updateCoordinates(country_name, region_name, city_name);
+		//_self.updateCoordinates(country_name, region_name, city_name);
+		_self.updateCoordinates(address);
 	}
-		
+	
+	/////////////////////////////////////////////JL edited so that lat and lon can be gotten from address
+	this.updateCoordinates = function(address){
+		if (typeof(geocoder) != 'undefined') {
+			var location = geocoder.getLocationFromAddress(address);
+			geocoder.geocodeLocation(location, function(latitude, longitude){
+				_self.setCoordinates(latitude, longitude);
+			});	
+		}
+	}
+	/////////////////////////////////////////////
+	
 	this.updateCoordinates = function(country, region, city){
 		if (typeof(geocoder) != 'undefined') {
 			var location = geocoder.getLocationFromAddress(country, region, city);

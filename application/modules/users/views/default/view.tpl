@@ -4,7 +4,8 @@
 <div class="content-block">
 	<div class="view small">
 		<div class="image">
-			<div id="user_photo" class="pos-rel dimp100{if $data.user_logo} pointer{/if}">
+			<!--<div id="user_photo" class="pos-rel dimp100{if $data.user_logo} pointer{/if}">-->
+			<div>
 				{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$data}
 				<img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" />
 			</div>
@@ -14,7 +15,8 @@
 			<div class="body">
 				<h1>
 				<span class="users-profile-h1">{seotag tag='header_text'}</span>
-				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span></h1>
+				<span data-role="online_status" class="fright online-status">
+					<s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span></h1>
 				<div>
 					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 					
@@ -56,7 +58,9 @@
 									<i class="delim-alone"></i>
 									<a href="javascript:void(0);" id="view_map_link" class="target_blank">{l i='link_view_map' gid='geomap'}</a>
 								{/depends}
+								  
 							{/if}
+							
 						</div>
 						<div class="fleft">
 							{block name='send_rating_block' module='ratings' 

@@ -325,10 +325,11 @@ Class Users extends Controller
                 'address' => $user['address'],
                 'lat' => (float) $user['lat'],
                 'lon' => (float) $user['lon'],
-                'info' => $user['output_name'] . ", " . $user['age'],
+                //'info' => $user['output_name'] . ", " . $user['age'],
+				'info' => $user['output_name'] . "<br/>" . $user['address']." ".$user[postal_code],
             );
             $this->template_lite->assign('markers', $markers);
-            $this->template_lite->assign('header', $user["location"]);
+            $this->template_lite->assign('header', $user["output_name"]." - Google Maps");
             $this->template_lite->assign('load_map_scripts', $load_map_scripts);
 
             $return['html'] = $this->template_lite->fetch('ajax_view_map_user_location', 'user', 'users');

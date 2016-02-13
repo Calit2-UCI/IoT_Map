@@ -93,7 +93,7 @@
 				<div class="h">{l i='field_fname' gid='users'}: </div>
 				<div class="v"><input type="text" name="fname" value="{$data.fname|escape}" class="middle"></div>
 			</div>
-			<div class="row">
+			<div class="row hide">
 				<div class="h">{l i='field_sname' gid='users'}: </div>
 				<div class="v"><input type="text" name="sname" value="{$data.sname|escape}" class="middle"></div>
 			</div>

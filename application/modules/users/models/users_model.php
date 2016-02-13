@@ -103,7 +103,6 @@ class Users_model extends \Model
         'user_type',
         'user_type_str',
         'views_count',
-		'website',
     );
     public $fields_register = array(
         //'birth_date',              // JL commented it for removing the birthday field
@@ -120,13 +119,12 @@ class Users_model extends \Model
     );
     public $fields_for_activation = array(
         //'birth_date',
-        'id_region',
-        'id_country',
-        'looking_user_type',
+        //'id_region',
+        //'id_country',
+        //'looking_user_type',
         'nickname',
         'user_logo',
         'user_type',
-		'website',
     );
     public $fields_completion = array(
         'email',
@@ -142,7 +140,6 @@ class Users_model extends \Model
         //'birth_date',
         'age_min',
         'age_max',
-		'website',
     );
     public $services_buy_gids = array(
         'users_featured',
@@ -1065,7 +1062,6 @@ class Users_model extends \Model
                 $user['online-status-name'] = l('status_online_' . $user['online_status'], 'users');
             }
 			
-			$user['website'] = $user['website'];
 			
             $user['section-code'] = $section_code;
             $user['section-name'] = $section_name;

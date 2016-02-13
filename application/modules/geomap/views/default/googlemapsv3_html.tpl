@@ -16,6 +16,7 @@
 				{crossDomain: true}
 			);
 		});
+		
 	} else {
 		$(function(){setTimeout(map_loader, 100);});
 	}

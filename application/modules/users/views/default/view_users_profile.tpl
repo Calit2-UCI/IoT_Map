@@ -57,7 +57,7 @@
 	{if true}	
 	<div class="r">
 		<div class="f">Address (street):</div>
-		<div class="v">{$data.address}</div>
+		<div class="v">{$data.address} {$data.postal_code}{if $data.id_country == "US"}, United States{/if}</div>
 	</div>
 	{/if}
 	
@@ -67,6 +67,33 @@
 		<div class="v">{$data.location}</div>
 	</div>
 	{/if}
+	
+	<!--{/strip}{include file="map.html" module="users"}{strip}-->
+
+<!--
+<script>
+var latitude = {$data.lat};
+var longitude = {$data.lon};
+</script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<div style="overflow:hidden;">
+	<div id="gmap_canvas" style="height:450px;width:450px;border:5px solid #cccccc; border-radius:5px;"></div>
+</div>
+
+<script type="text/javascript">{literal}
+function init_map(){
+	var myOptions = {zoom:14,center:new google.maps.LatLng(latitude,longitude),
+	mapTypeId: google.maps.MapTypeId.ROADMAP};
+	map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+	marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(latitude, longitude)});
+	infowindow = new google.maps.InfoWindow({content:"<b>Irvine</b><br/>3801 Parkview Ln Apt 17C<br/> Irvine" });
+	google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
+	infowindow.open(map,marker);}
+</script>{/literal}
+-->
+	
 </div>
 
 {foreach item=item from=$sections}
@@ -82,3 +109,6 @@
 	{/if}
 	
 {/foreach}
+
+
+
