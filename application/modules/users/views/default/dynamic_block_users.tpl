@@ -1,4 +1,5 @@
 {strip}
+<div class="content">
 {switch from=$dynamic_block_users_view}
 	{case value='big_thumbs'}{assign var=block_class value='big'}{assign var=thumb_name value='great'}
 	{case value='medium_thumbs'}{assign var=block_class value='medium'}{assign var=thumb_name value='big'}
@@ -22,13 +23,13 @@
 						<div class="info">
 							<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
 							<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}" title="{$item.output_name|escape}">{$item.output_name}</a></div>
-							{if $item.location}<div class="text-overflow" title="{$item.location|escape}">{$item.location}</div>{/if}
+							{if $item.address}<div class="text-overflow" title="{$item.address|escape}">{$item.address}</div>{/if}
 						</div>
 					</div>
 				</div>
 				<div class="descr hide">
 					<div><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div>
-					{if $item.location}<div>{$item.location}</div>{/if}
+					{if $item.address}<div>{$item.address}</div>{/if}
 				</div>
 			</div>
 		{foreachelse}
@@ -36,6 +37,7 @@
 		{/foreach}
 	</div>
 {/if}
+</div>
 {/strip}
 
 <script>{literal}

@@ -384,6 +384,9 @@ Class Users extends Controller
                     'age_max' => $this->input->post('age_max', true),
                     'lat' => $this->input->post('lat', true),
                     'lon' => $this->input->post('lon', true),
+					'address' => $this->input->post('address', true),
+					'website' => $this->input->post('website', true),
+					
                 );
             } else {
                 foreach ($fields_for_select as $field) {
@@ -791,6 +794,7 @@ Class Users extends Controller
         }
     }
 
+	
     public function ajax_get_users_data($page = 1)
     {
         $return = array();
@@ -806,8 +810,10 @@ Class Users extends Controller
         if (!empty($search_string)) {
             $hide_user_names = $this->pg_module->get_module_config('users', 'hide_user_names');
             if ($hide_user_names) {
-                $params["where"]["nickname LIKE"] = "%" . $search_string . "%";
-            } else {
+                $search_string_escape = $this->db->escape("%" . $search_string . "%");
+                $params["where_sql"][] = "(nickname LIKE " . $search_string_escape
+                    . " OR fname LIKE " . $search_string_escape
+                    . " OR sname LIKE " . $search_string_escape . ")";            } else {
                 $search_string_escape = $this->db->escape("%" . $search_string . "%");
                 $params["where_sql"][] = "(nickname LIKE " . $search_string_escape
                     . " OR fname LIKE " . $search_string_escape
@@ -865,6 +871,7 @@ Class Users extends Controller
         $this->template_lite->view('ajax_user_select_form');
     }
 
+	
     public function search($order = "default", $order_direction = "DESC", $page = 1)
     {
         if (empty($_POST)) {
@@ -1067,6 +1074,7 @@ Class Users extends Controller
         return $this->template_lite->fetch('users_list_block');
     }
 
+	
     private function getAdvancedSearchCriteria($data)
     {
         $this->load->model('field_editor/models/Field_editor_forms_model');
@@ -1080,10 +1088,26 @@ Class Users extends Controller
                 $fe_criteria['fields'][] = $temp_criteria['user']['field'];
                 $fe_criteria['where_sql'][] = $temp_criteria['user']['where_sql'];
             } else {
-                $search_text_escape = $this->db->escape($data["search"] . "%");
-                $fe_criteria['where_sql'][] = "(nickname LIKE " . $search_text_escape . ")";
+                $search_text_escape = $this->db->escape("%" . $data["search"] . "%");  ////////JL edited on 3/5/2016
+                $fe_criteria['where_sql'][] = "(fname LIKE " . $search_text_escape
+					. " OR address LIKE " . $search_text_escape
+					. ")";
             }
         }
+		//////////////JL added, for location searching 
+		if (!empty($data["search_location"])) {
+            $data["search_location"] = trim(strip_tags($data["search_location"]));
+            $this->load->model('Field_editor_model');
+            $this->Field_editor_model->initialize($this->Users_model->form_editor_type);
+			
+			// make it for address searching only  ////////JL edited on 3/5/2016
+			$search_text_escape = $this->db->escape("%" . $data["search_location"] . "%");
+			$fe_criteria['where_sql'][] = "(address LIKE " . $search_text_escape   
+				. ")";
+
+            
+        }
+		////////////////
         $common_criteria = $this->Users_model->get_common_criteria($data);
         $advanced_criteria = $this->Users_model->get_advanced_search_criteria($data);
         $criteria = array_merge_recursive($fe_criteria, $common_criteria, $advanced_criteria);

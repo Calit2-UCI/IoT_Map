@@ -16,7 +16,7 @@
 		<div class="v">{$data.user_type_str}</div>
 	</div>
 	{if $data.looking_user_type_str}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_looking_user_type' gid='users'}:</div>
 		<div class="v">{$data.looking_user_type_str}</div>
 	</div>
@@ -56,13 +56,13 @@
 	
 	{if true}	
 	<div class="r">
-		<div class="f">Address (street):</div>
-		<div class="v">{$data.address} {$data.postal_code}{if $data.id_country == "US"}, United States{/if}</div>
+		<div class="f">Address:</div>
+		<div class="v">{$data.address}</div>   <!--{if $data.id_country == "US"}, United States{/if}</div>-->
 	</div>
 	{/if}
 	
 	{if $data.location}
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_region' gid='users'}:</div>
 		<div class="v">{$data.location}</div>
 	</div>

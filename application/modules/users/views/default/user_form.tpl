@@ -24,7 +24,7 @@
 				</div>
 			{/if}
 			{if !$not_editable_fields.looking_user_type}
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='field_looking_user_type' gid='users'}:</div>
 					<div class="v">
 						<select name="looking_user_type">
@@ -70,13 +70,11 @@
 				</div>
 			{/if}
 			
-			{if true}
-				<div class="r">
-					<div class="f">Website: </div>
-					<!--div class="v">Empty</div-->
-					<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
-				</div>
-			{/if}
+			<div class="r">
+				<div class="f">Website: </div>
+				<!--div class="v">Empty</div-->
+				<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
+			</div>
 			
 			<div class="r">
 				<div class="f">{l i='field_icon' gid='users'}: </div>
@@ -100,17 +98,16 @@
 				</div>
 			{/if}
 			
-					
-			
-			{if true}
-				<div class="r">
-					<div class="f">Address (street): </div>
-					<!--div class="v">Empty</div-->
-					<div class="v"><input type="text" name="address" value="{$data.address|escape}"></div>
-				</div>
-			{/if}
-			
 			<div class="r">
+				<div class="f">Address: </div>
+				<!--div class="v">Empty</div-->
+				<div class="v"><input type="text" name="address" value="{$data.address|escape}"></div>
+				<input type="hidden" name="lat" value="{$data.lat|escape}" id="lat">
+				<input type="hidden" name="lon" value="{$data.lon|escape}" id="lon">
+			</div>
+			
+			
+			<div class="r hide">
 				<div class="f">{l i='field_region' gid='users'}: </div>
 				<div class="v">
 					{block name='location_select' 

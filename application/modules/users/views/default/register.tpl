@@ -43,12 +43,15 @@
 					<div class="v"><input type='text' value='{$data.birth_date}' name="birth_date" id="datepicker" maxlength="10"></div>
 				</div>
 				
-				<div class="r hide">   <!--website link is not needed for register, and users can add this info later-->
-					<div class="f">Website: </div>
-					<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
+				<div class="r hide">   <!--address is optional-->
+					<div class="f">Address: </div>					
+					<div class="v"><input type="text" name="address" value="{$data.address|escape}"></div>
+					<input type="hidden" name="lat" value="{$data.lat|escape}" id="lat">
+					<input type="hidden" name="lon" value="{$data.lon|escape}" id="lon">
+				
 				</div>
 				
-				<div class="r">
+				<div class="r hide">
 					<div class="f">{l i='field_location' gid='users'}: </div>
 					<div class="v">
 						{block name='location_select' 

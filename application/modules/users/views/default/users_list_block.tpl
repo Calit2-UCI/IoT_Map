@@ -51,7 +51,7 @@
 							<div class="info">
 								<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
 								<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a></div>
-								{if $item.location}<div class="text-overflow">{$item.location}</div>{/if}
+								{if $item.address}<div class="text-overflow">{$item.address}</div>{/if}
 							</div>
 						</div>
 					</div>
@@ -77,9 +77,9 @@
 						<div class="t-2">
 							{$item.user_type_str}.&nbsp;<span>{l i='field_looking_user_type' gid='users'}:</span>&nbsp;{$item.looking_user_type_str}
 						</div>
-						{if $item.location}
+						{if $item.address}
 							<div class="t-2">
-								<span>{l i='field_location' gid='users'}:</span> {$item.location}
+								<span>Address:</span> {$item.address}
 							</div>
 						{/if}
 					</div>

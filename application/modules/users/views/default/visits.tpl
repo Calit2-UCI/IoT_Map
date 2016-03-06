@@ -34,7 +34,7 @@
 					<div class="info">
 						<!--div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div--> <!--remove age-->
 						<div class="text-overflow"><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a></div>
-						{if $item.location}<div class="text-overflow">{$item.location}</div>{/if}
+						{if $item.address}<div class="text-overflow">{$item.address}</div>{/if}
 					</div>
 				</div>
 			</div>

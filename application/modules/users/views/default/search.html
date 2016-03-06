@@ -14,9 +14,12 @@
 			<div style="display: inline-block; width: 222px; position: relative; top: 10px; "><!--border: 0.1em solid #1e90ff;-->
 				{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
 			</div>
+			<!--keyword searching-->
 			<input type="text" name="search" placeholder="{l i='search_people' gid='start'}" style="display: inline-block; width: 222px; height: 25px; padding: 3px 8px; "/>
 			<div style="display: inline-block; width: 400px;">
-				{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}
+			<!--location searching-->
+			<input type="text" name="search_location" placeholder="Location" style="display: inline-block; width: 222px; height: 25px; padding: 3px 8px; "/>
+				<!--{block name='location_select' module='countries' select_type='city' placeholder=$location_lang id_country=$data.id_country id_region=$data.id_region id_city=$data.id_city}-->
 			</div>
 			<input type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button" style="display: inline-block;">
 		</div>
