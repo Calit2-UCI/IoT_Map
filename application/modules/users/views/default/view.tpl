@@ -7,7 +7,8 @@
 			<!--<div id="user_photo" class="pos-rel dimp100{if $data.user_logo} pointer{/if}">-->
 			<div>
 				{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$data}
-				<img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" />
+				<a href={$data.website} target="_blank"><img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" alt=""></a>
+				<!--<img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" />-->
 			</div>
 		</div>
 		<div class="info">
@@ -26,7 +27,7 @@
 					
 					{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
 					
-					{if $data.location}
+					{if $data.address}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>
 						{depends module=geomap}
 							<i class="delim-alone"></i>
@@ -52,7 +53,7 @@
 							<!--website hyper link-->
 							
 							<a href={$data.website} target="_blank" class="target_blank">Website</a>  
-							{if $data.location}
+							{if $data.address}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>
 								{depends module=geomap}
 									<i class="delim-alone"></i>
@@ -94,8 +95,23 @@
 			{/depends}
 			
 			<div class="actions noPrint">
-				{block name='send_message_button' module='mailbox' id_user=$data.id}
-				{*helper func_name='lists_links' module='users_lists' func_param=$data.id*}
+				<!--{block name='send_message_button' module='mailbox' id_user=$data.id}-->
+				<!--{*helper func_name='lists_links' module='users_lists' func_param=$data.id*}-->
+				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\mail-circle.png alt="Email" style="width:3%; height:80%; border-style:none;">
+				</a>
+				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\facebook-circle.png alt="Facebook" style="width:3%; height:80%; border-style:none;">
+				</a>
+				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\twitter-circle.png alt="Twitter" style="width:3%; height:80%; border-style:none;">
+				</a>
+				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\linkedin-circle.png alt="Linkedin" style="width:3%; height:80%; border-style:none;">
+				</a>
+				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\instagram-circle.png alt="Instagram" style="width:3%; height:80%; border-style:none;">
+				</a>
 				<!--{block name='friendlist_links' module='friendlist' id_user=$data.id}-->
 				<!--{block name='blacklist_button' module='blacklist' id_user=$data.id}-->
 				<!--{block name='favourites_button' module='favourites' id_user=$data.id}-->

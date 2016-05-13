@@ -48,16 +48,19 @@ function usersMap(optionArr) {
 	};
 	
 	this.checkAddressUpdated = function(){
+	
+		document.getElementById('lblresult').innerHTML = "adf";
+
 		var country = $('input[name=id_country]').val();
 		var region = $('input[name=id_region]').val();
 		var city = $('input[name=id_city]').val();
 		var address = $('input[name=address]').val(); 
-		
+		/*
 		if (country == '') {
 			_self.setCoordinates(0, 0);
 			return;
 		}
-		
+		*/
 		var country_name = '';
 		var region_name = '';
 		var city_name = '';
@@ -72,7 +75,7 @@ function usersMap(optionArr) {
 		if (typeof(locations[2]) != 'undefined') {
 			city_name = locations[2];
 		}
-
+		
 		//_self.updateCoordinates(country_name, region_name, city_name);
 		_self.updateCoordinates(address);
 	}
@@ -87,7 +90,7 @@ function usersMap(optionArr) {
 		}
 	}
 	/////////////////////////////////////////////
-	
+	/*
 	this.updateCoordinates = function(country, region, city){
 		if (typeof(geocoder) != 'undefined') {
 			var location = geocoder.getLocationFromAddress(country, region, city);
@@ -96,7 +99,7 @@ function usersMap(optionArr) {
 			});	
 		}
 	}
-	
+	*/
 	this.setCoordinates = function(latitude, longitude) {
 		$('#lat').val(latitude);
 		$('#lon').val(longitude);

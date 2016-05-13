@@ -100,12 +100,10 @@
 			
 			<div class="r">
 				<div class="f">Address: </div>
-				<!--div class="v">Empty</div-->
-				<div class="v"><input type="text" name="address" value="{$data.address|escape}"></div>
+				<div class="v"><input type="text" name="address" value="{$data.address|escape}" id="adddre"></div>
 				<input type="hidden" name="lat" value="{$data.lat|escape}" id="lat">
 				<input type="hidden" name="lon" value="{$data.lon|escape}" id="lon">
 			</div>
-			
 			
 			<div class="r hide">
 				<div class="f">{l i='field_region' gid='users'}: </div>
@@ -141,6 +139,23 @@
 	{depends module=geomap}
 		{block name=geomap_load_geocoder module='geomap'}	
 	{/depends}
+	 
+	<!--for latlong 
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type='text/javascript'>{literal} 
+		var geocoder = new google.maps.Geocoder();
+		var address = {$data.address};
+		geocoder.geocode( { 'address': address}, function(results, status) {
+
+		  if (status == google.maps.GeocoderStatus.OK) {
+			var latitude = results[0].geometry.location.lat();
+			var longitude = results[0].geometry.location.lng();
+			document.getElementById('lat').value = latitude;			
+			document.getElementById('lon').value = longitude;
+		  }
+		}); 
+	</script>{/literal}
+	-->
 	<script type='text/javascript'>{literal}
 		$(function(){
 			var now = new Date();
