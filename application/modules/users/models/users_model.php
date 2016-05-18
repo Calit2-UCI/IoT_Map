@@ -77,6 +77,10 @@ class Users_model extends \Model
         'lat',
         'lon',
 		'website',
+		'instagram',
+		'twitter',
+		'facebook',
+		'linkedin',
     );
     public $fields_all = array();
     public $safe_fields = array(
@@ -725,7 +729,23 @@ class Users_model extends \Model
 		if (isset($data["website"])) {
 			$return["data"]["website"] = trim(strip_tags($data["website"]));
         }
-
+	
+		if (isset($data["instagram"])) {
+			$return["data"]["instagram"] = trim(strip_tags($data["instagram"]));
+        }
+		
+		if (isset($data["twitter"])) {
+			$return["data"]["twitter"] = trim(strip_tags($data["twitter"]));
+        }
+		
+		if (isset($data["facebook"])) {
+			$return["data"]["facebook"] = trim(strip_tags($data["facebook"]));
+        }
+		
+		if (isset($data["linkedin"])) {
+			$return["data"]["linkedin"] = trim(strip_tags($data["linkedin"]));
+        }
+	
 		
 		/*
         if (!empty($data["birth_date"])) {
@@ -1114,7 +1134,7 @@ class Users_model extends \Model
         $data['online-status-name'] = l('status_online_0', 'users');
         $data['section-code'] = $section_code;
         $data['section-name'] = $section_name;
-		$data['website'] = 'unknown';
+		//$data['website'] = 'unknown';
         return $data;
     }
 
@@ -1699,7 +1719,7 @@ class Users_model extends \Model
             'address' => $data['address'],
             'postal_code' => $data['postal_code'],
             //'birth_date' => $data['birth_date'],
-			'website' => $data['website'],
+			//'website' => $data['website'],
         );
         $user_for_location[$data["id"]] = array($data["id_country"], $data["id_region"], $data["id_city"]);
         $this->CI->load->helper('countries');

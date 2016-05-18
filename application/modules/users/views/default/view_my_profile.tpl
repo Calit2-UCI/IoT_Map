@@ -112,6 +112,26 @@
 		<div class="v">{$data.website}</div>
 	</div>
 	
+	<div class="r">
+		<div class="f">Instagram:</div>
+		<div class="v">{$data.instagram}</div>
+	</div>
+	
+	<div class="r">
+		<div class="f">Twitter:</div>
+		<div class="v">{$data.twitter}</div>
+	</div>
+	
+	<div class="r">
+		<div class="f">Facebook:</div>
+		<div class="v">{$data.facebook}</div>
+	</div>
+	
+	<div class="r">
+		<div class="f">Linkedin:</div>
+		<div class="v">{$data.linkedin}</div>
+	</div>
+	
 	{if true}	
 	<div class="r">
 		<div class="f">Address:</div>

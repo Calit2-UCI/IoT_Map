@@ -1,10 +1,11 @@
 {include file="header.tpl"}
 {strip}
+<div class="content">
 <div class="content-block mailbox">
 	<h1>{seotag tag='header_text'}</h1>
 	<div id="mailbox_content">{$content}</div>
 </div>
-<div class="clr"></div>
+<div class="clr"></div></div>
 {/strip}
 <script>{literal}
 	$(function(){

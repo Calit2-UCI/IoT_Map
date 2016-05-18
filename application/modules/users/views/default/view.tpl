@@ -100,18 +100,24 @@
 				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\mail-circle.png alt="Email" style="width:3%; height:80%; border-style:none;">
 				</a>
-				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+				
+				{if $data.facebook}
+				<a href={$data.facebook} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\facebook-circle.png alt="Facebook" style="width:3%; height:80%; border-style:none;">
-				</a>
-				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+				</a>{/if}
+				{if $data.twitter}
+				<a href={$data.twitter} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\twitter-circle.png alt="Twitter" style="width:3%; height:80%; border-style:none;">
-				</a>
-				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+				</a>{/if}
+				{if $data.linkedin}
+				<a href={$data.linkedin} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\linkedin-circle.png alt="Linkedin" style="width:3%; height:80%; border-style:none;">
-				</a>
-				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+				</a>{/if}
+				{if $data.instagram}
+				<a href={$data.instagram} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\instagram-circle.png alt="Instagram" style="width:3%; height:80%; border-style:none;">
-				</a>
+				</a>{/if}
+				
 				<!--{block name='friendlist_links' module='friendlist' id_user=$data.id}-->
 				<!--{block name='blacklist_button' module='blacklist' id_user=$data.id}-->
 				<!--{block name='favourites_button' module='favourites' id_user=$data.id}-->

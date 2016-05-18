@@ -22,10 +22,40 @@
 	});
 
 	<!-----add js here------>
-	
-	
-</script>{/literal}
+	<!------jenny zeng inserted js -------->
+function dropdownlist(listindex) {
 
+    document.getElementById("subcategory").options.length = 0;
+    switch (listindex) {
+        case "category1":
+            document.getElementById("subcategory").options[0] = new Option("Subcategory1.0", "value1.0");
+            document.getElementById("subcategory").options[1] = new Option("Subcategory1.1", "value1.1");
+            document.getElementById("subcategory").options[2] = new Option("Subcategory1.2", "value1.2");
+            document.getElementById("subcategory").options[3] = new Option("Subcategory1.3", "value1.3");
+            break;
+
+        case "category2":
+			document.getElementById("subcategory").options[0] = new Option("Subcategory2.0", "value2.0");
+            document.getElementById("subcategory").options[1] = new Option("Subcategory2.1", "value2.1");
+            document.getElementById("subcategory").options[2] = new Option("Subcategory2.2", "value2.2");
+            document.getElementById("subcategory").options[3] = new Option("Subcategory2.3", "value2.3");
+            break;
+
+        case "category3":
+			document.getElementById("subcategory").options[0] = new Option("Subcategory3.0", "value3.0");
+            document.getElementById("subcategory").options[1] = new Option("Subcategory3.1", "value3.1");
+            document.getElementById("subcategory").options[2] = new Option("Subcategory3.2", "value3.2");
+            document.getElementById("subcategory").options[3] = new Option("Subcategory3.3", "value3.3");
+            break;
+
+        default:
+            document.getElementById("subcategory").options[0] = new Option("Select Category")
+            break;
+    }
+    return true;
+}
+	<!------end jenny zeng inserted---->
+</script>{/literal}
 
 <!--------------style.css---------------->
 <style type="text/css">
@@ -83,10 +113,62 @@
 	padding:2.35% 0;	
 }
 
+/*this one is for the original search dropdown select box*/
 .searchDropdown{
-	display: inline-block;
 	width: 40%;
+	display: inline-block; 
+	float:left;
 	position: relative;
+}
+
+/*below is the new search dropdown css.
+ it is inside the search dropdown container*/
+.searchMainCategoryDropdown{
+	display: inline-block;
+	width: 48.7%;
+	position: relative;
+	padding-bottom:0.8%;
+	float:left;
+	overflow:hidden;
+	height: 2.3em;
+	margin-top: 0.1%;
+	background: url("{$site_root}application\modules\users\views\default\arrow-down.png") no-repeat right white;
+}
+.searchMainCategoryDropdown select{
+	background: transparent;
+	/*-webkit-appearance: none;*/
+	-webkit-border-radius: 0px;
+	width: 100%;
+	height: 2.3em;
+	padding: 5px 5px 4px 5px;
+	border: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchSubCategoryDropdown{
+	display: inline-block;
+	width: 48.5%;
+	position: relative;
+	float:right;
+	padding-bottom:0.8%;
+	overflow:hidden;
+	height: 2.3em;
+	margin-top: 0.1%;
+	background: url("{$site_root}application\modules\users\views\default\arrow-down.png") no-repeat right white;
+}
+
+.searchSubCategoryDropdown select{
+	background: transparent;
+	/*-webkit-appearance: none;*/
+	-webkit-border-radius: 0px;
+	width: 100%;
+	height: 2.3em;
+	padding: 5px 5px 4px 5px;
+	border: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
 
 .searchBarAndButton{
@@ -135,14 +217,30 @@
 				</div>
 
 				<div class="searchPart">
-				
-					<div class="searchDropdown">
+					<!---change the original search dropdown box to enable subcategory---->
+					<!--div class="searchDropdown">
 						{selectbox input='user_type' id='looking_user_type' value=$user_types.option default=$all_select_lang}
-					</div>
+					</div!-->
+					<div class="searchDropdown">
+                        <div class="searchMainCategoryDropdown">
+                            <select name="category" class="selectBox" id="category" onchange="dropdownlist(this.options[this.selectedIndex].value);">
+                                <option value="allCategories">All IoT Categories</option>
+                                <option value="category1">Category 1</option>
+                                <option value="category2">Category 2</option>
+                                <option value="category3">Category 3</option>
+                            </select>
+                        </div>
+						
+                        <div class="searchSubCategoryDropdown">
+						<select id="subcategory" class="selectBox" name="subcategory"><option value="">Select Category</option></select>
+                        </div>
+
+                    </div>
 					<div class="searchBarAndButton">
 						<input class="searchTextBox" type="text" name="search" placeholder="{l i='search_people' gid='start'}"/>
 						<input class="searchButton"type="submit" value="Search" id="main_search_button_{$form_settings.form_id}" name="search_button">
 					</div>
+					
 				</div>
 			</li>
 		</ul>

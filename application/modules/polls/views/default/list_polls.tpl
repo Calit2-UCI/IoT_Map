@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div class="content">
 <div class="content-block">
 	<h1>{l i='polls_results' gid='polls'}</h1>
 	{foreach item=item key=key from=$polls}
@@ -41,5 +42,5 @@
 		</script>
 	{/literal}
 </div>
-<div class="clr"></div>
+<div class="clr"></div></div>
 {include file="footer.tpl"}

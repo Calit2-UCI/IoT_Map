@@ -26,9 +26,37 @@
 				<!--website hyper link-->
 				{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}    
 				
-				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
+				{if $data.address}
+								<i class="delim-alone"></i><span class="">{$data.location}</span>
+								{depends module=geomap}
+									<i class="delim-alone"></i>
+									<a href="javascript:void(0);" id="view_map_link" class="target_blank">{l i='link_view_map' gid='geomap'}</a>
+								{/depends}
+								  
+				{/if}
+				
+				<!--{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}-->
 			</div>
 		</div>
+		
+		{depends module=geomap}
+			<script type='text/javascript'>{literal}
+				$(function(){		
+					loadScripts(
+						["{/literal}{js file='users-map.js' module='users' return='path'}{literal}"],
+						function(){
+							user_map = new usersMap({
+								siteUrl: site_url,
+								user_id: '{/literal}{$data.id}{literal}',
+							});
+						},
+						['user_map'],
+						{async: true}
+					);
+				});
+			</script>{/literal}
+		{/depends}
+		
 		<div class="actions noPrint">
 			{l i='filter_section_personal' gid='users' assign='personal_section_name'}
 			<a class="link-r-margin" title="{l i='edit_my_profile' gid='start'}" href="{seolink module='users' method='profile' section-code='personal' section-name=$personal_section_name}"><i class="fa-pencil icon-big edge hover"></i></a>

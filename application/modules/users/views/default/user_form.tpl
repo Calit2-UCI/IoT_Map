@@ -76,6 +76,27 @@
 				<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
 			</div>
 			
+			<!--social media-->
+			<div class="r">
+				<div class="f">Instagram: </div>
+				<div class="v"><input type="text" name="instagram" value="{$data.instagram|escape}"></div>
+			</div>
+			
+			<div class="r">
+				<div class="f">Twitter: </div>
+				<div class="v"><input type="text" name="twitter" value="{$data.twitter|escape}"></div>
+			</div>
+			
+			<div class="r">
+				<div class="f">Facebook: </div>
+				<div class="v"><input type="text" name="facebook" value="{$data.facebook|escape}"></div>
+			</div>
+			
+			<div class="r">
+				<div class="f">Linkedin: </div>
+				<div class="v"><input type="text" name="linkedin" value="{$data.linkedin|escape}"></div>
+			</div>
+			
 			<div class="r">
 				<div class="f">{l i='field_icon' gid='users'}: </div>
 				<div class="v">
@@ -205,9 +226,37 @@
 				
 				{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
 				
-				{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}
+				<!--{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}-->
+				{if $data.address}
+					<i class="delim-alone"></i><span class="">{$data.location}</span>
+					{depends module=geomap}
+						<i class="delim-alone"></i>
+						<a href="javascript:void(0);" id="view_map_link" class="target_blank">{l i='link_view_map' gid='geomap'}</a>
+					{/depends}
+								  
+				{/if}
+				
 			</div>
 		</div>
+		
+		{depends module=geomap}
+			<script type='text/javascript'>{literal}
+				$(function(){		
+					loadScripts(
+						["{/literal}{js file='users-map.js' module='users' return='path'}{literal}"],
+						function(){
+							user_map = new usersMap({
+								siteUrl: site_url,
+								user_id: '{/literal}{$data.id}{literal}',
+							});
+						},
+						['user_map'],
+						{async: true}
+					);
+				});
+			</script>{/literal}
+		{/depends}
+		
 		<div class="actions noPrint">
 			{l i='filter_section_personal' gid='users' assign='personal_section_name'}
 			<a class="link-r-margin" title="{l i='edit_my_profile' gid='start'}" href="{seolink module='users' method='profile' section-code='personal' section-name=$personal_section_name}"><i class="icon-pencil icon-big edge hover"></i></a>

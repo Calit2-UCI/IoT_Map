@@ -1,5 +1,6 @@
 {include file="header.tpl" load_type='ui'}
 {strip}
+<div class="content">
 <div class="content-block">
 	<h1>{seotag tag='header_text'}</h1>
 
@@ -34,7 +35,7 @@
 	</div>
 </div>
 	
-<div class="clr"></div>
+<div class="clr"></div></div>
 {/strip}
 
 <script>{literal}

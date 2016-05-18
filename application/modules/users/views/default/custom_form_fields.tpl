@@ -16,6 +16,7 @@
 					{foreach item=option key=value from=$item.options.option}<input type="radio" name="{$item.field_name}" value="{$value}" {if $value eq $item.value} checked{/if} id="{$item.field_name}_{$value}"><label for="{$item.field_name}_{$value}">{$option}</label><br>{/foreach}
 				{/if}
 			{elseif $item.field_type eq 'multiselect'}
+				<!-- About the Company --> <!-- About the Company --> <!-- About the Company --> <!--By JL-->
 				{if $item.settings_data_array.view_type eq 'mselect'}
 					<select name="{$item.field_name}[]" multiple>
 						{foreach item=option key=value from=$item.options.option}<option value="{$value}" {in_array match=$value array=$item.value returnvalue="selected"}>{$option}</option>{/foreach}
