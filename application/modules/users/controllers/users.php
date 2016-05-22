@@ -326,7 +326,7 @@ Class Users extends Controller
                 'lat' => (float) $user['lat'],
                 'lon' => (float) $user['lon'],
                 //'info' => $user['output_name'] . ", " . $user['age'],
-				'info' => $user['output_name'] . "<br/>" . $user['address']." ".$user[postal_code],
+				'info' => $user['output_name']."<br/>".$user['address'].", ".$user['city'].", ".$user['region']." ".$user[postal_code],
             );
             $this->template_lite->assign('markers', $markers);
             $this->template_lite->assign('header', $user["output_name"]." - Google Maps");
@@ -385,6 +385,7 @@ Class Users extends Controller
                     'lat' => $this->input->post('lat', true),
                     'lon' => $this->input->post('lon', true),
 					'address' => $this->input->post('address', true),
+					'postal_code' => $this->input->post('postal_code', true),
 					'website' => $this->input->post('website', true),
 					'instagram' => $this->input->post('instagram', true),
 					'twitter' => $this->input->post('twitter', true),

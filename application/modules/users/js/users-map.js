@@ -48,24 +48,24 @@ function usersMap(optionArr) {
 	};
 	
 	this.checkAddressUpdated = function(){
-	
-		document.getElementById('lblresult').innerHTML = "adf";
-
 		var country = $('input[name=id_country]').val();
 		var region = $('input[name=id_region]').val();
 		var city = $('input[name=id_city]').val();
-		var address = $('input[name=address]').val(); 
-		/*
+		//var address = $('input[name=address]').val();
+		//var address = $('input[name=postal_code]').val();
+		var address = document.getElementById('address').getAttribute('value');
+		var zip = document.getElementById('postal_code').getAttribute('value');
 		if (country == '') {
-			_self.setCoordinates(0, 0);
+			_self.setCoordinates(37.090240, -95.712891);   // set coordination to US when it doesnt exist
 			return;
 		}
-		*/
+		
 		var country_name = '';
 		var region_name = '';
 		var city_name = '';
+		
 		var locations = $('input[name=region_name]').val().split(',');
-
+		
 		if (typeof(locations[0]) != 'undefined') {
 			country_name = locations[0];
 		}
@@ -75,31 +75,19 @@ function usersMap(optionArr) {
 		if (typeof(locations[2]) != 'undefined') {
 			city_name = locations[2];
 		}
+
+		_self.updateCoordinates(country_name, region_name, city_name, address, zip);
+	}
 		
-		//_self.updateCoordinates(country_name, region_name, city_name);
-		_self.updateCoordinates(address);
+	this.updateCoordinates = function(country, region, city, address, zip){
+		if (typeof(geocoder) != 'undefined') {
+			var location = geocoder.getLocationFromAddress(country, region, city, address, zip);
+			geocoder.geocodeLocation(location, function(latitude, longitude){
+				_self.setCoordinates(latitude, longitude);
+			});	
+		}
 	}
 	
-	/////////////////////////////////////////////JL edited so that lat and lon can be gotten from address
-	this.updateCoordinates = function(address){
-		if (typeof(geocoder) != 'undefined') {
-			var location = geocoder.getLocationFromAddress(address);
-			geocoder.geocodeLocation(location, function(latitude, longitude){
-				_self.setCoordinates(latitude, longitude);
-			});	
-		}
-	}
-	/////////////////////////////////////////////
-	/*
-	this.updateCoordinates = function(country, region, city){
-		if (typeof(geocoder) != 'undefined') {
-			var location = geocoder.getLocationFromAddress(country, region, city);
-			geocoder.geocodeLocation(location, function(latitude, longitude){
-				_self.setCoordinates(latitude, longitude);
-			});	
-		}
-	}
-	*/
 	this.setCoordinates = function(latitude, longitude) {
 		$('#lat').val(latitude);
 		$('#lon').val(longitude);

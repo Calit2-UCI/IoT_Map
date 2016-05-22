@@ -131,7 +131,7 @@ class Users_statuses_model extends \Model {
 	public function format_status($online_status, $site_status){
 		$result['online_status'] = $online_status;
 		$result['site_status'] = $site_status;
-		//$result['online_status_text'] = $online_status ? 'online' : 'offline';
+		$result['online_status_text'] = $online_status ? 'online' : 'offline';
 		$result['current_site_status'] = $online_status ? $site_status : 0;
 		$result['site_status_text'] = isset($this->statuses[$site_status]) ? $this->statuses[$site_status] : '';
 		$result['current_site_status_text'] = isset($this->statuses[$result['current_site_status']]) ? $this->statuses[$result['current_site_status']] : '';

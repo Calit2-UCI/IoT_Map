@@ -108,7 +108,6 @@
 	
 	<div class="r">
 		<div class="f">Website:</div>
-		<!--div class="v">{$data.fe_field11}</div-->
 		<div class="v">{$data.website}</div>
 	</div>
 	
@@ -132,7 +131,7 @@
 		<div class="v">{$data.linkedin}</div>
 	</div>
 	
-	{if true}	
+	{if $data.address}
 	<div class="r">
 		<div class="f">Address:</div>
 		<div class="v">{$data.address}</div>
@@ -140,11 +139,19 @@
 	{/if}
 	
 	{if $data.location}
-	<div class="r hide">
+	<div class="r">
 		<div class="f">{l i='field_region' gid='users'}:</div>
 		<div class="v">{$data.location}</div>
 	</div>
 	{/if}
+	
+	{if $data.postal_code}
+	<div class="r">
+		<div class="f">Zip code:</div>
+		<div class="v">{$data.postal_code}</div>
+	</div>
+	{/if}
+	
 </div>
 {foreach item=item from=$sections}
 	<h2 class="line top bottom linked">

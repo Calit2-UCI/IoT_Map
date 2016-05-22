@@ -16,9 +16,11 @@
 			<div class="body">
 				<h1>
 				<span class="users-profile-h1">{seotag tag='header_text'}</span>
+				<!-- hide online status, by JL
 				<span data-role="online_status" class="fright online-status">
 					<s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span></h1>
 				<div>
+				-->
 					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 					
 					<!--remove age-->
@@ -40,7 +42,9 @@
 			<div class="body">
 				<h1>
 					<span class="users-profile-h1">{seotag tag='header_text'}</span>
+					<!-- hide online status, by JL
 					<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span>
+					-->
 				</h1>
 				<div>
 					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
@@ -97,7 +101,7 @@
 			<div class="actions noPrint">
 				<!--{block name='send_message_button' module='mailbox' id_user=$data.id}-->
 				<!--{*helper func_name='lists_links' module='users_lists' func_param=$data.id*}-->
-				<a href=# target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+				<a href=# !--target="_blank"-- class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\mail-circle.png alt="Email" style="width:3%; height:80%; border-style:none;">
 				</a>
 				

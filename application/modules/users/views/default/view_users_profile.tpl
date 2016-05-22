@@ -54,7 +54,7 @@
 		<div class="v">{$data.website}</div>
 	</div>
 	
-	{if true}	
+	{if $data.address}
 	<div class="r">
 		<div class="f">Address:</div>
 		<div class="v">{$data.address}</div>   <!--{if $data.id_country == "US"}, United States{/if}</div>-->
@@ -68,31 +68,23 @@
 	</div>
 	{/if}
 	
+	{if $data.location}
+	<div class="r">
+		<div class="f">{l i='field_region' gid='users'}:</div>
+		<div class="v">{$data.city}, {$data.region} {$data.postal_code}</div>
+	</div>
+	{/if}
+	
+	{if $data.postal_code}
+	<div class="r hide">
+		<div class="f">Zip code:</div>
+		<div class="v">{$data.postal_code}</div>
+	</div>
+	{/if}
+	
+	
 	<!--{/strip}{include file="map.html" module="users"}{strip}-->
 
-<!--
-<script>
-var latitude = {$data.lat};
-var longitude = {$data.lon};
-</script>
-
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-<div style="overflow:hidden;">
-	<div id="gmap_canvas" style="height:450px;width:450px;border:5px solid #cccccc; border-radius:5px;"></div>
-</div>
-
-<script type="text/javascript">{literal}
-function init_map(){
-	var myOptions = {zoom:14,center:new google.maps.LatLng(latitude,longitude),
-	mapTypeId: google.maps.MapTypeId.ROADMAP};
-	map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-	marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(latitude, longitude)});
-	infowindow = new google.maps.InfoWindow({content:"<b>Irvine</b><br/>3801 Parkview Ln Apt 17C<br/> Irvine" });
-	google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});
-	infowindow.open(map,marker);}
-</script>{/literal}
--->
 	
 </div>
 

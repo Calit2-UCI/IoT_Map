@@ -119,15 +119,14 @@
 				</div>
 			{/if}
 			
+			
 			<div class="r">
 				<div class="f">Address: </div>
-				<div class="v"><input type="text" name="address" value="{$data.address|escape}" id="adddre"></div>
-				<input type="hidden" name="lat" value="{$data.lat|escape}" id="lat">
-				<input type="hidden" name="lon" value="{$data.lon|escape}" id="lon">
-			</div>
+				<div class="v"><input id="address" type="text" name="address" value="{$data.address|escape}"></div>
+			</div>			
 			
-			<div class="r hide">
-				<div class="f">{l i='field_region' gid='users'}: </div>
+			<div class="r">
+				<div class="f">City, States, Country: </div>
 				<div class="v">
 					{block name='location_select' 
 						module='countries' 
@@ -143,6 +142,12 @@
 				<input type="hidden" name="lat" value="{$data.lat|escape}" id="lat">
 				<input type="hidden" name="lon" value="{$data.lon|escape}" id="lon">
 			</div>
+			
+			<div class="r">
+				<div class="f">Zip Code: </div>
+				<div class="v"><input id="postal_code" type="text" name="postal_code" value="{$data.postal_code|escape}"></div>
+			</div>
+			
 		{else}
 			{/strip}{include file="custom_form_fields.tpl" module="users"}{strip}
 		{/if}
@@ -161,22 +166,7 @@
 		{block name=geomap_load_geocoder module='geomap'}	
 	{/depends}
 	 
-	<!--for latlong 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script type='text/javascript'>{literal} 
-		var geocoder = new google.maps.Geocoder();
-		var address = {$data.address};
-		geocoder.geocode( { 'address': address}, function(results, status) {
 
-		  if (status == google.maps.GeocoderStatus.OK) {
-			var latitude = results[0].geometry.location.lat();
-			var longitude = results[0].geometry.location.lng();
-			document.getElementById('lat').value = latitude;			
-			document.getElementById('lon').value = longitude;
-		  }
-		}); 
-	</script>{/literal}
-	-->
 	<script type='text/javascript'>{literal}
 		$(function(){
 			var now = new Date();
@@ -218,7 +208,10 @@
 		<div class="body">
 			<h1>
 				<span style="font-size:30px;line-height:28px;">{$data.output_name}</span>
+				
+				<!-- hide online status, by JL
 				<span data-role="online_status" class="fright online-status"><s class="{$data.statuses.online_status_text}">{$data.statuses.online_status_lang}</s></span>
+				-->
 			</h1>
 			<div>
 				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
