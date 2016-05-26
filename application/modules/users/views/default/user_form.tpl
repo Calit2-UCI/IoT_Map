@@ -70,32 +70,14 @@
 				</div>
 			{/if}
 			
-			<div class="r">
+			<!--We decided to place the website and social media to the contact section, so we hide them hear.-->
+			<div class="r hide">
 				<div class="f">Website: </div>
 				<!--div class="v">Empty</div-->
 				<div class="v"><input type="text" name="website" value="{$data.website|escape}"></div>
 			</div>
 			
-			<!--social media-->
-			<div class="r">
-				<div class="f">Instagram: </div>
-				<div class="v"><input type="text" name="instagram" value="{$data.instagram|escape}"></div>
-			</div>
-			
-			<div class="r">
-				<div class="f">Twitter: </div>
-				<div class="v"><input type="text" name="twitter" value="{$data.twitter|escape}"></div>
-			</div>
-			
-			<div class="r">
-				<div class="f">Facebook: </div>
-				<div class="v"><input type="text" name="facebook" value="{$data.facebook|escape}"></div>
-			</div>
-			
-			<div class="r">
-				<div class="f">Linkedin: </div>
-				<div class="v"><input type="text" name="linkedin" value="{$data.linkedin|escape}"></div>
-			</div>
+
 			
 			<div class="r">
 				<div class="f">{l i='field_icon' gid='users'}: </div>
@@ -217,7 +199,9 @@
 				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
 				
-				{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
+				{if $data.fe_field22}
+					<a href={$data.fe_field22} target="_blank" class="target_blank">Website</a>
+				{/if}  
 				
 				<!--{if $data.location}<i class="delim-alone"></i><span class="">{$data.location}</span>{/if}-->
 				{if $data.address}

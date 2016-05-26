@@ -63,11 +63,16 @@
 				</div>
 			</form>
 		{else}
-			<form action="" method="post" class="ptb10">
+			<form action="" method="post" class="ptb10">  <!---Username, email, and phone, by JL--->
+				<div class="r">
+					<div class="f">{l i='field_nickname' gid='users'}: {$user.nickname}</div>
+				</div>
+			
 				<div class="r">
 					<div class="f">{l i='field_email' gid='users'}: </div>
 					<div class="v"><input type="text" name="email" value="{$user.email}"></div>
 				</div>
+							
 				<div class="r">
 					<div class="f">{l i='field_phone' gid='users'}: </div>
 					<div class="v"><input type="text" name="phone" value="{$user.phone}"></div>

@@ -49,7 +49,7 @@
 		<div class="v">{$data.birth_date}</div>
 	</div>
 	
-	<div class="r">
+	<div class="r hide">
 		<div class="f">Website:</div>
 		<div class="v">{$data.website}</div>
 	</div>

@@ -53,8 +53,18 @@ function usersMap(optionArr) {
 		var city = $('input[name=id_city]').val();
 		//var address = $('input[name=address]').val();
 		//var address = $('input[name=postal_code]').val();
+		
+		/*
+		var script = document.createElement('script');
+		script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js';
+		script.type = 'text/javascript';
+		var address;
+		$("#address").keyup(function(){
+			address = $("address").val();
+		});
+		*/		
 		var address = document.getElementById('address').getAttribute('value');
-		var zip = document.getElementById('postal_code').getAttribute('value');
+		//var zip = document.getElementById('postal_code').getAttribute('value');
 		if (country == '') {
 			_self.setCoordinates(37.090240, -95.712891);   // set coordination to US when it doesnt exist
 			return;
@@ -76,12 +86,12 @@ function usersMap(optionArr) {
 			city_name = locations[2];
 		}
 
-		_self.updateCoordinates(country_name, region_name, city_name, address, zip);
+		_self.updateCoordinates(country_name, region_name, city_name, address);
 	}
 		
-	this.updateCoordinates = function(country, region, city, address, zip){
+	this.updateCoordinates = function(country, region, city, address){
 		if (typeof(geocoder) != 'undefined') {
-			var location = geocoder.getLocationFromAddress(country, region, city, address, zip);
+			var location = geocoder.getLocationFromAddress(country, region, city, address);
 			geocoder.geocodeLocation(location, function(latitude, longitude){
 				_self.setCoordinates(latitude, longitude);
 			});	

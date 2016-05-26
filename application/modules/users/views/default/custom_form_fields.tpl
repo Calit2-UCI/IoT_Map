@@ -30,7 +30,7 @@
 					<div class="clr"></div>
 					<a href="#" class="select-link">{l i='select_all' gid='start'}</a> &nbsp;|&nbsp;<a href="#" class="unselect-link">{l i='unselect_all' gid='start'}</a> 
 				{/if}
-			{elseif $item.field_type eq 'text'}
+			{elseif $item.field_type eq 'text'}  <!--contact form:-->
 				<input type="text" name="{$item.field_name}" value="{$item.value|escape}" maxlength="{$item.settings_data_array.max_char}" {if $item.settings_data_array.max_char < 11}class="short"{elseif $item.settings_data_array.max_char > 1100}class="long"{/if}>
 			{elseif $item.field_type eq 'range'}
 				<div class="w500">

@@ -20,13 +20,14 @@
 						</select>
 					</div>
 				</div>
-				<div class="r">
-					<div class="f">{l i='field_email' gid='users'}: </div>
-					<div class="v"><input type="text" name="email" value="{$data.email|escape}"></div>
-				</div>
+
 				<div class="r">
 					<div class="f">{l i='field_nickname' gid='users'}: </div>
 					<div class="v"><input type="text" name="nickname" value="{$data.nickname|escape}"></div>
+				</div>
+				<div class="r">
+					<div class="f">{l i='field_email' gid='users'}: </div>
+					<div class="v"><input type="text" name="email" value="{$data.email|escape}"></div>
 				</div>
 				<div class="r">
 					<div class="f">{l i='field_password' gid='users'}: </div>

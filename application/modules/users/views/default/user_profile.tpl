@@ -1,3 +1,5 @@
+<!--This is the user profile, which shows the logo, name, and website, location. -->
+
 {strip}
 <div class="content">
 <div class="view small">
@@ -26,7 +28,7 @@
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
 				
 				<!--website hyper link-->
-				{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}    
+				{if $data.fe_field22}<a href={$data.fe_field22} target="_blank" class="target_blank">Website</a>{/if}    
 				
 				{if $data.address}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>

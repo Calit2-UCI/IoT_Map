@@ -7,7 +7,7 @@
 			<!--<div id="user_photo" class="pos-rel dimp100{if $data.user_logo} pointer{/if}">-->
 			<div>
 				{l i='text_user_logo' gid='users' type='button' assign='text_user_logo' replace_array=$data}
-				<a href={$data.website} target="_blank"><img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" alt=""></a>
+				<a href={$data.fe_field22} target="_blank"><img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" alt="Company logo"></a>
 				<!--<img src="{$data.media.user_logo.thumbs.middle}" alt="{$text_user_logo}" title="{$text_user_logo}" />-->
 			</div>
 		</div>
@@ -27,7 +27,10 @@
 					<!--{l i='field_age' gid='users'}: {$data.age}-->
 					<!--website hyper link-->
 					
-					{if $data.website}<a href={$data.website} target="_blank" class="target_blank">Website</a>{/if}  
+					{if $data.fe_field22}
+						<a href={$data.fe_field22} target="_blank" class="target_blank">Website</a>
+					{/if} 
+					
 					
 					{if $data.address}
 						<i class="delim-alone"></i><span class="">{$data.location}</span>
@@ -56,7 +59,10 @@
 
 							<!--website hyper link-->
 							
-							<a href={$data.website} target="_blank" class="target_blank">Website</a>  
+							{if $data.fe_field22}
+								<a href={$data.fe_field22} target="_blank" class="target_blank">Website</a>
+							{/if} 
+							
 							{if $data.address}
 								<i class="delim-alone"></i><span class="">{$data.location}</span>
 								{depends module=geomap}
@@ -106,20 +112,20 @@
 				</a>
 				
 				{if $data.facebook}
-				<a href={$data.facebook} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
-					<img src={$site_root}application\modules\menu\views\default\facebook-circle.png alt="Facebook" style="width:3%; height:80%; border-style:none;">
+				<a href={$data.fe_field25} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\facebook-circle.png alt="Facebook" title="Facebook" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
 				{if $data.twitter}
-				<a href={$data.twitter} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
-					<img src={$site_root}application\modules\menu\views\default\twitter-circle.png alt="Twitter" style="width:3%; height:80%; border-style:none;">
+				<a href={$data.fe_field24} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\twitter-circle.png alt="Twitter" title="Twitter" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
 				{if $data.linkedin}
-				<a href={$data.linkedin} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
-					<img src={$site_root}application\modules\menu\views\default\linkedin-circle.png alt="Linkedin" style="width:3%; height:80%; border-style:none;">
+				<a href={$data.fe_field26} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\linkedin-circle.png alt="Linkedin" title="Linkedin" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
 				{if $data.instagram}
-				<a href={$data.instagram} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
-					<img src={$site_root}application\modules\menu\views\default\instagram-circle.png alt="Instagram" style="width:3%; height:80%; border-style:none;">
+				<a href={$data.fe_field23} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
+					<img src={$site_root}application\modules\menu\views\default\instagram-circle.png alt="Instagram" title="Instagram" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
 				
 				<!--{block name='friendlist_links' module='friendlist' id_user=$data.id}-->

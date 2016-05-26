@@ -86,12 +86,12 @@
 	{/if}
 	
 	
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_nickname' gid='users'}:</div>
 		<div class="v">{$data.nickname}</div>
 	</div>
 
-	<div class="r">
+	<div class="r hide">
 		<div class="f">{l i='field_email' gid='users'}:</div>
 		<div class="v">{$data.email}</div>
 	</div>
@@ -106,29 +106,10 @@
 		<div class="v">{$data.birth_date|date_format:$page_data.date_format:'':$no_info_str}</div>
 	</div>
 	
-	<div class="r">
+	<!--We decided to place the website and social media to the contact section, so we hide them hear.-->
+	<div class="r hide">
 		<div class="f">Website:</div>
 		<div class="v">{$data.website}</div>
-	</div>
-	
-	<div class="r">
-		<div class="f">Instagram:</div>
-		<div class="v">{$data.instagram}</div>
-	</div>
-	
-	<div class="r">
-		<div class="f">Twitter:</div>
-		<div class="v">{$data.twitter}</div>
-	</div>
-	
-	<div class="r">
-		<div class="f">Facebook:</div>
-		<div class="v">{$data.facebook}</div>
-	</div>
-	
-	<div class="r">
-		<div class="f">Linkedin:</div>
-		<div class="v">{$data.linkedin}</div>
 	</div>
 	
 	{if $data.address}
