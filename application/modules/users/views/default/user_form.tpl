@@ -196,7 +196,6 @@
 				-->
 			</h1>
 			<div>
-				<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 				<!--{l i='field_age' gid='users'}: {$data.age}-->
 				
 				{if $data.fe_field22}
@@ -215,6 +214,9 @@
 				
 			</div>
 		</div>
+		
+		<!------->
+		<!------->
 		
 		{depends module=geomap}
 			<script type='text/javascript'>{literal}

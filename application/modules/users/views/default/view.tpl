@@ -53,12 +53,7 @@
 					<!--div class="fright">{l i='views' gid='users'}: {$data.views_count}</div-->
 					<div class="fleft clearfix">
 						<div class="fleft">
-						
-							<!--remove age-->
-							<!--{l i='field_age' gid='users'}: {$data.age}-->		
-
 							<!--website hyper link-->
-							
 							{if $data.fe_field22}
 								<a href={$data.fe_field22} target="_blank" class="target_blank">Website</a>
 							{/if} 
@@ -111,19 +106,19 @@
 					<img src={$site_root}application\modules\menu\views\default\mail-circle.png alt="Email" style="width:3%; height:80%; border-style:none;">
 				</a>
 				
-				{if $data.facebook}
+				{if $data.fe_field25}
 				<a href={$data.fe_field25} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\facebook-circle.png alt="Facebook" title="Facebook" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
-				{if $data.twitter}
+				{if $data.fe_field24}
 				<a href={$data.fe_field24} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\twitter-circle.png alt="Twitter" title="Twitter" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
-				{if $data.linkedin}
+				{if $data.fe_field26}
 				<a href={$data.fe_field26} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\linkedin-circle.png alt="Linkedin" title="Linkedin" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
-				{if $data.instagram}
+				{if $data.fe_field23}
 				<a href={$data.fe_field23} target="_blank" class="target_blank" style="display:inline; text-decoration:none;">
 					<img src={$site_root}application\modules\menu\views\default\instagram-circle.png alt="Instagram" title="Instagram" style="width:3%; height:80%; border-style:none;">
 				</a>{/if}
