@@ -45,8 +45,9 @@
 		</div>
 		
 	{elseif $action eq 'update'}
-		</br><p style="font-size: 12px">No update account yet</p>
-		<!--{helper func_name='update_account_block' module='users_payments'}-->
+		<!--{block name='user_account' module='users_payments'}-->
+		{helper func_name='update_account_block' module='users_payments'}
+		<!--</br><p style="font-size: 12px">No update account yet</p>-->
 	{elseif $action eq 'payments_history'}
 		<div>{block name='user_payments_history' module='payments' id_user=$user_id page=$page base_url=$base_url}</div>
 	{elseif $action eq 'banners'}

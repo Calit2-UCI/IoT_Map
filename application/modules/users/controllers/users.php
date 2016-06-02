@@ -386,11 +386,11 @@ Class Users extends Controller
                     'lon' => $this->input->post('lon', true),
 					'address' => $this->input->post('address', true),
 					'postal_code' => $this->input->post('postal_code', true),
-					'website' => $this->input->post('website', true),
-					'instagram' => $this->input->post('instagram', true),
-					'twitter' => $this->input->post('twitter', true),
-					'facebook' => $this->input->post('facebook', true),
-					'linkedin' => $this->input->post('linkedin', true),
+					//'website' => $this->input->post('website', true),
+					//'instagram' => $this->input->post('instagram', true),
+					//'twitter' => $this->input->post('twitter', true),
+					//'facebook' => $this->input->post('facebook', true),
+					//'linkedin' => $this->input->post('linkedin', true),
 					
                 );
             } else {

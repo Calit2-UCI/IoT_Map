@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<div class="content">
 <h1>{seotag tag='header_text'}</h1>
 {include file="list_top_panel.tpl" module="winks" theme=user}
 {strip}
@@ -59,6 +60,8 @@
 			</button>
 		</div>
 	</div>
+	
+	
 <script>{literal}
 	$(function(){
 		loadScripts(
@@ -80,4 +83,6 @@
 	});
 </script>{/literal}
 {/strip}
+</div>
+
 {include file="footer.tpl"}

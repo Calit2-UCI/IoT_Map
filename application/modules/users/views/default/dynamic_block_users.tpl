@@ -28,7 +28,7 @@
 					</div>
 				</div>
 				<div class="descr hide">
-					<div><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, {$item.age}</div>
+					<div><a href="{seolink module='users' method='view' data=$item}">{$item.output_name}</a>, <!--{$item.age}--></div>
 					{if $item.address}<div>{$item.address}</div>{/if}
 				</div>
 			</div>

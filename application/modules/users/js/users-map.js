@@ -66,7 +66,7 @@ function usersMap(optionArr) {
 		var address = document.getElementById('address').getAttribute('value');
 		//var zip = document.getElementById('postal_code').getAttribute('value');
 		if (country == '') {
-			_self.setCoordinates(37.090240, -95.712891);   // set coordination to US when it doesnt exist
+			_self.setCoordinates(0, 0);   // set coordination to US when it doesnt exist
 			return;
 		}
 		

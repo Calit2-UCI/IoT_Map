@@ -1,5 +1,5 @@
 {strip}
-{block name='users_carousel' module='users' users=$helper_featured_users_data.users scroll='auto' class='small' thumb_name='middle'}
+<!--JL commented a line of code here of not showing the featured users on pages like search top.-->
 {if $helper_featured_users_data.buy_ability}
 	<script>{literal}
 		$(function(){

@@ -1,4 +1,5 @@
 {strip}
+<div class="content">
 {if $users_carousel_data.users}
 	{if $users_carousel_data.header}<h2>{$users_carousel_data.header}</h2>{/if}
 
@@ -66,6 +67,7 @@
 		</div>
 	</div>
 {/if}
+</div>
 {/strip}
 <script>{literal}
 	$('#users_carousel_{/literal}{$users_carousel_data.rand}{literal}').not('.w-descr')

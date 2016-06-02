@@ -725,7 +725,7 @@ class Users_model extends \Model
         if (isset($data["address"])) {
             $return["data"]["address"] = trim(strip_tags($data["address"]));
         }
-		
+		/*
 		if (isset($data["website"])) {
 			$return["data"]["website"] = trim(strip_tags($data["website"]));
         }
@@ -745,7 +745,7 @@ class Users_model extends \Model
 		if (isset($data["linkedin"])) {
 			$return["data"]["linkedin"] = trim(strip_tags($data["linkedin"]));
         }
-	
+		*/
 		
 		/*
         if (!empty($data["birth_date"])) {

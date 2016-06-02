@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <routes>
 <users>
+<method name="search" link="[text|users/search/][postfix|1|order|literal][text|/][postfix|2|order_direction|literal][text|/][postfix|3|page|numeric]" />
+<method name="account" link="[text|users/account/][postfix|1|action|literal][text|/][postfix|2|page|numeric]" />
+<method name="view" link="[text|users/view/][tpl|1|id|literal][text|/][postfix|2|section-code|literal][text|/][postfix|3|subsection-code|literal]" />
+<method name="confirm" link="[text|users/confirm/][postfix|1|code|literal]" />
+<method name="profile" link="[text|users/profile/][postfix|1|section-code|literal][text|/][postfix|2|subsection-code|literal]" />
+<method name="my_guests" link="[text|users/my_guests/][postfix|1|period|literal][text|/][postfix|2|page|numeric]" />
+<method name="my_visits" link="[text|users/my_visits/][postfix|1|period|literal][text|/][postfix|2|page|numeric]" />
+<method name="perfect_match" link="[text|users/perfect_match/][postfix|1|order|literal][text|/][postfix|2|order_direction|literal][text|/][postfix|3|page|numeric]" />
 </users>
+<blacklist>
+<method name="index" link="[text|blacklist/index/][postfix|1|action|literal][text|/][postfix|2|page|numeric]" />
+</blacklist>
+<content>
+<method name="view" link="[text|content/view/][tpl|1|gid|literal]" />
+</content>
+<favourites>
+<method name="index" link="[text|favourites/index/][postfix|1|page|numeric]" />
+<method name="i_am_their_fav" link="[text|favourites/i_am_their_fav/][postfix|1|page|numeric]" />
+<method name="my_favs" link="[text|favourites/my_favs/][postfix|1|page|numeric]" />
+</favourites>
+<friendlist>
+<method name="index" link="[text|friendlist/index/][postfix|1|action|literal][text|/][postfix|2|page|numeric]" />
+<method name="friends_requests" link="[text|friendlist/friends_requests/][postfix|1|action|literal][text|/][postfix|2|page|numeric]" />
+<method name="friends_invites" link="[text|friendlist/friends_invites/][postfix|1|action|literal][text|/][postfix|2|page|numeric]" />
+</friendlist>
+<mailbox>
+<method name="write" link="[text|mailbox/write/][postfix|1|id|numeric]" />
+<method name="inbox" link="[text|mailbox/inbox/][postfix|1|page|numeric]" />
+<method name="outbox" link="[text|mailbox/outbox/][postfix|1|page|numeric]" />
+<method name="drafts" link="[text|mailbox/drafts/][postfix|1|page|numeric]" />
+<method name="trash" link="[text|mailbox/trash/][postfix|1|page|numeric]" />
+<method name="spam" link="[text|mailbox/spam/][postfix|1|page|numeric]" />
+<method name="index" link="[text|mailbox/index/][postfix|1|page|numeric]" />
+</mailbox>
+<news>
+<method name="view" link="[text|news/view/][tpl|1|id|literal]" />
+</news>
+<winks>
+<method name="index" link="[text|winks/index/][postfix|1|page|numeric]" />
+</winks>
 </routes>

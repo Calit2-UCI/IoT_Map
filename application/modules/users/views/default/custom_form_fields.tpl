@@ -16,7 +16,6 @@
 					{foreach item=option key=value from=$item.options.option}<input type="radio" name="{$item.field_name}" value="{$value}" {if $value eq $item.value} checked{/if} id="{$item.field_name}_{$value}"><label for="{$item.field_name}_{$value}">{$option}</label><br>{/foreach}
 				{/if}
 			{elseif $item.field_type eq 'multiselect'}
-				<!-- About the Company --> <!-- About the Company --> <!-- About the Company --> <!--By JL-->
 				{if $item.settings_data_array.view_type eq 'mselect'}
 					<select name="{$item.field_name}[]" multiple>
 						{foreach item=option key=value from=$item.options.option}<option value="{$value}" {in_array match=$value array=$item.value returnvalue="selected"}>{$option}</option>{/foreach}
@@ -30,7 +29,7 @@
 					<div class="clr"></div>
 					<a href="#" class="select-link">{l i='select_all' gid='start'}</a> &nbsp;|&nbsp;<a href="#" class="unselect-link">{l i='unselect_all' gid='start'}</a> 
 				{/if}
-			{elseif $item.field_type eq 'text'}  <!--contact form:-->
+			{elseif $item.field_type eq 'text'}
 				<input type="text" name="{$item.field_name}" value="{$item.value|escape}" maxlength="{$item.settings_data_array.max_char}" {if $item.settings_data_array.max_char < 11}class="short"{elseif $item.settings_data_array.max_char > 1100}class="long"{/if}>
 			{elseif $item.field_type eq 'range'}
 				<div class="w500">

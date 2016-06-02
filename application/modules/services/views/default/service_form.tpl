@@ -1,5 +1,6 @@
 {include file="header.tpl"}
 {strip}
+<div class="content">
 <div class="content-block">
 	<h1>{l i='header_service_settings' gid='services'}: {l i=$data.name_lang_gid gid='services'}</h1>
 
@@ -100,5 +101,6 @@
 	</div>
 </div>
 <div class="clr"></div>
+</div>
 {/strip}
 {include file="footer.tpl"}
